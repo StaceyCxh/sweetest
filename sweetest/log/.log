@@ -1,0 +1,700 @@
+2018-11-24 23:37:57,880 [INFO] parse.py line:245: Testsuite imported from Excel:
+[
+    {
+        "id": "HOME_001",
+        "title": "打开百度",
+        "condition": "SETUP",
+        "designer": "",
+        "flag": "",
+        "result": "",
+        "remark": "",
+        "priority": "H",
+        "steps": [
+            {
+                "control": "",
+                "no": "1",
+                "keyword": "打开",
+                "page": "",
+                "element": "百度搜索链接",
+                "data": "标签页名=百度搜索窗口",
+                "expected": "",
+                "output": "",
+                "score": "",
+                "remark": "",
+                "_keyword": "打开",
+                "_element": "百度搜索链接",
+                "_data": "标签页名=百度搜索窗口",
+                "vdata": "标签页名=百度搜索窗口",
+                "_expected": "",
+                "_output": ""
+            },
+            {
+                "control": "",
+                "no": "2",
+                "keyword": "检查",
+                "page": "百度搜索页面",
+                "element": "页面title",
+                "data": "百度一下，你就知道",
+                "expected": "",
+                "output": "",
+                "score": "",
+                "remark": "",
+                "_keyword": "检查",
+                "_element": "页面title",
+                "_data": "百度一下，你就知道",
+                "vdata": "百度一下，你就知道",
+                "_expected": "",
+                "_output": ""
+            }
+        ]
+    },
+    {
+        "id": "BAIDU_001",
+        "title": "搜索：自动化测试",
+        "condition": "",
+        "designer": "",
+        "flag": "",
+        "result": "",
+        "remark": "",
+        "priority": "H",
+        "steps": [
+            {
+                "control": "",
+                "no": "1",
+                "keyword": "输入",
+                "page": "",
+                "element": "搜索框",
+                "data": "自动化测试",
+                "expected": "",
+                "output": "",
+                "score": "",
+                "remark": "",
+                "_keyword": "输入",
+                "_element": "搜索框",
+                "_data": "自动化测试",
+                "vdata": "自动化测试",
+                "_expected": "",
+                "_output": ""
+            },
+            {
+                "control": "",
+                "no": "2",
+                "keyword": "点击",
+                "page": "",
+                "element": "搜索按钮",
+                "data": "",
+                "expected": "",
+                "output": "",
+                "score": "",
+                "remark": "",
+                "_keyword": "点击",
+                "_element": "搜索按钮",
+                "_data": "",
+                "vdata": "",
+                "_expected": "",
+                "_output": ""
+            },
+            {
+                "control": "",
+                "no": "3",
+                "keyword": "检查",
+                "page": "",
+                "element": "页面title",
+                "data": "自动化测试_百度搜索",
+                "expected": "",
+                "output": "",
+                "score": "",
+                "remark": "检查的预期结果建议写在测试数据列，也可以写在预期结果列。如果没有 http 接口测试，可以删除预期结果列。",
+                "_keyword": "检查",
+                "_element": "页面title",
+                "_data": "自动化测试_百度搜索",
+                "vdata": "自动化测试_百度搜索",
+                "_expected": "",
+                "_output": ""
+            }
+        ]
+    },
+    {
+        "id": "SNIPPET_001",
+        "title": "搜索：<keywords>",
+        "condition": "SNIPPET",
+        "designer": "",
+        "flag": "",
+        "result": "",
+        "remark": "",
+        "priority": "M",
+        "steps": [
+            {
+                "control": "",
+                "no": "1",
+                "keyword": "输入",
+                "page": "百度搜索页面",
+                "element": "搜索框",
+                "data": "<keywords>",
+                "expected": "",
+                "output": "",
+                "score": "",
+                "remark": "",
+                "_keyword": "输入",
+                "_element": "搜索框",
+                "_data": "<keywords>",
+                "vdata": "<keywords>",
+                "_expected": "",
+                "_output": ""
+            },
+            {
+                "control": "",
+                "no": "2",
+                "keyword": "点击",
+                "page": "",
+                "element": "搜索按钮",
+                "data": "",
+                "expected": "",
+                "output": "",
+                "score": "",
+                "remark": "",
+                "_keyword": "点击",
+                "_element": "搜索按钮",
+                "_data": "",
+                "vdata": "",
+                "_expected": "",
+                "_output": ""
+            },
+            {
+                "control": "",
+                "no": "3",
+                "keyword": "检查",
+                "page": "",
+                "element": "页面title",
+                "data": "<keywords>_百度搜索",
+                "expected": "",
+                "output": "",
+                "score": "",
+                "remark": "",
+                "_keyword": "检查",
+                "_element": "页面title",
+                "_data": "<keywords>_百度搜索",
+                "vdata": "<keywords>_百度搜索",
+                "_expected": "",
+                "_output": ""
+            },
+            {
+                "control": "",
+                "no": "4",
+                "keyword": "点击",
+                "page": "",
+                "element": "搜索结果#1",
+                "data": "",
+                "expected": "",
+                "output": "",
+                "score": "",
+                "remark": "",
+                "_keyword": "点击",
+                "_element": "搜索结果#1",
+                "_data": "",
+                "vdata": "",
+                "_expected": "",
+                "_output": ""
+            },
+            {
+                "control": "",
+                "no": "5",
+                "keyword": "检查",
+                "page": "",
+                "element": "页面title",
+                "data": "<title>",
+                "expected": "",
+                "output": "",
+                "score": "",
+                "remark": "",
+                "_keyword": "检查",
+                "_element": "页面title",
+                "_data": "<title>",
+                "vdata": "<title>",
+                "_expected": "",
+                "_output": ""
+            }
+        ]
+    },
+    {
+        "id": "BAIDU_002",
+        "title": "搜索：搜狗",
+        "condition": "",
+        "designer": "",
+        "flag": "",
+        "result": "",
+        "remark": "",
+        "priority": "M",
+        "steps": [
+            {
+                "control": "",
+                "no": "1",
+                "keyword": "执行",
+                "page": "用例片段",
+                "element": "SNIPPET_001",
+                "data": "keywords=搜狗,title=搜狗搜索引擎 - 上网从搜狗开始",
+                "expected": "",
+                "output": "",
+                "score": "",
+                "remark": "",
+                "_keyword": "执行",
+                "_element": "SNIPPET_001",
+                "_data": "keywords=搜狗,title=搜狗搜索引擎 - 上网从搜狗开始",
+                "vdata": "keywords=搜狗,title=搜狗搜索引擎 - 上网从搜狗开始",
+                "_expected": "",
+                "_output": ""
+            },
+            {
+                "control": "",
+                "no": "2",
+                "keyword": "点击",
+                "page": "百度搜索页面",
+                "element": "搜索结果#1",
+                "data": "",
+                "expected": "",
+                "output": "title=text",
+                "score": "",
+                "remark": "",
+                "_keyword": "点击",
+                "_element": "搜索结果#1",
+                "_data": "",
+                "vdata": "",
+                "_expected": "",
+                "_output": "title=text"
+            },
+            {
+                "control": "",
+                "no": "3",
+                "keyword": "检查",
+                "page": "",
+                "element": "页面title",
+                "data": "<title>",
+                "expected": "",
+                "output": "",
+                "score": "",
+                "remark": "",
+                "_keyword": "检查",
+                "_element": "页面title",
+                "_data": "<title>",
+                "vdata": "<title>",
+                "_expected": "",
+                "_output": ""
+            }
+        ]
+    },
+    {
+        "id": "BAIDU_003",
+        "title": "搜索：知乎",
+        "condition": "",
+        "designer": "",
+        "flag": "N",
+        "result": "",
+        "remark": "",
+        "priority": "M",
+        "steps": [
+            {
+                "control": "",
+                "no": "1",
+                "keyword": "执行",
+                "page": "用例片段",
+                "element": "SNIPPET_001",
+                "data": "keywords=知乎",
+                "expected": "",
+                "output": "",
+                "score": "",
+                "remark": "",
+                "_keyword": "执行",
+                "_element": "SNIPPET_001",
+                "_data": "keywords=知乎",
+                "vdata": "keywords=知乎",
+                "_expected": "",
+                "_output": ""
+            },
+            {
+                "control": "",
+                "no": "2",
+                "keyword": "点击",
+                "page": "",
+                "element": "搜索结果#1",
+                "data": "",
+                "expected": "",
+                "output": "",
+                "score": "",
+                "remark": "",
+                "_keyword": "点击",
+                "_element": "搜索结果#1",
+                "_data": "",
+                "vdata": "",
+                "_expected": "",
+                "_output": ""
+            },
+            {
+                "control": "^",
+                "no": "^3",
+                "keyword": "检查",
+                "page": "",
+                "element": "link#注册机构号",
+                "data": "",
+                "expected": "",
+                "output": "",
+                "score": "",
+                "remark": "",
+                "_keyword": "检查",
+                "_element": "link#注册机构号",
+                "_data": "",
+                "vdata": "",
+                "_expected": "",
+                "_output": ""
+            },
+            {
+                "control": ">",
+                "no": ">4",
+                "keyword": "点击",
+                "page": "",
+                "element": "button#注册",
+                "data": "",
+                "expected": "",
+                "output": "",
+                "score": "",
+                "remark": "",
+                "_keyword": "点击",
+                "_element": "button#注册",
+                "_data": "",
+                "vdata": "",
+                "_expected": "",
+                "_output": ""
+            },
+            {
+                "control": "<",
+                "no": "<5",
+                "keyword": "点击",
+                "page": "",
+                "element": "button#提问",
+                "data": "",
+                "expected": "",
+                "output": "",
+                "score": "",
+                "remark": "",
+                "_keyword": "点击",
+                "_element": "button#提问",
+                "_data": "",
+                "vdata": "",
+                "_expected": "",
+                "_output": ""
+            }
+        ]
+    },
+    {
+        "id": "BAIDU_004",
+        "title": "搜索：雪球行情中心",
+        "condition": "",
+        "designer": "",
+        "flag": "N",
+        "result": "",
+        "remark": "",
+        "priority": "M",
+        "steps": [
+            {
+                "control": "",
+                "no": "1",
+                "keyword": "执行",
+                "page": "用例片段",
+                "element": "SNIPPET_001",
+                "data": "keywords=雪球行情中心",
+                "expected": "",
+                "output": "",
+                "score": "",
+                "remark": "",
+                "_keyword": "执行",
+                "_element": "SNIPPET_001",
+                "_data": "keywords=雪球行情中心",
+                "vdata": "keywords=雪球行情中心",
+                "_expected": "",
+                "_output": ""
+            },
+            {
+                "control": "",
+                "no": "2",
+                "keyword": "点击",
+                "page": "百度搜索页面",
+                "element": "搜索结果#1",
+                "data": "",
+                "expected": "",
+                "output": "title=text",
+                "score": "",
+                "remark": "",
+                "_keyword": "点击",
+                "_element": "搜索结果#1",
+                "_data": "",
+                "vdata": "",
+                "_expected": "",
+                "_output": "title=text"
+            },
+            {
+                "control": "",
+                "no": "3",
+                "keyword": "检查",
+                "page": "",
+                "element": "页面title",
+                "data": "*雪球",
+                "expected": "",
+                "output": "",
+                "score": "",
+                "remark": "",
+                "_keyword": "检查",
+                "_element": "页面title",
+                "_data": "*雪球",
+                "vdata": "*雪球",
+                "_expected": "",
+                "_output": ""
+            },
+            {
+                "control": "",
+                "no": "4",
+                "keyword": "点击",
+                "page": "雪球行情中心",
+                "element": "新股预告表格#2#1",
+                "data": "",
+                "expected": "",
+                "output": "name=text",
+                "score": "",
+                "remark": "",
+                "_keyword": "点击",
+                "_element": "新股预告表格#2#1",
+                "_data": "",
+                "vdata": "",
+                "_expected": "",
+                "_output": "name=text"
+            },
+            {
+                "control": "",
+                "no": "5",
+                "keyword": "检查",
+                "page": "",
+                "element": "页面title",
+                "data": "*<name>",
+                "expected": "",
+                "output": "",
+                "score": "",
+                "remark": "",
+                "_keyword": "检查",
+                "_element": "页面title",
+                "_data": "*<name>",
+                "vdata": "*<name>",
+                "_expected": "",
+                "_output": ""
+            }
+        ]
+    },
+    {
+        "id": "BAIDU_005",
+        "title": "搜索：<测试数据>",
+        "condition": "",
+        "designer": "",
+        "flag": "",
+        "result": "",
+        "remark": "",
+        "priority": "M",
+        "steps": [
+            {
+                "control": "",
+                "no": "1",
+                "keyword": "执行",
+                "page": "用例片段",
+                "element": "SNIPPET_001*2",
+                "data": "keywords=<_keywords>, title=<_title>",
+                "expected": "",
+                "output": "",
+                "score": "",
+                "remark": "",
+                "_keyword": "执行",
+                "_element": "SNIPPET_001*2",
+                "_data": "keywords=<_keywords>, title=<_title>",
+                "vdata": "keywords=<_keywords>, title=<_title>",
+                "_expected": "",
+                "_output": ""
+            }
+        ]
+    },
+    {
+        "id": "SQL",
+        "title": "SQL",
+        "condition": "",
+        "designer": "",
+        "flag": "N",
+        "result": "",
+        "remark": "",
+        "priority": "M",
+        "steps": [
+            {
+                "control": "",
+                "no": "1",
+                "keyword": "SQL",
+                "page": "Oracle",
+                "element": "查询User表#STR_GSYL",
+                "data": "STKID=000590",
+                "expected": "",
+                "output": "stkpoolid=STKPOOLID,stkid=STKID",
+                "score": "",
+                "remark": "",
+                "_keyword": "SQL",
+                "_element": "查询User表#STR_GSYL",
+                "_data": "STKID=000590",
+                "vdata": "STKID=000590",
+                "_expected": "",
+                "_output": "stkpoolid=STKPOOLID,stkid=STKID"
+            },
+            {
+                "control": "",
+                "no": "2",
+                "keyword": "SQL",
+                "page": "",
+                "element": "sql#select STKPOOLID,STKID,STKNAME from ir_stkpool_member_etl where STKPOOLID='<stkpoolid>'",
+                "data": "STKID=<stkid>",
+                "expected": "",
+                "output": "",
+                "score": "",
+                "remark": "",
+                "_keyword": "SQL",
+                "_element": "sql#select STKPOOLID,STKID,STKNAME from ir_stkpool_member_etl where STKPOOLID='<stkpoolid>'",
+                "_data": "STKID=<stkid>",
+                "vdata": "STKID=<stkid>",
+                "_expected": "",
+                "_output": ""
+            }
+        ]
+    },
+    {
+        "id": "api",
+        "title": "api 测试",
+        "condition": "",
+        "designer": "",
+        "flag": "N",
+        "result": "",
+        "remark": "",
+        "priority": "M",
+        "steps": [
+            {
+                "control": "",
+                "no": "1",
+                "keyword": "POST",
+                "page": "Sonar",
+                "element": "登录",
+                "data": "data={'login': 'admin'\\, 'password': '123456'}, status_code=200",
+                "expected": "",
+                "output": "",
+                "score": "",
+                "remark": "",
+                "_keyword": "POST",
+                "_element": "登录",
+                "_data": "data={'login': 'admin'\\, 'password': '123456'}, status_code=200",
+                "vdata": "data={'login': 'admin'\\, 'password': '123456'}, status_code=200",
+                "_expected": "",
+                "_output": ""
+            },
+            {
+                "control": "",
+                "no": "2",
+                "keyword": "GET",
+                "page": "",
+                "element": "项目状态#sweetest",
+                "data": "",
+                "expected": "status_code=200,text=*OK,json={\"projectStatus\":{\"status\":\"OK\"}}",
+                "output": "code=status_code,\njson={\"projectStatus\":{\"status\":\"<status>\"}}",
+                "score": "",
+                "remark": "http 接口测试，预期结果可以写在测试数据列，也可以写在预期结果列，建议写在预期结果列",
+                "_keyword": "GET",
+                "_element": "项目状态#sweetest",
+                "_data": "",
+                "vdata": "",
+                "_expected": "status_code=200,text=*OK,json={\"projectStatus\":{\"status\":\"OK\"}}",
+                "_output": "code=status_code,\njson={\"projectStatus\":{\"status\":\"<status>\"}}"
+            },
+            {
+                "control": "",
+                "no": "3",
+                "keyword": "POST",
+                "page": "xxx",
+                "element": "登录#http://vwt-sonar/api/authentication/login",
+                "data": "data={'login': 'admin'\\, 'password': '123456'}, headers={'Content-Type':'application/x-www-form-urlencoded'},status_code=200",
+                "expected": "",
+                "output": "",
+                "score": "",
+                "remark": "http 接口测试，data，headers 是测试数据，必须写在测试数据列，status_code，json 是预期结果",
+                "_keyword": "POST",
+                "_element": "登录#http://vwt-sonar/api/authentication/login",
+                "_data": "data={'login': 'admin'\\, 'password': '123456'}, headers={'Content-Type':'application/x-www-form-urlencoded'},status_code=200",
+                "vdata": "data={'login': 'admin'\\, 'password': '123456'}, headers={'Content-Type':'application/x-www-form-urlencoded'},status_code=200",
+                "_expected": "",
+                "_output": ""
+            },
+            {
+                "control": "",
+                "no": "4",
+                "keyword": "GET",
+                "page": "",
+                "element": "http://vwt-sonar/api/qualitygates/project_status?projectKey=sweetest",
+                "data": "",
+                "expected": "status_code=<code>,text=*OK,json={\"projectStatus\":{\"status\":\"<status>\"}}",
+                "output": "",
+                "score": "",
+                "remark": "",
+                "_keyword": "GET",
+                "_element": "http://vwt-sonar/api/qualitygates/project_status?projectKey=sweetest",
+                "_data": "",
+                "vdata": "",
+                "_expected": "status_code=<code>,text=*OK,json={\"projectStatus\":{\"status\":\"<status>\"}}",
+                "_output": ""
+            }
+        ]
+    }
+]
+2018-11-24 23:37:57,881 [INFO] parse.py line:246: From Excel import testsuite success
+2018-11-24 23:38:00,187 [INFO] myrunner.py line:13: test_BAIDU_001 (sweetest.gentest.TestClass)用例开始运行... 
+2018-11-24 23:38:00,187 [INFO] gentest.py line:34: Run the Step: 1|OPEN|百度搜索链接
+2018-11-24 23:38:01,531 [INFO] gentest.py line:108: Run the Step: 1|OPEN|通用-百度搜索链接 is Pass
+2018-11-24 23:38:01,735 [INFO] gentest.py line:34: Run the Step: 2|CHECK|页面title
+2018-11-24 23:38:01,736 [INFO] web.py line:16: DATA:'百度一下，你就知道'
+2018-11-24 23:38:01,744 [INFO] web.py line:17: REAL:'百度一下，你就知道'
+2018-11-24 23:38:01,753 [INFO] gentest.py line:108: Run the Step: 2|CHECK|通用-页面title is Pass
+2018-11-24 23:38:01,958 [INFO] gentest.py line:34: Run the Step: 1|INPUT|搜索框
+2018-11-24 23:38:02,719 [INFO] gentest.py line:108: Run the Step: 1|INPUT|百度搜索页面-搜索框 is Pass
+2018-11-24 23:38:02,922 [INFO] gentest.py line:34: Run the Step: 2|CLICK|搜索按钮
+2018-11-24 23:38:03,563 [INFO] gentest.py line:108: Run the Step: 2|CLICK|百度搜索页面-搜索按钮 is Pass
+2018-11-24 23:38:03,768 [INFO] gentest.py line:34: Run the Step: 3|CHECK|页面title
+2018-11-24 23:38:03,769 [INFO] web.py line:16: DATA:'自动化测试_百度搜索'
+2018-11-24 23:38:03,779 [INFO] web.py line:17: REAL:'自动化测试_百度搜索'
+2018-11-24 23:38:03,785 [INFO] gentest.py line:108: Run the Step: 3|CHECK|通用-页面title is Pass
+2018-11-24 23:38:03,990 [INFO] myrunner.py line:18: 测试通过
+
+2018-11-24 23:38:03,990 [INFO] myrunner.py line:13: test_BAIDU_002 (sweetest.gentest.TestClass)用例开始运行... 
+2018-11-24 23:38:03,990 [INFO] gentest.py line:34: Run the Step: 1|OPEN|通用-百度搜索链接
+2018-11-24 23:38:03,990 [WARNING] elements.py line:33: Page:通用 element:通用-百度搜索链接 is not exist
+2018-11-24 23:38:04,750 [INFO] gentest.py line:108: Run the Step: 1|OPEN|通用-百度搜索链接 is Pass
+2018-11-24 23:38:04,951 [INFO] gentest.py line:34: Run the Step: 2|CHECK|通用-页面title
+2018-11-24 23:38:04,952 [WARNING] elements.py line:33: Page:百度搜索页面 element:通用-页面title is not exist
+2018-11-24 23:38:04,952 [INFO] web.py line:16: DATA:'百度一下，你就知道'
+2018-11-24 23:38:04,960 [INFO] web.py line:17: REAL:'百度一下，你就知道'
+2018-11-24 23:38:04,967 [INFO] gentest.py line:108: Run the Step: 2|CHECK|通用-页面title is Pass
+2018-11-24 23:38:05,168 [INFO] gentest.py line:34: Run the Step: 1|EXECUTE|SNIPPET_001
+2018-11-24 23:38:05,169 [INFO] myrunner.py line:18: 测试通过
+
+2018-11-24 23:38:05,170 [INFO] myrunner.py line:13: test_BAIDU_005 (sweetest.gentest.TestClass)用例开始运行... 
+2018-11-24 23:38:05,170 [INFO] gentest.py line:34: Run the Step: 1|OPEN|通用-百度搜索链接
+2018-11-24 23:38:05,171 [WARNING] elements.py line:33: Page:通用 element:通用-百度搜索链接 is not exist
+2018-11-24 23:38:05,863 [INFO] gentest.py line:108: Run the Step: 1|OPEN|通用-百度搜索链接 is Pass
+2018-11-24 23:38:06,067 [INFO] gentest.py line:34: Run the Step: 2|CHECK|通用-页面title
+2018-11-24 23:38:06,067 [WARNING] elements.py line:33: Page:百度搜索页面 element:通用-页面title is not exist
+2018-11-24 23:38:06,068 [INFO] web.py line:16: DATA:'百度一下，你就知道'
+2018-11-24 23:38:06,076 [INFO] web.py line:17: REAL:'百度一下，你就知道'
+2018-11-24 23:38:06,084 [INFO] gentest.py line:108: Run the Step: 2|CHECK|通用-页面title is Pass
+2018-11-24 23:38:06,287 [INFO] gentest.py line:34: Run the Step: 1|EXECUTE|SNIPPET_001*2
+2018-11-24 23:38:06,289 [INFO] myrunner.py line:18: 测试通过
+
+2018-11-24 23:38:06,485 [INFO] myrunner.py line:108: ----------------------------------------------------------------------
+2018-11-24 23:38:06,485 [INFO] myrunner.py line:111: Ran 3 tests in 6.299s
+
+2018-11-24 23:38:06,485 [INFO] myrunner.py line:132: SUCCESS!
+
+2018-11-24 23:38:06,486 [INFO] myrunner.py line:142: 
+

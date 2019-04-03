@@ -1,0 +1,451 @@
+2019-03-26 18:00:03,030 [INFO] parse.py line:340: 从Excel中读取测试用例集:
+[
+    {
+        "id": "HOME_001",
+        "title": "打开百度",
+        "condition": "SETUP",
+        "designer": "",
+        "flag": "",
+        "result": "",
+        "remark": "",
+        "priority": "H",
+        "steps": [
+            {
+                "control": "",
+                "no": "1",
+                "keyword": "打开",
+                "page": "通用",
+                "element": "通用^百度搜索链接",
+                "data": "标签页名=百度搜索窗口",
+                "expected": "",
+                "output": "",
+                "score": "",
+                "remark": "",
+                "custom": ""
+            },
+            {
+                "control": "",
+                "no": "2",
+                "keyword": "检查",
+                "page": "百度搜索页面",
+                "element": "通用^页面title",
+                "data": "百度一下，你就知道",
+                "expected": "",
+                "output": "",
+                "score": "",
+                "remark": "",
+                "custom": ""
+            }
+        ]
+    },
+    {
+        "id": "BAIDU_001",
+        "title": "搜索：自动化测试",
+        "condition": "",
+        "designer": "",
+        "flag": "",
+        "result": "",
+        "remark": "",
+        "priority": "H",
+        "steps": [
+            {
+                "control": "",
+                "no": "1",
+                "keyword": "输入",
+                "page": "百度搜索页面",
+                "element": "百度搜索页面^搜索框",
+                "data": "text=自动化测试,text1=<Keys.ENTER>",
+                "expected": "",
+                "output": "",
+                "score": "",
+                "remark": "",
+                "custom": ""
+            },
+            {
+                "control": "",
+                "no": "2",
+                "keyword": "点击",
+                "page": "百度搜索页面",
+                "element": "百度搜索页面^搜索按钮",
+                "data": "",
+                "expected": "",
+                "output": "",
+                "score": "",
+                "remark": "",
+                "custom": ""
+            },
+            {
+                "control": "",
+                "no": "3",
+                "keyword": "检查",
+                "page": "百度搜索页面",
+                "element": "通用^页面title",
+                "data": "^自动化测试_百度搜索$",
+                "expected": "",
+                "output": "",
+                "score": "",
+                "remark": "检查的预期结果建议写在测试数据列，也可以写在预期结果列。如果没有 http 接口测试，可以删除预期结果列。",
+                "custom": ""
+            }
+        ]
+    },
+    {
+        "id": "SNIPPET_001",
+        "title": "搜索：<keywords>",
+        "condition": "SNIPPET",
+        "designer": "",
+        "flag": "",
+        "result": "",
+        "remark": "",
+        "priority": "M",
+        "steps": [
+            {
+                "control": "",
+                "no": "1",
+                "keyword": "输入",
+                "page": "百度搜索页面",
+                "element": "百度搜索页面^搜索框",
+                "data": "<keywords>",
+                "expected": "",
+                "output": "",
+                "score": "",
+                "remark": "",
+                "custom": ""
+            },
+            {
+                "control": "",
+                "no": "2",
+                "keyword": "点击",
+                "page": "百度搜索页面",
+                "element": "百度搜索页面^搜索按钮",
+                "data": "",
+                "expected": "",
+                "output": "",
+                "score": "",
+                "remark": "",
+                "custom": ""
+            },
+            {
+                "control": "",
+                "no": "3",
+                "keyword": "检查",
+                "page": "百度搜索页面",
+                "element": "通用^页面title",
+                "data": "<keywords>_百度搜索",
+                "expected": "",
+                "output": "",
+                "score": "",
+                "remark": "",
+                "custom": ""
+            },
+            {
+                "control": "",
+                "no": "4",
+                "keyword": "点击",
+                "page": "百度搜索页面",
+                "element": "百度搜索页面^搜索结果#1",
+                "data": "",
+                "expected": "",
+                "output": "",
+                "score": "",
+                "remark": "",
+                "custom": ""
+            },
+            {
+                "control": "",
+                "no": "5",
+                "keyword": "检查",
+                "page": "百度搜索页面",
+                "element": "通用^页面title",
+                "data": "<title>",
+                "expected": "",
+                "output": "",
+                "score": "",
+                "remark": "",
+                "custom": ""
+            }
+        ]
+    },
+    {
+        "id": "BAIDU_002",
+        "title": "搜索：搜狗",
+        "condition": "",
+        "designer": "",
+        "flag": "N",
+        "result": "",
+        "remark": "",
+        "priority": "M",
+        "steps": [
+            {
+                "control": "",
+                "no": "1",
+                "keyword": "执行",
+                "page": "用例片段",
+                "element": "SNIPPET_001",
+                "data": "keywords=搜狗,title=搜狗*",
+                "expected": "",
+                "output": "",
+                "score": "",
+                "remark": "",
+                "custom": ""
+            },
+            {
+                "control": "",
+                "no": "2",
+                "keyword": "点击",
+                "page": "百度搜索页面",
+                "element": "百度搜索页面^搜索结果#1",
+                "data": "",
+                "expected": "",
+                "output": "title=text",
+                "score": "",
+                "remark": "",
+                "custom": ""
+            },
+            {
+                "control": "",
+                "no": "3",
+                "keyword": "检查",
+                "page": "百度搜索页面",
+                "element": "通用^页面title",
+                "data": "<title>",
+                "expected": "",
+                "output": "",
+                "score": "",
+                "remark": "",
+                "custom": ""
+            }
+        ]
+    },
+    {
+        "id": "BAIDU_003",
+        "title": "搜索：知乎",
+        "condition": "",
+        "designer": "",
+        "flag": "N",
+        "result": "",
+        "remark": "",
+        "priority": "M",
+        "steps": [
+            {
+                "control": "",
+                "no": "1",
+                "keyword": "执行",
+                "page": "用例片段",
+                "element": "SNIPPET_001",
+                "data": "keywords=知乎,title=知乎*",
+                "expected": "",
+                "output": "",
+                "score": "",
+                "remark": "",
+                "custom": ""
+            },
+            {
+                "control": "^",
+                "no": "^2",
+                "keyword": "检查",
+                "page": "百度搜索页面",
+                "element": "通用^link#注册机构号",
+                "data": "",
+                "expected": "",
+                "output": "",
+                "score": "",
+                "remark": "",
+                "custom": ""
+            },
+            {
+                "control": ">",
+                "no": ">3",
+                "keyword": "点击",
+                "page": "百度搜索页面",
+                "element": "通用^button#注册",
+                "data": "",
+                "expected": "",
+                "output": "",
+                "score": "",
+                "remark": "",
+                "custom": ""
+            },
+            {
+                "control": "<",
+                "no": "<4",
+                "keyword": "点击",
+                "page": "百度搜索页面",
+                "element": "通用^button#提问",
+                "data": "",
+                "expected": "",
+                "output": "",
+                "score": "",
+                "remark": "",
+                "custom": ""
+            }
+        ]
+    },
+    {
+        "id": "BAIDU_004",
+        "title": "搜索：雪球行情中心",
+        "condition": "",
+        "designer": "",
+        "flag": "N",
+        "result": "",
+        "remark": "",
+        "priority": "M",
+        "steps": [
+            {
+                "control": "",
+                "no": "1",
+                "keyword": "执行",
+                "page": "用例片段",
+                "element": "SNIPPET_001",
+                "data": "keywords=雪球行情中心,title=行情中心*",
+                "expected": "",
+                "output": "",
+                "score": "",
+                "remark": "",
+                "custom": ""
+            },
+            {
+                "control": "",
+                "no": "2",
+                "keyword": "点击",
+                "page": "百度搜索页面",
+                "element": "百度搜索页面^搜索结果#1",
+                "data": "",
+                "expected": "",
+                "output": "title=text",
+                "score": "",
+                "remark": "",
+                "custom": ""
+            },
+            {
+                "control": "",
+                "no": "3",
+                "keyword": "检查",
+                "page": "百度搜索页面",
+                "element": "通用^页面title",
+                "data": "行情中心*",
+                "expected": "",
+                "output": "",
+                "score": "",
+                "remark": "",
+                "custom": ""
+            },
+            {
+                "control": "",
+                "no": "4",
+                "keyword": "点击",
+                "page": "雪球行情中心",
+                "element": "雪球行情中心^新股预告表格#2#1",
+                "data": "",
+                "expected": "",
+                "output": "name=text",
+                "score": "",
+                "remark": "",
+                "custom": ""
+            },
+            {
+                "control": "",
+                "no": "5",
+                "keyword": "检查",
+                "page": "雪球行情中心",
+                "element": "通用^页面title",
+                "data": "*<name>",
+                "expected": "",
+                "output": "",
+                "score": "",
+                "remark": "",
+                "custom": ""
+            }
+        ]
+    },
+    {
+        "id": "BAIDU_005",
+        "title": "搜索：<测试数据>",
+        "condition": "",
+        "designer": "",
+        "flag": "N",
+        "result": "",
+        "remark": "",
+        "priority": "M",
+        "steps": [
+            {
+                "control": "",
+                "no": "1",
+                "keyword": "执行",
+                "page": "用例片段",
+                "element": "SNIPPET_001*2",
+                "data": "keywords=<_keywords>, title=<_title>",
+                "expected": "",
+                "output": "",
+                "score": "",
+                "remark": "",
+                "custom": ""
+            }
+        ]
+    },
+    {
+        "id": "SQL",
+        "title": "SQL",
+        "condition": "",
+        "designer": "",
+        "flag": "N",
+        "result": "",
+        "remark": "",
+        "priority": "M",
+        "steps": [
+            {
+                "control": "",
+                "no": "1",
+                "keyword": "SQL",
+                "page": "Oracle",
+                "element": "Oracle^查询User表#STR_GSYL",
+                "data": "STKID=000590",
+                "expected": "",
+                "output": "stkpoolid=STKPOOLID,stkid=STKID",
+                "score": "",
+                "remark": "",
+                "custom": ""
+            },
+            {
+                "control": "",
+                "no": "2",
+                "keyword": "SQL",
+                "page": "Oracle",
+                "element": "通用^sql#select STKPOOLID,STKID,STKNAME from ir_stkpool_member_etl where STKPOOLID='<stkpoolid>'",
+                "data": "STKID=<stkid>",
+                "expected": "",
+                "output": "",
+                "score": "",
+                "remark": "",
+                "custom": ""
+            }
+        ]
+    }
+]
+2019-03-26 18:00:03,030 [INFO] parse.py line:341: 从Excel中读取测试用例集成功！
+2019-03-26 18:00:04,653 [INFO] myrunner.py line:14: test_BAIDU_001 (sweetest.lib.gentest.TestClass)用例开始运行... 
+2019-03-26 18:00:04,654 [INFO] gentest.py line:33: 执行测试步骤: 1|OPEN|通用^百度搜索链接
+2019-03-26 18:00:05,617 [INFO] gentest.py line:108: 执行测试步骤通过: 1|OPEN|通用^百度搜索链接
+2019-03-26 18:00:05,818 [INFO] gentest.py line:33: 执行测试步骤: 2|CHECK|通用^页面title
+2019-03-26 18:00:05,823 [INFO] web.py line:57: DATA:'百度一下，你就知道'
+2019-03-26 18:00:05,823 [INFO] web.py line:58: REAL:'百度一下，你就知道'
+2019-03-26 18:00:05,823 [INFO] gentest.py line:108: 执行测试步骤通过: 2|CHECK|通用^页面title
+2019-03-26 18:00:06,024 [INFO] gentest.py line:33: 执行测试步骤: 1|INPUT|百度搜索页面^搜索框
+2019-03-26 18:00:07,412 [INFO] gentest.py line:108: 执行测试步骤通过: 1|INPUT|百度搜索页面^搜索框
+2019-03-26 18:00:07,613 [INFO] gentest.py line:33: 执行测试步骤: 2|CLICK|百度搜索页面^搜索按钮
+2019-03-26 18:00:08,207 [INFO] gentest.py line:108: 执行测试步骤通过: 2|CLICK|百度搜索页面^搜索按钮
+2019-03-26 18:00:08,408 [INFO] gentest.py line:33: 执行测试步骤: 3|CHECK|通用^页面title
+2019-03-26 18:00:08,415 [INFO] web.py line:57: DATA:'^自动化测试_百度搜索$'
+2019-03-26 18:00:08,416 [INFO] web.py line:58: REAL:'自动化测试_百度搜索'
+2019-03-26 18:00:08,416 [INFO] gentest.py line:108: 执行测试步骤通过: 3|CHECK|通用^页面title
+2019-03-26 18:00:08,616 [INFO] myrunner.py line:19: 测试通过
+
+2019-03-26 18:00:08,734 [INFO] myrunner.py line:109: ----------------------------------------------------------------------
+2019-03-26 18:00:08,735 [INFO] myrunner.py line:112: Ran 1 test in 4.084s
+
+2019-03-26 18:00:08,735 [INFO] myrunner.py line:135: SUCCESS!
+
+2019-03-26 18:00:08,735 [INFO] myrunner.py line:145: 
+
+2019-03-26 18:00:14,444 [INFO] mail.py line:131: ***邮件发送成功！***
+2019-03-26 18:00:14,444 [INFO] dingtalk.py line:51: markdown类型：{'msgtype': 'markdown', 'markdown': {'title': '自动化测试报告', 'text': '# ** 自动化测试报告 **\n * 开始执行时间：**2019-03-26 18:00:03** ;\n* 测试用例总数：**6** ;\n* 测试通过：**1** ;\n* 测试失败：**0** ;\n* 测试跳过：**5** ;\n* 运行时间：**4.08s** 。 \n> ![自动化](http://www.11506.com/uploadfile/2018/1024/20181024102305336.jpg)\n'}, 'at': {}}
