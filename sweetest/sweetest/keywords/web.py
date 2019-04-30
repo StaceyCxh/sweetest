@@ -1,3 +1,4 @@
+import re
 from selenium.webdriver.common.action_chains import ActionChains
 from time import sleep
 from sweetest.globals import g
@@ -5,7 +6,8 @@ from sweetest.lib.elements import get_elem
 from sweetest.lib.windows import w
 from sweetest.lib.locator import locating_element
 from sweetest.lib.log import logger
-from sweetest.lib.utility import str2int, str2float
+from sweetest.lib.utility import str2int, str2float, replace
+from selenium.webdriver.common.keys import Keys
 
 
 class Common():
@@ -41,7 +43,7 @@ def open(step):
         # 判断是否打开了新的窗口，并将新窗口添加到所有窗口列表里
         all_handles = g.driver.window_handles
         for handle in all_handles:
-            if handle not in w.windows.values():
+            if handle not in w.pages.values():
                 w.register(step, handle)
     else:
         if step['data'].get('打开方式', '') == '新浏览器' or step['data'].get('mode', '').lower() == 'browser':
@@ -119,6 +121,10 @@ def check(step):
         # 获取元素其他属性
         get_Ouput(step, element_location)
 
+    for k in ('新窗口', '标签页名', 'tabname'):
+        if step['data'].get(k):
+            w.switch_window(step['data'].get(k))
+
 
 def notcheck(step):
     data = step['data']
@@ -142,8 +148,30 @@ def get_Ouput(step, element_location):
                 g.var[key] = element_location.text[:-3]
             else:
                 g.var[key] = element_location.text
+        elif re.findall(r'<(.*?)>', output[key]):
+            g.var[key] = replace(output[key])
         else:
             g.var[key] = element_location.get_attribute(output[key])
+
+
+def judge(step):
+    data = step['data']
+    element = step['element']
+
+    try:
+        element_location = locating_element(element)
+        flag = 1
+    except:
+        flag = 2
+
+    logger.info('REAL:%s' % repr(flag))
+
+    if step['data'].get('存在', '') == '否' or step['data'].get('judge', '').lower() == 'no':
+        logger.info('DATA:%s' % repr(2))
+        assert flag == 2
+    else:
+        logger.info('DATA:%s' % repr(1))
+        assert flag == 1
 
 
 def input(step):
@@ -154,7 +182,9 @@ def input(step):
     if step['data'].get('清除文本', '') == '否' or step['data'].get('clear', '').lower() == 'no':
         pass
     else:
-        element_location.clear()
+        #element_location.send_keys(Keys.BACK_SPACE)
+        element_location.send_keys(Keys.CONTROL, "a")
+        element_location.send_keys(Keys.DELETE)
 
     for key in data:
         if key.startswith('text'):
@@ -163,6 +193,8 @@ def input(step):
             elif element_location:
                 element_location.send_keys(data[key])
             sleep(0.5)
+
+    get_Ouput(step, element_location)
 
 
 def click(step):
@@ -181,11 +213,19 @@ def click(step):
     # 获取元素其他属性
     get_Ouput(step, element_location)
 
-    # 判断是否打开了新的窗口，并将新窗口添加到所有窗口列表里
+    # 判断是否打开了新的窗口，并将新窗口添加到pages映射表中
     all_handles = g.driver.window_handles
     for handle in all_handles:
-        if handle not in w.windows.values():
+        if handle not in w.pages.values():
             w.register(step, handle)
+
+
+def obtain(step):
+    element = step['element']
+    element_location = locating_element(element)
+
+    # 获取元素其他属性
+    get_Ouput(step, element_location)
 
 
 def select(step):
@@ -196,9 +236,13 @@ def move(step):
     actions = ActionChains(g.driver)
     element = step['element']
     el = locating_element(element)
+
     actions.move_to_element(el)
     actions.perform()
     sleep(0.5)
+
+    # 获取元素其他属性
+    get_Ouput(step, el)
 
 
 def context_click(step):
@@ -244,7 +288,7 @@ def swipe(step):
 
 def script(step):
     element = step['element']
-    el, value =get_elem(element)
+    el, value = get_elem(element)
     g.driver.execute_script(value)
 
 
@@ -284,3 +328,8 @@ def upload(step):
 
 def refresh(step):
     g.driver.refresh()
+
+
+def switch(step):
+    data = step['data']
+    w.switch_tab(data['text'])

@@ -70,9 +70,9 @@ class AutoTest(object):
         # 生成html格式的报告
         htmlreport()
         # 发送邮件
-        Mail().sendmail()
+        # Mail().sendmail()
         # 发送钉钉群消息
-        DingTalk().send_markdown()
+        # DingTalk().send_markdown()
 
     @staticmethod
     def ready(sheet_name):
@@ -111,8 +111,7 @@ class AutoTest(object):
         '''
 
         # 1.从 Excel 获取、解析测试用例集
-        g.testsuite, g.base_testcase, g.end_testcase, g.setup_testcase, g.teardown_testcase, g.normal_testcase = \
-            parse_suite(sheet_name)
+        parse_suite(sheet_name)
         # 2.从 Csv 获取、解析全局变量
         parse_var(sheet_name)
 
@@ -152,7 +151,7 @@ class AutoTest(object):
           }
          ...]
         '''
-        for case in g.normal_testcase:
+        for case in g.normal_testcases:
             suite = {}
             suite['suiteName'] = suiteName
             suite['id'] = case['id']

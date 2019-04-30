@@ -94,7 +94,10 @@ def replace(data):
 
     # 带有运算符，则进行表达式运算
     if '+' in new_data or '-' in new_data or '*' in new_data or '%' in new_data:
-        new_data = str(expression2value(middle2after(new_data)))
+        expression = middle2after(new_data)
+        value = (''.join([str(x) for x in expression]))
+        if new_data != value:
+            new_data = str(expression2value(middle2after(new_data)))
 
     # 恢复原先的转义字符
     new_data = new_data.replace(addition, '+').replace(subtraction, '-').replace(multiplication, '*').\
@@ -158,40 +161,35 @@ def middle2after(data):
     ops = []
     # 遍历每个字符
     for i, s in enumerate(data):
-        # 若字符是运算符
-        if s in ['+', '-', '*', '/']:
-            # 且运算符左边的字符是数字、右边的字符是数字或左括号
-            if is_number(data[i-1]) and (is_number(data[i+1]) or data[i+1]=='('):
-                while len(ops) >= 0:
-                    # 运算符栈为空，则运算符直接放入
-                    if len(ops) == 0:
-                        ops.append(s)
-                        break
-                    # 运算符栈非空，比较优先级
-                    op = ops.pop()
-                    # 在括号内或优先级高，则入运算符栈
-                    if op == '(' or ops_pri[s] > ops_pri[op]:
-                        ops.append(op)
-                        ops.append(s)
-                        break
-                    # 否则入表达式栈
-                    else:
-                        expression.append(op)
-            # 运算符左或右非数字，说明直接当字符，则直接入表达式栈
-            else:
-                expression.append(s)
+        # 若字符是运算符, 且运算符左边的字符是数字、右边的字符是数字或左括号
+        if s in ['+', '-', '*', '/'] and (is_number(data[i-1]) and (is_number(data[i+1]) or data[i+1]=='(')):
+            while len(ops) >= 0:
+                # 运算符栈为空，则运算符直接放入
+                if len(ops) == 0:
+                    ops.append(s)
+                    break
+                # 运算符栈非空，比较优先级
+                op = ops.pop()
+                # 在括号内或优先级高，则入运算符栈
+                if op == '(' or ops_pri[s] > ops_pri[op]:
+                    ops.append(op)
+                    ops.append(s)
+                    break
+                # 否则入表达式栈
+                else:
+                    expression.append(op)
         # 左括号，直接入运算符栈
-        elif s == '(':
+        elif s == '(' and (is_number(data[i-1]) and is_number(data[i+1])):
             ops.append(s)
         # 右括号，循环出运算符栈、入表达式栈，直到遇左括号为止
-        elif s == ')':
+        elif s == ')' and (is_number(data[i-1]) and is_number(data[i+1])):
             while len(ops) > 0:
                 op = ops.pop()
                 if op == '(':
                     break
                 else:
                     expression.append(op)
-        # 数值，直接入表达式栈
+        # 数值或无需做运算的计算符，直接入表达式栈
         else:
             expression.append(s)
 

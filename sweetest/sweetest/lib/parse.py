@@ -20,12 +20,12 @@ def analyze_record(record, data, d, i):
     :return:
     '''
     k = data[0][i]
-    # 若record中未有值
+    # 若record中已有值
     if record.get(k, None):
         if isinstance(record[k], str):
             record[k] = [record[k]]
         record[k].append(d[i])
-    # 若record中已有值
+    # 若record中未有值
     else:
         record[k] = d[i]
     return record
@@ -302,11 +302,9 @@ def parse_suite(sheet_name):
     # 从excel文件中获取、转换测试用例集
     testsuite = import_suite(sheet_name)
     # 将测试用例解析为可执行参数
-    testsuite = analyze_suite(testsuite)
+    g.testsuite = analyze_suite(testsuite)
     # 将测试用例集分解为base、end、setup、teardown、normal、snippet 6类用例
-    base_testcase, end_testcase, setup_testcase, teardown_testcase, normal_testcase = decompose_suite(testsuite)
-
-    return testsuite, base_testcase, end_testcase, setup_testcase, teardown_testcase, normal_testcase
+    decompose_suite(testsuite)
 
 
 def parse_var(sheet_name):
@@ -412,27 +410,27 @@ def decompose_suite(testsuite):
     '''
 
     # base 在整个测试套件前执行一次
-    base_testcase = {}
+    g.base_testcase = {}
     # end 在整个测试套件后执行一次
-    end_testcase = {}
+    g.end_testcase = {}
     # setup 在每个测试用例执行之前执行一次
-    setup_testcase = {}
+    g.setup_testcase = {}
     # teardown 在每个测试用例执行之后执行一次
-    teardown_testcase = {}
+    g.teardown_testcase = {}
     # 普通测试用例
-    normal_testcases = []
+    g.normal_testcases = []
     for testcase in testsuite:
         if testcase['condition'].lower() == 'base':
-            base_testcase = testcase
+            g.base_testcase = testcase
             testcase['flag'] = 'N'
         elif testcase['condition'].lower() == 'end':
-            end_testcase = testcase
+            g.end_testcase = testcase
             testcase['flag'] = 'N'
         elif testcase['condition'].lower() == 'setup':
-            setup_testcase = testcase
+            g.setup_testcase = testcase
             testcase['flag'] = 'N'
         elif testcase['condition'].lower() == 'teardown':
-            teardown_testcase = testcase
+            g.teardown_testcase = testcase
             testcase['flag'] = 'N'
         elif testcase['condition'].lower() == 'snippet':
             g.snippet[testcase['id']] = testcase
@@ -454,7 +452,7 @@ def decompose_suite(testsuite):
                     g.results['testSkip'] += 1
                     break
             if testcase['flag'] != 'N':
-                normal_testcases.append(testcase)
+                g.normal_testcases.append(testcase)
         # 非自动化测试用例
         else:
             testcase['result'] = 'Skip'
@@ -464,5 +462,3 @@ def decompose_suite(testsuite):
             g.results['testAll'] += 1
             # 跳过用例数统计
             g.results['testSkip'] += 1
-
-    return base_testcase, end_testcase, setup_testcase, teardown_testcase, normal_testcases

@@ -55,6 +55,7 @@ class _Factory(object):
                             # 切换 frame 处理，支持变量替换
                             frame = variable2value(step['custom'])
                             w.switch_frame(frame)
+                            sleep(2)
 
                         # 根据关键字调用关键字实现
                         getattr(web, step['keyword'].lower())(step)
@@ -214,7 +215,7 @@ def gentest():
         create(name, g.teardown_testcase)
         setattr(TestClass, name, eval(name))
 
-    for case in g.normal_testcase:
+    for case in g.normal_testcases:
         name = 'test_' + case.get('id')
         create(name, case)
         setattr(TestClass, name, eval(name))

@@ -3,7 +3,9 @@ from sweetest.globals import g
 from sweetest.lib.elements import get_elem
 from sweetest.lib.log import logger
 from sweetest.lib.parse import data_format
+from sweetest.lib.utility import replace
 import sweetest.lib.gentest
+import re
 import json
 
 
@@ -35,7 +37,7 @@ def execute(step):
     key = g.snippet[element].get('id')
 
     for k, v in step['data'].items():
-        g.var[k] = v
+        g.var[k] = replace(v)
 
     # 初始化测试片段执行结果
     result = 'Pass'
@@ -43,13 +45,13 @@ def execute(step):
         for t in range(times):
             name = key+'_1'
             g.snippet[name]=deepcopy(g.snippet[key])
-            sweetest.gentest.genSnippest(name)
+            sweetest.lib.gentest.genSnippest(name)
             try:
-                getattr(sweetest.gentest.TestClass, name)()
+                getattr(sweetest.lib.gentest.TestClass, name)()
             except:
                 result = 'Fail'
 
-            delattr(sweetest.gentest.TestClass, name)
+            delattr(sweetest.lib.gentest.TestClass, name)
 
             # 用例片段执行失败时
             if result != 'Pass':
@@ -114,3 +116,20 @@ def sql(step):
         logger.info('output: %s' % repr(output))
         for key in output:
             g.var[key] = result[output[key]]
+
+
+def call(step):
+    output = step['output']
+    if output:
+        logger.info('Call function: %s' % repr(output))
+        for key in output:
+            value = output[key].split('.')
+            s = 'from sweetest.lib' + ' import ' + value[0].strip()
+            exec(s)
+            p = re.compile(r'[(](.*?)[)]', re.S)
+            param = re.findall(p, value[1])[0]
+            if len(param):
+                g.var[key] = getattr(eval(value[0].strip()), value[1].split('(')[0].strip())(param.split(','))
+            else:
+                g.var[key] = getattr(eval(value[0].strip()), value[1].split('(')[0].strip())()
+            logger.info('g.var[' + key +']=' + g.var[key])

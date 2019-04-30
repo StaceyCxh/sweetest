@@ -29,13 +29,19 @@ web_keywords = {
     '上传文件': 'UPLOAD',
     'UPLOAD': 'UPLOAD',
     '刷新': 'REFRESH',
-    'REFRESH': 'REFRESH'
+    'REFRESH': 'REFRESH',
+    '获取': 'OBTAIN',
+    'OBTAIN': 'OBTAIN',
+    '判断': 'JUDGE',
+    'JUDGE': 'JUDGE'
 }
 # 通用关键字
 common_keywords = {
     '执行': 'EXECUTE',
     'EXECUTE': 'EXECUTE',
-    'SQL': 'SQL'
+    'SQL': 'SQL',
+    '调用': 'CALL',
+    'CALL': 'CALL'
 }
 # http关键字
 http_keywords = {

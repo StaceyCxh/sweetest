@@ -44,6 +44,7 @@ class Global(object):
                 prefs["profile.password_manager_enabled"] = False
                 options.add_experimental_option("prefs", prefs)
                 options.add_argument('disable-infobars')
+                options.add_argument('--ignore-certificate-errors')
                 options.add_experimental_option(
                     "excludeSwitches", ["ignore-certificate-errors"])
                 self.driver = webdriver.Chrome(chrome_options=options)
@@ -66,10 +67,10 @@ class Global(object):
 g = Global()
 
 # 项目名称，和测试用例、页面元素表文件名称中的项目名称必须一致
-g.project_name = 'Baidu'
+g.project_name = 'UT'
 
 # 单 sheet 页面模式
-g.sheet_name = 'baidu'
+g.sheet_name = 'Order'
 
 # sheet 页面匹配模式，支持首部或结尾带*，表示模糊匹配
 # g.sheet_name = 'TestCase*'

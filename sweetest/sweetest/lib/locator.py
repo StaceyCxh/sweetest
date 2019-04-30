@@ -13,7 +13,7 @@ def locating_element(element, action=''):
         el, value = get_elem(element)
     except:
         logger.exception(
-            'Locating the element:%s is Failure, no element in define' % element)
+            '定位元素:%s 失败！' % element)
         raise Exception('Locating the element:%s is Failure, no element in define' % element)
 
     wait = WebDriverWait(g.driver, element_wait_timeout)
@@ -26,6 +26,16 @@ def locating_element(element, action=''):
     else:
         el_location = wait.until(EC.presence_of_element_located(
             (getattr(By, el['by'].upper()), value)))
+
+    try:
+        if g.browserName.lower() in ('chrome'):
+            g.driver.execute_script(
+                "arguments[0].scrollIntoViewIfNeeded(true)", el_location)
+        else:
+            g.driver.execute_script(
+                "arguments[0].scrollIntoView(false)", el_location)
+    except:
+        pass
 
     return el_location
 
