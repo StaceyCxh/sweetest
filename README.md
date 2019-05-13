@@ -38,27 +38,27 @@
 	</tr>
 	<tr>
 		<td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" height="46" align="center" valign=middle><font color="#000000">page/页面</font></td>
-		<td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="left" valign=middle><font color="#000000">元素所在页面<br>所有页面通用的元素（如title等 ）可放于页面“通用”下面</font></td>
+		<td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="left" valign=middle><font color="#000000">必填字段<br>元素所在页面<br>所有页面通用的元素（如title等 ）可放于页面“通用”下面</font></td>
 	</tr>
 	<tr>
 		<td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" height="24" align="center" valign=middle><font color="#000000">element/元素</font></td>
-		<td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="left" valign=middle><font color="#000000">需定位进行操作的元素，不同page下的元素可同名</font></td>
+		<td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="left" valign=middle><font color="#000000">必填字段<br>需定位进行操作的元素，不同page下的元素可同名</font></td>
 	</tr>
 	<tr>
 		<td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" height="24" align="center" valign=middle><font color="#000000">by/定位方式</font></td>
-		<td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="left" valign=middle><font color="#000000">定位方式，常用的有id、name、xpath等</font></td>
+		<td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="left" valign=middle><font color="#000000">必填字段<br>定位方式，常用的有id、name、xpath等</font></td>
 	</tr>
 	<tr>
 		<td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" height="24" align="center" valign=middle><font color="#000000">value/定位值</font></td>
-		<td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="left" valign=middle><font color="#000000">定位值</font></td>
+		<td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="left" valign=middle><font color="#000000">必填字段<br>定位值</font></td>
 	</tr>
 	<tr>
 		<td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" height="24" align="center" valign=middle><font color="#000000">custom/自定义</font></td>
-		<td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="left" valign=middle><font color="#000000">若元素在frame/iframe中，则填写相应的frame id或frame name</font></td>
+		<td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="left" valign=middle><font color="#000000">选填字段<br>若元素在frame/iframe中，则填写相应的frame id或frame name</font></td>
 	</tr>
 	<tr>
 		<td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" height="24" align="center" valign=middle><font color="#000000">remark/备注</font></td>
-		<td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="left" valign=middle><font color="#000000">注释说明</font></td>
+		<td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="left" valign=middle><font color="#000000">选填字段<br>注释说明</font></td>
 	</tr>
 </table>
 
@@ -107,6 +107,138 @@
 
 ## 五、测试用例
 
+在excel中书写测试用例，将测试用例与代码分隔开，方便维护，可读性高。
+
+excel文件中每个表单表示1个测试用例集，表单名sheet_name是测试用例集名称（test_suite）; 
+执行哪些测试用例集，需要在globals.py中指定g.sheet_name;
+
+- sheet_name是str字符串，支持多种匹配方式
+    - ^放开头，表示以此值开头；
+    - $放结尾，表示以此值结尾；
+    - *放开头或结尾，表示模糊匹配；
+    - 非^ *开头，非$ *结尾，表示精确匹配；
+- sheet_name是list列表，则excel表单名在列表中的用例都需要执行；
+
+![image](https://github.com/StaceyCxh/sweetest/blob/master/sweetest/img/%E6%B5%8B%E8%AF%95%E7%94%A8%E4%BE%8B.png)
+
+<table cellspacing="0" border="0">
+	<colgroup width="143"></colgroup>
+	<colgroup width="482"></colgroup>
+	<tr>
+		<td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" height="18" align="center" valign=middle bgcolor="#ADC5E7"><font color="#000000">字段</font></td>
+		<td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="center" valign=middle bgcolor="#ADC5E7"><font color="#000000">说明</font></td>
+	</tr>
+	<tr>
+		<td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" height="46" align="center" valign=middle><font color="#000000">id/用例编号</font></td>
+		<td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="left" valign=middle><font color="#000000">必填字段<br>用例/用例片段的id</font></td>
+	</tr>
+	<tr>
+		<td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" height="46" align="center" valign=middle><font color="#000000">title/用例标题</font></td>
+		<td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="left" valign=middle><font color="#000000">必填字段<br>用例/用例片段的名称</font></td>
+	</tr>
+	<tr>
+		<td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" height="46" align="center" valign=middle><font color="#000000">condition/前置条件</font></td>
+		<td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="left" valign=middle><font color="#000000">选填字段<br>取值：base、end、setup、teardown、snippet</font></td>
+	</tr>
+	<tr>
+		<td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" height="46" align="center" valign=middle><font color="#000000">step/测试步骤</font></td>
+		<td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="left" valign=middle><font color="#000000">必填字段<br>测试执行步骤的编号 <br>所编号前可用逻辑控制符号，取值：^、&gt;、&lt;</font></td>
+	</tr>
+	<tr>
+		<td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" height="46" align="center" valign=middle><font color="#000000">keyword/操作</font></td>
+		<td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="left" valign=middle><font color="#000000">必填字段<br>测试操作/关键字</font></td>
+	</tr>
+	<tr>
+		<td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" height="46" align="center" valign=middle><font color="#000000">page/页面</font></td>
+		<td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="left" valign=middle><font color="#000000">选填字段<br>测试元素所在页面<br>为空时，自动沿用上个步骤的page值</font></td>
+	</tr>
+	<tr>
+		<td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" height="24" align="center" valign=middle><font color="#000000">element/元素</font></td>
+		<td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="left" valign=middle><font color="#000000">必填字段<br>需进行操作的元素，不同page下的元素可同名</font></td>
+	</tr>
+	<tr>
+		<td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" height="24" align="center" valign=middle><font color="#000000">data/测试数据</font></td>
+		<td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="left" valign=middle><font color="#000000">选填字段<br>测试数据，用键值对表示<br>多个data用 英文逗号 或 双英文逗号 隔开</font></td>
+	</tr>
+	<tr>
+		<td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" height="24" align="center" valign=middle><font color="#000000">expected/预期结果</font></td>
+		<td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="left" valign=middle><font color="#000000">选填字段<br>预期结果，用键值对表示<br>为空时，则data列充当expected的内容</font></td>
+	</tr>
+	<tr>
+		<td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" height="24" align="center" valign=middle><font color="#000000">output/输出数据</font></td>
+		<td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="left" valign=middle><font color="#000000">选填字段<br>输出数据，用键值对表示</font></td>
+	</tr>
+	<tr>
+		<td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" height="24" align="center" valign=middle><font color="#000000">priority/优先级</font></td>
+		<td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="left" valign=middle><font color="#000000">选填字段<br>测试用例的优先级，取值：H/高、M/中、L/低</font></td>
+	</tr>
+	<tr>
+		<td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" height="24" align="center" valign=middle><font color="#000000">designer/设计者</font></td>
+		<td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="left" valign=middle><font color="#000000">选填字段<br>测试用例设计者名称</font></td>
+	</tr>
+	<tr>
+		<td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" height="24" align="center" valign=middle><font color="#000000">flag/自动化标记</font></td>
+		<td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="left" valign=middle><font color="#000000">选填字段<br>标记是否是自动化测试用例<br>值为Y，表示是自动化测试用例<br>值为N，表示不是自动化测试用例<br>值为空，默认为自动化测试用例</font></td>
+	</tr>
+	<tr>
+		<td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" height="24" align="center" valign=middle><font color="#000000">score/步骤结果</font></td>
+		<td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="left" valign=middle><font color="#000000">选填字段<br>测试步骤的执行结果记录</font></td>
+	</tr>
+	<tr>
+		<td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" height="24" align="center" valign=middle><font color="#000000">result/用例结果</font></td>
+		<td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="left" valign=middle><font color="#000000">选填字段<br>测试用例的执行结果记录</font></td>
+	</tr>
+	<tr>
+		<td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" height="24" align="center" valign=middle><font color="#000000">remark/备注</font></td>
+		<td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="left" valign=middle><font color="#000000">选填字段<br>注释说明</font></td>
+	</tr>
+</table>
+
+- 前置条件 / condition
+    - base：相当于setUpClass，每个用例集前执行一次; 
+    - end：相当于tearDownClass，每个用例集后执行一次; 
+    - setup：相当于setUp，每个用例前执行一次; 
+    - teardown：相当于tearDown，每个用例后执行一次; 
+    - snippet：共用的用例片段，可供调用; 
+
+- 测试步骤 / step
+    - ^：相当于if语句; 
+    - <：相当于then语句; 
+    - \>：相当于else语句; 
+      
+- 测试数据 / data
+    - 可为空; 
+    - data中以=分隔键值对; 
+    - 多个data用 英文逗号 或 双英文逗号 隔开; 
+    - 若data中本身带有英文逗号，需转义\; 
+    - 若data中没有=号，直接赋值给text; 
+    - data中可带变量，用<>括起部分为变量；
+    - data中直接带+、-、*、/、%、(、)、<、>，即运算符 和 变量定界符，需转义；
+    - data中+、-、*、/、%、(、)左边或右边字符 非数字，也可不转义；
+    - data中可以带按键操作，如：text=<Keys.ENTER>、<Keys.CONTROL\,'a'>；
+    - data中可带运算表达式，代码自动执行计算
+    
+- 预期结果 / expected
+    - 测试数据(data)为空时，可以将预期结果（expected）放在测试数据(data)列
+    - 满足测试数据(data)的一切规则
+    - 支持多种匹配方式
+        - ^放开头，表示以此值开头
+        - $放结尾，表示以此值结尾
+        - *放开头或结尾，表示模糊匹配
+        - 非^ *开头，非$ *结尾，表示精确匹配
+        
+- 输出数据 / output
+    - 以=分隔键值对，key是自定义的变量，value是具体值; 
+    - 若value为text，则取element的text值赋值给变量key；
+    - value中可带变量，用<>括起部分为变量；
+    - 若value中带变量，则将替换变量后的value值赋值给变量key；
+    - 若value中不带变量、且不为text，则取element对应的属性值赋值给变量key；
+    
+- 元素 / element
+    - 多个element用 | 隔开，比如拖拽操作涉及2元素；
+    - element中可带变量，用<>括起部分为变量；
+    - element中带#号，表示写用例时，后面需带元素定位值；
+    - element可为用例片段名称；
 
 
 ## 六、关键字 / keyword / 操作
@@ -552,8 +684,10 @@
 - message / 对话框 关键字，对应的page=通用，element取值：确认、取消、关闭、输入
 - prompt弹窗的输入操作，会自动点击确认按钮，故无需再写确认步骤；
 
+## 七、外部数据文件
 
-
-
-
-
+- csv格式文件；
+- 可存放全局变量；
+- 最后字段!=flag：变量值全部读取使用；
+- 最后字段=flag：本次测试读取flag!=Y的变量值使用，读取值后置flag=Y，下次自动化测试时不再使用该值，适用于数据需唯一的场景；需及时维护添加数据；
+- 若最后字段=flag且不存在flay!=Y的记录，则本次测试没有数据可以使用，用例执行会失败；
