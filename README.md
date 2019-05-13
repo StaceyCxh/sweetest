@@ -20,6 +20,7 @@
 - 报告模式：excel、html
 - 日志模式：log
 - 错误截图：png
+- 消息通知：钉钉群消息、邮件
 
 ## 三、目录结构
 ![image](https://github.com/StaceyCxh/sweetest/blob/master/sweetest/img/%E7%9B%AE%E5%BD%95%E7%BB%93%E6%9E%84.png)
