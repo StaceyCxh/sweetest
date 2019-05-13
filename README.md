@@ -25,6 +25,7 @@
     - 在element/XX-Elements.xlsx文件中书写测试页面中各测试元素的定位信息；
     - 在testcase/XX-TestCase.xlsx文件中书写测试用例；
     - 若有全局变量，可保存在data/XX-YY.csv文件中；
+    - 可在sweetest/config.py文件中修改邮件及钉钉相关配置信息；
     - 修改sweetest/globals.py文件中的g.project_name(项目名称)、g.sheet_name（本次需执行的测试用例集）、g.conditions(用例筛选条件)及环境信息（平台、浏览器）; 
     - 运行start.py启动本次自动化测试；
 
