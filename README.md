@@ -21,6 +21,12 @@
 - 日志模式：log
 - 错误截图：png
 - 消息通知：钉钉群消息、邮件
+- 快速使用：
+    - 在element/XX-Elements.xlsx文件中书写测试页面中各测试元素的定位信息；
+    - 在testcase/XX-TestCase.xlsx文件中书写测试用例；
+    - 若有全局变量，可保存在data/XX-YY.csv文件中；
+    - 修改sweetest/globals.py文件中的g.project_name(项目名称)、g.sheet_name（本次需执行的测试用例集）、g.conditions(用例筛选条件)及环境信息（平台、浏览器）; 
+    - 运行start.py启动本次自动化测试；
 
 ## 三、目录结构
 ![image](https://github.com/StaceyCxh/sweetest/blob/master/sweetest/img/%E7%9B%AE%E5%BD%95%E7%BB%93%E6%9E%84.png)
