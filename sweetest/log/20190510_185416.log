@@ -1,0 +1,2728 @@
+2019-05-10 18:54:17,676 [INFO] parse.py line:338: 从Excel中读取测试用例集:
+[
+    {
+        "id": "HOME_001",
+        "title": "打开优投平台",
+        "condition": "base",
+        "designer": "",
+        "flag": "",
+        "result": "",
+        "remark": "",
+        "priority": "M",
+        "steps": [
+            {
+                "control": "",
+                "no": "1",
+                "keyword": "打开",
+                "page": "通用",
+                "element": "通用^优投平台链接",
+                "data": "标签页名=优投平台登录页",
+                "expected": "",
+                "output": "",
+                "score": "",
+                "remark": "",
+                "custom": ""
+            },
+            {
+                "control": "",
+                "no": "2",
+                "keyword": "检查",
+                "page": "优投平台登录页",
+                "element": "通用^页面title",
+                "data": "有米优投-首页,,等待时间=2",
+                "expected": "",
+                "output": "",
+                "score": "",
+                "remark": "",
+                "custom": ""
+            }
+        ]
+    },
+    {
+        "id": "HOME_002",
+        "title": "退出登录",
+        "condition": "teardown",
+        "designer": "",
+        "flag": "",
+        "result": "",
+        "remark": "",
+        "priority": "M",
+        "steps": [
+            {
+                "control": "^",
+                "no": "^1",
+                "keyword": "判断",
+                "page": "优投平台登录页",
+                "element": "优投平台登录页^提示信息关闭图标",
+                "data": "",
+                "expected": "",
+                "output": "",
+                "score": "",
+                "remark": "",
+                "custom": ""
+            },
+            {
+                "control": ">",
+                "no": ">2",
+                "keyword": "点击",
+                "page": "优投平台登录页",
+                "element": "优投平台登录页^提示信息关闭图标",
+                "data": "",
+                "expected": "",
+                "output": "",
+                "score": "",
+                "remark": "",
+                "custom": ""
+            },
+            {
+                "control": "",
+                "no": "3",
+                "keyword": "点击",
+                "page": "优投平台登录页",
+                "element": "优投平台登录页^用户图标",
+                "data": "等待时间=5",
+                "expected": "",
+                "output": "",
+                "score": "",
+                "remark": "",
+                "custom": ""
+            },
+            {
+                "control": "",
+                "no": "4",
+                "keyword": "点击",
+                "page": "优投平台登录页",
+                "element": "优投平台登录页^退出登录按钮",
+                "data": "等待时间=3",
+                "expected": "",
+                "output": "",
+                "score": "",
+                "remark": "",
+                "custom": ""
+            },
+            {
+                "control": "",
+                "no": "5",
+                "keyword": "检查",
+                "page": "优投平台登录页",
+                "element": "通用^页面title",
+                "data": "有米优投-首页,,等待时间=2",
+                "expected": "",
+                "output": "",
+                "score": "",
+                "remark": "",
+                "custom": ""
+            }
+        ]
+    },
+    {
+        "id": "SNIPPET_001",
+        "title": "登录优投平台,到广告管理页",
+        "condition": "snippet",
+        "designer": "",
+        "flag": "",
+        "result": "",
+        "remark": "",
+        "priority": "M",
+        "steps": [
+            {
+                "control": "",
+                "no": "1",
+                "keyword": "点击",
+                "page": "优投平台登录页",
+                "element": "优投平台登录页^登录按钮",
+                "data": "等待时间=5",
+                "expected": "",
+                "output": "",
+                "score": "",
+                "remark": "",
+                "custom": ""
+            },
+            {
+                "control": "",
+                "no": "2",
+                "keyword": "检查",
+                "page": "优投平台登录页",
+                "element": "通用^页面title",
+                "data": "有米优投登录 - 有米云,,等待时间=3",
+                "expected": "",
+                "output": "",
+                "score": "",
+                "remark": "",
+                "custom": ""
+            },
+            {
+                "control": "",
+                "no": "3",
+                "keyword": "输入",
+                "page": "优投平台登录页",
+                "element": "优投平台登录页^账号",
+                "data": "<account>",
+                "expected": "",
+                "output": "",
+                "score": "",
+                "remark": "",
+                "custom": ""
+            },
+            {
+                "control": "",
+                "no": "4",
+                "keyword": "输入",
+                "page": "优投平台登录页",
+                "element": "优投平台登录页^密码",
+                "data": "<pwd>",
+                "expected": "",
+                "output": "",
+                "score": "",
+                "remark": "",
+                "custom": ""
+            },
+            {
+                "control": "",
+                "no": "5",
+                "keyword": "点击",
+                "page": "优投平台登录页",
+                "element": "优投平台登录页^登录",
+                "data": "",
+                "expected": "",
+                "output": "",
+                "score": "",
+                "remark": "",
+                "custom": ""
+            },
+            {
+                "control": "^",
+                "no": "^6",
+                "keyword": "检查",
+                "page": "优投平台登录页",
+                "element": "通用^页面title",
+                "data": "个人信息*,,等待时间=5",
+                "expected": "",
+                "output": "",
+                "score": "",
+                "remark": "",
+                "custom": ""
+            },
+            {
+                "control": ">",
+                "no": ">7",
+                "keyword": "执行",
+                "page": "用例片段",
+                "element": "SNIPPET_010",
+                "data": "",
+                "expected": "",
+                "output": "",
+                "score": "",
+                "remark": "",
+                "custom": ""
+            },
+            {
+                "control": "",
+                "no": "8",
+                "keyword": "检查",
+                "page": "优投平台登录页",
+                "element": "通用^页面title",
+                "data": "数据概览 - 有米优投,,等待时间=10",
+                "expected": "",
+                "output": "",
+                "score": "",
+                "remark": "",
+                "custom": ""
+            },
+            {
+                "control": "",
+                "no": "9",
+                "keyword": "点击",
+                "page": "通用",
+                "element": "通用^投放管理",
+                "data": "等待时间=1",
+                "expected": "",
+                "output": "",
+                "score": "",
+                "remark": "",
+                "custom": ""
+            },
+            {
+                "control": "",
+                "no": "10",
+                "keyword": "点击",
+                "page": "通用",
+                "element": "通用^广告管理",
+                "data": "",
+                "expected": "",
+                "output": "",
+                "score": "",
+                "remark": "",
+                "custom": ""
+            },
+            {
+                "control": "",
+                "no": "11",
+                "keyword": "检查",
+                "page": "通用",
+                "element": "通用^页面title",
+                "data": "推广计划 - 有米优投,,等待时间=1",
+                "expected": "",
+                "output": "",
+                "score": "",
+                "remark": "",
+                "custom": ""
+            }
+        ]
+    },
+    {
+        "id": "SNIPPET_002",
+        "title": "刷新广告订单第1步",
+        "condition": "snippet",
+        "designer": "",
+        "flag": "",
+        "result": "",
+        "remark": "",
+        "priority": "M",
+        "steps": [
+            {
+                "control": "",
+                "no": "1",
+                "keyword": "刷新",
+                "page": "通用",
+                "element": "",
+                "data": "",
+                "expected": "",
+                "output": "",
+                "score": "",
+                "remark": "",
+                "custom": ""
+            },
+            {
+                "control": "",
+                "no": "2",
+                "keyword": "点击",
+                "page": "广告投放页",
+                "element": "广告投放页^投放产品",
+                "data": "",
+                "expected": "",
+                "output": "",
+                "score": "",
+                "remark": "",
+                "custom": ""
+            },
+            {
+                "control": "",
+                "no": "3",
+                "keyword": "输入",
+                "page": "广告投放页",
+                "element": "广告投放页^产品搜索框",
+                "data": "685",
+                "expected": "",
+                "output": "",
+                "score": "",
+                "remark": "",
+                "custom": ""
+            },
+            {
+                "control": "",
+                "no": "4",
+                "keyword": "点击",
+                "page": "广告投放页",
+                "element": "广告投放页^产品名称",
+                "data": "等待时间=5",
+                "expected": "",
+                "output": "",
+                "score": "",
+                "remark": "",
+                "custom": ""
+            }
+        ]
+    },
+    {
+        "id": "SNIPPET_003",
+        "title": "新建广告订单",
+        "condition": "snippet",
+        "designer": "",
+        "flag": "",
+        "result": "",
+        "remark": "",
+        "priority": "M",
+        "steps": [
+            {
+                "control": "",
+                "no": "1",
+                "keyword": "点击",
+                "page": "通用",
+                "element": "通用^新建广告订单按钮",
+                "data": "标签页名=广告投放页",
+                "expected": "",
+                "output": "",
+                "score": "",
+                "remark": "",
+                "custom": ""
+            },
+            {
+                "control": "",
+                "no": "2",
+                "keyword": "检查",
+                "page": "通用",
+                "element": "通用^页面title",
+                "data": "广告投放 - 有米优投,,等待时间=10",
+                "expected": "",
+                "output": "",
+                "score": "",
+                "remark": "",
+                "custom": ""
+            },
+            {
+                "control": "",
+                "no": "3",
+                "keyword": "点击",
+                "page": "广告投放页",
+                "element": "广告投放页^投放产品",
+                "data": "",
+                "expected": "",
+                "output": "",
+                "score": "",
+                "remark": "",
+                "custom": ""
+            },
+            {
+                "control": "",
+                "no": "4",
+                "keyword": "输入",
+                "page": "广告投放页",
+                "element": "广告投放页^产品搜索框",
+                "data": "685,,等待时间=3",
+                "expected": "",
+                "output": "",
+                "score": "",
+                "remark": "",
+                "custom": ""
+            },
+            {
+                "control": "",
+                "no": "5",
+                "keyword": "点击",
+                "page": "广告投放页",
+                "element": "广告投放页^产品名称",
+                "data": "等待时间=5",
+                "expected": "",
+                "output": "",
+                "score": "",
+                "remark": "",
+                "custom": ""
+            },
+            {
+                "control": "^",
+                "no": "^6",
+                "keyword": "检查",
+                "page": "广告投放页",
+                "element": "广告投放页^广告组",
+                "data": "value=,,等待时间=10",
+                "expected": "",
+                "output": "",
+                "score": "",
+                "remark": "",
+                "custom": ""
+            },
+            {
+                "control": ">",
+                "no": ">7",
+                "keyword": "执行",
+                "page": "用例片段",
+                "element": "SNIPPET_002",
+                "data": "",
+                "expected": "",
+                "output": "",
+                "score": "",
+                "remark": "",
+                "custom": ""
+            },
+            {
+                "control": "",
+                "no": "8",
+                "keyword": "点击",
+                "page": "广告投放页",
+                "element": "广告投放页^下一步:投放媒体",
+                "data": "等待时间=10",
+                "expected": "",
+                "output": "",
+                "score": "",
+                "remark": "",
+                "custom": ""
+            },
+            {
+                "control": "",
+                "no": "9",
+                "keyword": "点击",
+                "page": "广告投放页",
+                "element": "广告投放页^媒体:微博",
+                "data": "等待时间=10",
+                "expected": "",
+                "output": "",
+                "score": "",
+                "remark": "",
+                "custom": ""
+            },
+            {
+                "control": "",
+                "no": "10",
+                "keyword": "点击",
+                "page": "广告投放页",
+                "element": "广告投放页^广告位:标准图片创意_592x296",
+                "data": "等待时间=2",
+                "expected": "",
+                "output": "",
+                "score": "",
+                "remark": "",
+                "custom": ""
+            },
+            {
+                "control": "",
+                "no": "11",
+                "keyword": "点击",
+                "page": "广告投放页",
+                "element": "广告投放页^下一步:受众定向",
+                "data": "",
+                "expected": "",
+                "output": "",
+                "score": "",
+                "remark": "",
+                "custom": ""
+            },
+            {
+                "control": "",
+                "no": "12",
+                "keyword": "点击",
+                "page": "广告投放页",
+                "element": "广告投放页^下一步:基本信息",
+                "data": "等待时间=2",
+                "expected": "",
+                "output": "",
+                "score": "",
+                "remark": "",
+                "custom": ""
+            },
+            {
+                "control": "",
+                "no": "13",
+                "keyword": "输入",
+                "page": "广告投放页",
+                "element": "广告投放页^每日预算",
+                "data": "1000",
+                "expected": "",
+                "output": "",
+                "score": "",
+                "remark": "",
+                "custom": ""
+            },
+            {
+                "control": "",
+                "no": "14",
+                "keyword": "输入",
+                "page": "广告投放页",
+                "element": "广告投放页^计划出价",
+                "data": "0.5",
+                "expected": "",
+                "output": "",
+                "score": "",
+                "remark": "",
+                "custom": ""
+            },
+            {
+                "control": "",
+                "no": "15",
+                "keyword": "调用",
+                "page": "广告投放页",
+                "element": "",
+                "data": "",
+                "expected": "",
+                "output": "mytime=time.getTime()",
+                "score": "",
+                "remark": "",
+                "custom": ""
+            },
+            {
+                "control": "",
+                "no": "16",
+                "keyword": "调用",
+                "page": "广告投放页",
+                "element": "",
+                "data": "",
+                "expected": "",
+                "output": "mydate=time.getDate()",
+                "score": "",
+                "remark": "",
+                "custom": ""
+            },
+            {
+                "control": "",
+                "no": "17",
+                "keyword": "输入",
+                "page": "广告投放页",
+                "element": "广告投放页^广告订单名称",
+                "data": "<role>自动测试<mytime>,,清除文本=否",
+                "expected": "",
+                "output": "order_name=<mydate>-微博-<role>自动测试<mytime>",
+                "score": "",
+                "remark": "",
+                "custom": ""
+            },
+            {
+                "control": "",
+                "no": "18",
+                "keyword": "点击",
+                "page": "广告投放页",
+                "element": "广告投放页^保存并返回列表",
+                "data": "",
+                "expected": "",
+                "output": "",
+                "score": "",
+                "remark": "",
+                "custom": ""
+            },
+            {
+                "control": "",
+                "no": "19",
+                "keyword": "检查",
+                "page": "广告投放页",
+                "element": "通用^页面title",
+                "data": "广告订单 - 有米优投,,标签页名=广告订单页,,等待时间=12",
+                "expected": "",
+                "output": "",
+                "score": "",
+                "remark": "",
+                "custom": ""
+            },
+            {
+                "control": "",
+                "no": "20",
+                "keyword": "刷新",
+                "page": "广告订单页",
+                "element": "",
+                "data": "",
+                "expected": "",
+                "output": "",
+                "score": "",
+                "remark": "",
+                "custom": ""
+            },
+            {
+                "control": "",
+                "no": "21",
+                "keyword": "检查",
+                "page": "广告订单页",
+                "element": "广告订单页^广告订单列名",
+                "data": "innerText=<order_name>,,等待时间=12",
+                "expected": "",
+                "output": "",
+                "score": "",
+                "remark": "",
+                "custom": ""
+            },
+            {
+                "control": "",
+                "no": "22",
+                "keyword": "检查",
+                "page": "广告订单页",
+                "element": "广告订单页^投放媒体列名",
+                "data": "innerText=*微博",
+                "expected": "",
+                "output": "",
+                "score": "",
+                "remark": "",
+                "custom": ""
+            },
+            {
+                "control": "",
+                "no": "23",
+                "keyword": "检查",
+                "page": "广告订单页",
+                "element": "广告订单页^广告位列名",
+                "data": "innerText=*标准图片创意_592x296",
+                "expected": "",
+                "output": "",
+                "score": "",
+                "remark": "",
+                "custom": ""
+            },
+            {
+                "control": "",
+                "no": "24",
+                "keyword": "检查",
+                "page": "广告订单页",
+                "element": "广告订单页^计划出价列名",
+                "data": "0.5",
+                "expected": "",
+                "output": "",
+                "score": "",
+                "remark": "",
+                "custom": ""
+            },
+            {
+                "control": "",
+                "no": "25",
+                "keyword": "检查",
+                "page": "广告订单页",
+                "element": "广告订单页^每日预算列名",
+                "data": "1000",
+                "expected": "",
+                "output": "",
+                "score": "",
+                "remark": "",
+                "custom": ""
+            }
+        ]
+    },
+    {
+        "id": "SNIPPET_004",
+        "title": "无法新建广告订单",
+        "condition": "snippet",
+        "designer": "",
+        "flag": "",
+        "result": "",
+        "remark": "",
+        "priority": "M",
+        "steps": [
+            {
+                "control": "",
+                "no": "1",
+                "keyword": "检查",
+                "page": "通用",
+                "element": "通用^新建广告订单按钮",
+                "data": "disabled=true",
+                "expected": "",
+                "output": "",
+                "score": "",
+                "remark": "",
+                "custom": ""
+            }
+        ]
+    },
+    {
+        "id": "SNIPPET_005",
+        "title": "到广告订单模块查询",
+        "condition": "snippet",
+        "designer": "",
+        "flag": "",
+        "result": "",
+        "remark": "",
+        "priority": "M",
+        "steps": [
+            {
+                "control": "",
+                "no": "1",
+                "keyword": "点击",
+                "page": "通用",
+                "element": "通用^广告订单",
+                "data": "",
+                "expected": "",
+                "output": "",
+                "score": "",
+                "remark": "",
+                "custom": ""
+            },
+            {
+                "control": "",
+                "no": "2",
+                "keyword": "检查",
+                "page": "通用",
+                "element": "通用^页面title",
+                "data": "广告订单 - 有米优投,,标签页名=广告订单页,,等待时间=2",
+                "expected": "",
+                "output": "",
+                "score": "",
+                "remark": "",
+                "custom": ""
+            },
+            {
+                "control": "",
+                "no": "3",
+                "keyword": "刷新",
+                "page": "广告订单页",
+                "element": "",
+                "data": "",
+                "expected": "",
+                "output": "",
+                "score": "",
+                "remark": "",
+                "custom": ""
+            },
+            {
+                "control": "",
+                "no": "4",
+                "keyword": "获取",
+                "page": "广告订单页",
+                "element": "广告订单页^投放媒体列名",
+                "data": "等待时间=12",
+                "expected": "",
+                "output": "media=innerText",
+                "score": "",
+                "remark": "",
+                "custom": ""
+            },
+            {
+                "control": "",
+                "no": "5",
+                "keyword": "获取",
+                "page": "广告订单页",
+                "element": "广告订单页^广告位列名",
+                "data": "",
+                "expected": "",
+                "output": "slot=innerText",
+                "score": "",
+                "remark": "",
+                "custom": ""
+            },
+            {
+                "control": "",
+                "no": "6",
+                "keyword": "移动到",
+                "page": "广告订单页",
+                "element": "广告订单页^广告订单列名",
+                "data": "等待时间=2",
+                "expected": "",
+                "output": "order_name=innerText",
+                "score": "",
+                "remark": "",
+                "custom": ""
+            }
+        ]
+    },
+    {
+        "id": "SNIPPET_006",
+        "title": "编辑广告投放页",
+        "condition": "snippet",
+        "designer": "",
+        "flag": "",
+        "result": "",
+        "remark": "",
+        "priority": "M",
+        "steps": [
+            {
+                "control": "",
+                "no": "1",
+                "keyword": "检查",
+                "page": "广告投放页",
+                "element": "通用^页面title",
+                "data": "广告投放 - 有米优投,,等待时间=12",
+                "expected": "",
+                "output": "",
+                "score": "",
+                "remark": "",
+                "custom": ""
+            },
+            {
+                "control": "",
+                "no": "2",
+                "keyword": "输入",
+                "page": "广告投放页",
+                "element": "广告投放页^每日预算",
+                "data": "<budget>",
+                "expected": "",
+                "output": "",
+                "score": "",
+                "remark": "",
+                "custom": ""
+            },
+            {
+                "control": "",
+                "no": "3",
+                "keyword": "输入",
+                "page": "广告投放页",
+                "element": "广告投放页^计划出价",
+                "data": "<price>",
+                "expected": "",
+                "output": "",
+                "score": "",
+                "remark": "",
+                "custom": ""
+            },
+            {
+                "control": "",
+                "no": "4",
+                "keyword": "输入",
+                "page": "广告投放页",
+                "element": "广告投放页^广告订单名称",
+                "data": "(<name>),,清除文本=否,,等待时间=2",
+                "expected": "",
+                "output": "new_order_name=<order_name>(<name>)",
+                "score": "",
+                "remark": "",
+                "custom": ""
+            },
+            {
+                "control": "",
+                "no": "5",
+                "keyword": "点击",
+                "page": "广告投放页",
+                "element": "广告投放页^保存并返回列表",
+                "data": "",
+                "expected": "",
+                "output": "",
+                "score": "",
+                "remark": "",
+                "custom": ""
+            },
+            {
+                "control": "",
+                "no": "6",
+                "keyword": "检查",
+                "page": "广告投放页",
+                "element": "通用^页面title",
+                "data": "广告订单 - 有米优投,,标签页名=广告订单页,,等待时间=10",
+                "expected": "",
+                "output": "",
+                "score": "",
+                "remark": "",
+                "custom": ""
+            },
+            {
+                "control": "",
+                "no": "7",
+                "keyword": "刷新",
+                "page": "广告订单页",
+                "element": "",
+                "data": "",
+                "expected": "",
+                "output": "",
+                "score": "",
+                "remark": "",
+                "custom": ""
+            },
+            {
+                "control": "",
+                "no": "8",
+                "keyword": "检查",
+                "page": "广告订单页",
+                "element": "广告订单页^广告订单列名",
+                "data": "innerText=<new_order_name>,,等待时间=10",
+                "expected": "",
+                "output": "",
+                "score": "",
+                "remark": "",
+                "custom": ""
+            },
+            {
+                "control": "",
+                "no": "9",
+                "keyword": "检查",
+                "page": "广告订单页",
+                "element": "广告订单页^投放媒体列名",
+                "data": "innerText=<media>",
+                "expected": "",
+                "output": "",
+                "score": "",
+                "remark": "",
+                "custom": ""
+            },
+            {
+                "control": "",
+                "no": "10",
+                "keyword": "检查",
+                "page": "广告订单页",
+                "element": "广告订单页^广告位列名",
+                "data": "innerText=<slot>",
+                "expected": "",
+                "output": "",
+                "score": "",
+                "remark": "",
+                "custom": ""
+            },
+            {
+                "control": "",
+                "no": "11",
+                "keyword": "检查",
+                "page": "广告订单页",
+                "element": "广告订单页^计划出价列名",
+                "data": "<price>",
+                "expected": "",
+                "output": "",
+                "score": "",
+                "remark": "",
+                "custom": ""
+            },
+            {
+                "control": "",
+                "no": "12",
+                "keyword": "检查",
+                "page": "广告订单页",
+                "element": "广告订单页^每日预算列名",
+                "data": "<budget>",
+                "expected": "",
+                "output": "",
+                "score": "",
+                "remark": "",
+                "custom": ""
+            }
+        ]
+    },
+    {
+        "id": "SNIPPET_007",
+        "title": "编辑广告订单",
+        "condition": "snippet",
+        "designer": "",
+        "flag": "",
+        "result": "",
+        "remark": "",
+        "priority": "M",
+        "steps": [
+            {
+                "control": "",
+                "no": "1",
+                "keyword": "执行",
+                "page": "用例片段",
+                "element": "SNIPPET_005",
+                "data": "",
+                "expected": "",
+                "output": "",
+                "score": "",
+                "remark": "",
+                "custom": ""
+            },
+            {
+                "control": "",
+                "no": "2",
+                "keyword": "点击",
+                "page": "广告订单页",
+                "element": "广告订单页^广告订单编辑图标",
+                "data": "标签页名=广告投放页,,等待时间=2",
+                "expected": "",
+                "output": "",
+                "score": "",
+                "remark": "",
+                "custom": ""
+            },
+            {
+                "control": "",
+                "no": "3",
+                "keyword": "执行",
+                "page": "用例片段",
+                "element": "SNIPPET_006",
+                "data": "budget=1800,,price=0.8,,name=重命名",
+                "expected": "",
+                "output": "",
+                "score": "",
+                "remark": "",
+                "custom": ""
+            }
+        ]
+    },
+    {
+        "id": "SNIPPET_008",
+        "title": "无法编辑广告订单",
+        "condition": "snippet",
+        "designer": "",
+        "flag": "",
+        "result": "",
+        "remark": "",
+        "priority": "M",
+        "steps": [
+            {
+                "control": "",
+                "no": "1",
+                "keyword": "点击",
+                "page": "通用",
+                "element": "通用^广告订单",
+                "data": "",
+                "expected": "",
+                "output": "",
+                "score": "",
+                "remark": "",
+                "custom": ""
+            },
+            {
+                "control": "",
+                "no": "2",
+                "keyword": "检查",
+                "page": "通用",
+                "element": "通用^页面title",
+                "data": "广告订单 - 有米优投,,标签页名=广告订单页,,等待时间=1",
+                "expected": "",
+                "output": "",
+                "score": "",
+                "remark": "",
+                "custom": ""
+            },
+            {
+                "control": "",
+                "no": "3",
+                "keyword": "刷新",
+                "page": "广告订单页",
+                "element": "",
+                "data": "",
+                "expected": "",
+                "output": "",
+                "score": "",
+                "remark": "",
+                "custom": ""
+            },
+            {
+                "control": "",
+                "no": "4",
+                "keyword": "移动到",
+                "page": "广告订单页",
+                "element": "广告订单页^广告订单列名",
+                "data": "等待时间=3",
+                "expected": "",
+                "output": "",
+                "score": "",
+                "remark": "",
+                "custom": ""
+            },
+            {
+                "control": "",
+                "no": "5",
+                "keyword": "检查",
+                "page": "广告订单页",
+                "element": "广告订单页^广告订单编辑图标",
+                "data": "offsetHeight=0",
+                "expected": "",
+                "output": "",
+                "score": "",
+                "remark": "",
+                "custom": ""
+            }
+        ]
+    },
+    {
+        "id": "SNIPPET_009",
+        "title": "复制广告订单",
+        "condition": "snippet",
+        "designer": "",
+        "flag": "",
+        "result": "",
+        "remark": "",
+        "priority": "M",
+        "steps": [
+            {
+                "control": "",
+                "no": "1",
+                "keyword": "执行",
+                "page": "用例片段",
+                "element": "SNIPPET_005",
+                "data": "",
+                "expected": "",
+                "output": "",
+                "score": "",
+                "remark": "",
+                "custom": ""
+            },
+            {
+                "control": "",
+                "no": "2",
+                "keyword": "点击",
+                "page": "广告订单页",
+                "element": "广告订单页^广告订单复制链接",
+                "data": "标签页名=广告投放页,,等待时间=2",
+                "expected": "",
+                "output": "",
+                "score": "",
+                "remark": "",
+                "custom": ""
+            },
+            {
+                "control": "",
+                "no": "3",
+                "keyword": "执行",
+                "page": "用例片段",
+                "element": "SNIPPET_006",
+                "data": "budget=2000,,price=1.2,,name=复制",
+                "expected": "",
+                "output": "",
+                "score": "",
+                "remark": "",
+                "custom": ""
+            }
+        ]
+    },
+    {
+        "id": "SNIPPET_010",
+        "title": "选择优投服务",
+        "condition": "snippet",
+        "designer": "",
+        "flag": "",
+        "result": "",
+        "remark": "",
+        "priority": "M",
+        "steps": [
+            {
+                "control": "",
+                "no": "1",
+                "keyword": "点击",
+                "page": "优投平台登录页",
+                "element": "优投平台登录页^选择服务按钮",
+                "data": "",
+                "expected": "",
+                "output": "",
+                "score": "",
+                "remark": "",
+                "custom": ""
+            },
+            {
+                "control": "",
+                "no": "2",
+                "keyword": "点击",
+                "page": "优投平台登录页",
+                "element": "优投平台登录页^有米优投服务",
+                "data": "等待时间=3,,标签页名=优投平台登录页",
+                "expected": "",
+                "output": "",
+                "score": "",
+                "remark": "",
+                "custom": ""
+            }
+        ]
+    },
+    {
+        "id": "SNIPPET_011",
+        "title": "无法复制广告订单",
+        "condition": "snippet",
+        "designer": "",
+        "flag": "",
+        "result": "",
+        "remark": "",
+        "priority": "M",
+        "steps": [
+            {
+                "control": "",
+                "no": "1",
+                "keyword": "点击",
+                "page": "通用",
+                "element": "通用^广告订单",
+                "data": "",
+                "expected": "",
+                "output": "",
+                "score": "",
+                "remark": "",
+                "custom": ""
+            },
+            {
+                "control": "",
+                "no": "2",
+                "keyword": "检查",
+                "page": "通用",
+                "element": "通用^页面title",
+                "data": "广告订单 - 有米优投,,标签页名=广告订单页,,等待时间=1",
+                "expected": "",
+                "output": "",
+                "score": "",
+                "remark": "",
+                "custom": ""
+            },
+            {
+                "control": "",
+                "no": "3",
+                "keyword": "刷新",
+                "page": "广告订单页",
+                "element": "",
+                "data": "",
+                "expected": "",
+                "output": "",
+                "score": "",
+                "remark": "",
+                "custom": ""
+            },
+            {
+                "control": "",
+                "no": "4",
+                "keyword": "检查",
+                "page": "广告订单页",
+                "element": "广告订单页^广告订单复制链接",
+                "data": "class=f258-col switch-link dropdown-item-disabled,,等待时间=3",
+                "expected": "",
+                "output": "",
+                "score": "",
+                "remark": "",
+                "custom": ""
+            }
+        ]
+    },
+    {
+        "id": "ORDER_001",
+        "title": "代理商新建广告订单",
+        "condition": "",
+        "designer": "",
+        "flag": "Y",
+        "result": "",
+        "remark": "",
+        "priority": "M",
+        "steps": [
+            {
+                "control": "",
+                "no": "1",
+                "keyword": "执行",
+                "page": "用例片段",
+                "element": "SNIPPET_001",
+                "data": "account=<account1>,,pwd=<pwd1>",
+                "expected": "",
+                "output": "",
+                "score": "",
+                "remark": "",
+                "custom": ""
+            },
+            {
+                "control": "",
+                "no": "2",
+                "keyword": "执行",
+                "page": "用例片段",
+                "element": "SNIPPET_003",
+                "data": "role=代理商",
+                "expected": "",
+                "output": "",
+                "score": "",
+                "remark": "",
+                "custom": ""
+            }
+        ]
+    },
+    {
+        "id": "ORDER_002",
+        "title": "代理商编辑广告订单",
+        "condition": "",
+        "designer": "",
+        "flag": "Y",
+        "result": "",
+        "remark": "",
+        "priority": "M",
+        "steps": [
+            {
+                "control": "",
+                "no": "1",
+                "keyword": "执行",
+                "page": "用例片段",
+                "element": "SNIPPET_001",
+                "data": "account=<account1>,,pwd=<pwd1>",
+                "expected": "",
+                "output": "",
+                "score": "",
+                "remark": "",
+                "custom": ""
+            },
+            {
+                "control": "",
+                "no": "2",
+                "keyword": "执行",
+                "page": "用例片段",
+                "element": "SNIPPET_007",
+                "data": "",
+                "expected": "",
+                "output": "",
+                "score": "",
+                "remark": "",
+                "custom": ""
+            }
+        ]
+    },
+    {
+        "id": "ORDER_003",
+        "title": "代理商复制广告订单",
+        "condition": "",
+        "designer": "",
+        "flag": "Y",
+        "result": "",
+        "remark": "",
+        "priority": "M",
+        "steps": [
+            {
+                "control": "",
+                "no": "1",
+                "keyword": "执行",
+                "page": "用例片段",
+                "element": "SNIPPET_001",
+                "data": "account=<account1>,,pwd=<pwd1>",
+                "expected": "",
+                "output": "",
+                "score": "",
+                "remark": "",
+                "custom": ""
+            },
+            {
+                "control": "",
+                "no": "2",
+                "keyword": "执行",
+                "page": "用例片段",
+                "element": "SNIPPET_009",
+                "data": "",
+                "expected": "",
+                "output": "",
+                "score": "",
+                "remark": "",
+                "custom": ""
+            }
+        ]
+    },
+    {
+        "id": "ORDER_004",
+        "title": "客户新建广告订单",
+        "condition": "",
+        "designer": "",
+        "flag": "Y",
+        "result": "",
+        "remark": "",
+        "priority": "M",
+        "steps": [
+            {
+                "control": "",
+                "no": "1",
+                "keyword": "执行",
+                "page": "用例片段",
+                "element": "SNIPPET_001",
+                "data": "account=<account2>,,pwd=<pwd2>",
+                "expected": "",
+                "output": "",
+                "score": "",
+                "remark": "",
+                "custom": ""
+            },
+            {
+                "control": "",
+                "no": "2",
+                "keyword": "执行",
+                "page": "用例片段",
+                "element": "SNIPPET_003",
+                "data": "role=客户",
+                "expected": "",
+                "output": "",
+                "score": "",
+                "remark": "",
+                "custom": ""
+            }
+        ]
+    },
+    {
+        "id": "ORDER_005",
+        "title": "客户编辑广告订单",
+        "condition": "",
+        "designer": "",
+        "flag": "Y",
+        "result": "",
+        "remark": "",
+        "priority": "M",
+        "steps": [
+            {
+                "control": "",
+                "no": "1",
+                "keyword": "执行",
+                "page": "用例片段",
+                "element": "SNIPPET_001",
+                "data": "account=<account2>,,pwd=<pwd2>",
+                "expected": "",
+                "output": "",
+                "score": "",
+                "remark": "",
+                "custom": ""
+            },
+            {
+                "control": "",
+                "no": "2",
+                "keyword": "执行",
+                "page": "用例片段",
+                "element": "SNIPPET_007",
+                "data": "",
+                "expected": "",
+                "output": "",
+                "score": "",
+                "remark": "",
+                "custom": ""
+            }
+        ]
+    },
+    {
+        "id": "ORDER_006",
+        "title": "客户复制广告订单",
+        "condition": "",
+        "designer": "",
+        "flag": "Y",
+        "result": "",
+        "remark": "",
+        "priority": "M",
+        "steps": [
+            {
+                "control": "",
+                "no": "1",
+                "keyword": "执行",
+                "page": "用例片段",
+                "element": "SNIPPET_001",
+                "data": "account=<account2>,,pwd=<pwd2>",
+                "expected": "",
+                "output": "",
+                "score": "",
+                "remark": "",
+                "custom": ""
+            },
+            {
+                "control": "",
+                "no": "2",
+                "keyword": "执行",
+                "page": "用例片段",
+                "element": "SNIPPET_009",
+                "data": "",
+                "expected": "",
+                "output": "",
+                "score": "",
+                "remark": "",
+                "custom": ""
+            }
+        ]
+    },
+    {
+        "id": "ORDER_007",
+        "title": "财务专员无法新建广告订单",
+        "condition": "",
+        "designer": "",
+        "flag": "Y",
+        "result": "",
+        "remark": "",
+        "priority": "M",
+        "steps": [
+            {
+                "control": "",
+                "no": "1",
+                "keyword": "执行",
+                "page": "用例片段",
+                "element": "SNIPPET_001",
+                "data": "account=<account3>,,pwd=<pwd3>",
+                "expected": "",
+                "output": "",
+                "score": "",
+                "remark": "",
+                "custom": ""
+            },
+            {
+                "control": "",
+                "no": "2",
+                "keyword": "执行",
+                "page": "用例片段",
+                "element": "SNIPPET_004",
+                "data": "",
+                "expected": "",
+                "output": "",
+                "score": "",
+                "remark": "",
+                "custom": ""
+            }
+        ]
+    },
+    {
+        "id": "ORDER_008",
+        "title": "财务专员无法编辑广告订单",
+        "condition": "",
+        "designer": "",
+        "flag": "Y",
+        "result": "",
+        "remark": "",
+        "priority": "M",
+        "steps": [
+            {
+                "control": "",
+                "no": "1",
+                "keyword": "执行",
+                "page": "用例片段",
+                "element": "SNIPPET_001",
+                "data": "account=<account3>,,pwd=<pwd3>",
+                "expected": "",
+                "output": "",
+                "score": "",
+                "remark": "",
+                "custom": ""
+            },
+            {
+                "control": "",
+                "no": "2",
+                "keyword": "执行",
+                "page": "用例片段",
+                "element": "SNIPPET_008",
+                "data": "",
+                "expected": "",
+                "output": "",
+                "score": "",
+                "remark": "",
+                "custom": ""
+            }
+        ]
+    },
+    {
+        "id": "ORDER_009",
+        "title": "财务专员无法复制广告订单",
+        "condition": "",
+        "designer": "",
+        "flag": "Y",
+        "result": "",
+        "remark": "",
+        "priority": "M",
+        "steps": [
+            {
+                "control": "",
+                "no": "1",
+                "keyword": "执行",
+                "page": "用例片段",
+                "element": "SNIPPET_001",
+                "data": "account=<account3>,,pwd=<pwd3>",
+                "expected": "",
+                "output": "",
+                "score": "",
+                "remark": "",
+                "custom": ""
+            },
+            {
+                "control": "",
+                "no": "2",
+                "keyword": "执行",
+                "page": "用例片段",
+                "element": "SNIPPET_011",
+                "data": "",
+                "expected": "",
+                "output": "",
+                "score": "",
+                "remark": "",
+                "custom": ""
+            }
+        ]
+    }
+]
+2019-05-10 18:54:17,676 [INFO] parse.py line:339: 从Excel中读取测试用例集成功！
+2019-05-10 18:54:19,436 [INFO] gentest.py line:33: 执行测试步骤: 1|OPEN|通用^优投平台链接
+2019-05-10 18:54:23,143 [INFO] windows.py line:125: --- 注册新页面: '优投平台登录页'
+2019-05-10 18:54:23,144 [INFO] windows.py line:126: Pages:
+2019-05-10 18:54:23,144 [INFO] windows.py line:127: {'优投平台登录页': 'CDwindow-F1C1872F547928A71FFD4053C6E59351'}
+2019-05-10 18:54:23,645 [INFO] gentest.py line:109: 执行测试步骤通过: 1|OPEN|通用^优投平台链接
+2019-05-10 18:54:23,846 [INFO] gentest.py line:33: 执行测试步骤: 2|CHECK|通用^页面title
+2019-05-10 18:54:27,859 [INFO] web.py line:59: DATA:'有米优投-首页'
+2019-05-10 18:54:27,859 [INFO] web.py line:60: REAL:'有米优投-首页'
+2019-05-10 18:54:27,859 [INFO] gentest.py line:109: 执行测试步骤通过: 2|CHECK|通用^页面title
+2019-05-10 18:54:28,060 [INFO] myrunner.py line:14: test_ORDER_001 (sweetest.lib.gentest.TestClass)用例开始运行... 
+2019-05-10 18:54:28,061 [INFO] gentest.py line:33: 执行测试步骤: 1|EXECUTE|SNIPPET_001
+2019-05-10 18:54:28,063 [INFO] gentest.py line:33: 执行测试步骤: 1|CLICK|优投平台登录页^登录按钮
+2019-05-10 18:54:37,239 [INFO] gentest.py line:109: 执行测试步骤通过: 1|CLICK|优投平台登录页^登录按钮
+2019-05-10 18:54:37,440 [INFO] gentest.py line:33: 执行测试步骤: 2|CHECK|通用^页面title
+2019-05-10 18:54:42,452 [INFO] web.py line:59: DATA:'有米优投登录 - 有米云'
+2019-05-10 18:54:42,453 [INFO] web.py line:60: REAL:'有米优投登录 - 有米云'
+2019-05-10 18:54:42,453 [INFO] gentest.py line:109: 执行测试步骤通过: 2|CHECK|通用^页面title
+2019-05-10 18:54:42,653 [INFO] gentest.py line:33: 执行测试步骤: 3|INPUT|优投平台登录页^账号
+2019-05-10 18:54:45,406 [INFO] gentest.py line:109: 执行测试步骤通过: 3|INPUT|优投平台登录页^账号
+2019-05-10 18:54:45,606 [INFO] gentest.py line:33: 执行测试步骤: 4|INPUT|优投平台登录页^密码
+2019-05-10 18:54:48,240 [INFO] gentest.py line:109: 执行测试步骤通过: 4|INPUT|优投平台登录页^密码
+2019-05-10 18:54:48,440 [INFO] gentest.py line:33: 执行测试步骤: 5|CLICK|优投平台登录页^登录
+2019-05-10 18:54:51,061 [INFO] gentest.py line:109: 执行测试步骤通过: 5|CLICK|优投平台登录页^登录
+2019-05-10 18:54:51,262 [INFO] gentest.py line:33: 执行测试步骤: ^6|CHECK|通用^页面title
+2019-05-10 18:54:58,281 [INFO] web.py line:59: DATA:'个人信息*'
+2019-05-10 18:54:58,281 [INFO] web.py line:60: REAL:'数据概览 - 有米优投'
+2019-05-10 18:54:58,443 [ERROR] gentest.py line:139: 执行测试步骤失败: ^6|CHECK|通用^页面title
+Traceback (most recent call last):
+  File "/home/youmi/CxhProjects/cxh/AutoTest/sweetest/sweetest/lib/gentest.py", line 61, in __call__
+    getattr(web, step['keyword'].lower())(step)
+  File "/home/youmi/CxhProjects/cxh/AutoTest/sweetest/sweetest/keywords/web.py", line 107, in check
+    getattr(Common, by)(data, output)
+  File "/home/youmi/CxhProjects/cxh/AutoTest/sweetest/sweetest/keywords/web.py", line 19, in title
+    detail_check(expected, real)
+  File "/home/youmi/CxhProjects/cxh/AutoTest/sweetest/sweetest/keywords/web.py", line 77, in detail_check
+    assert expected[:-1] in real
+AssertionError
+2019-05-10 18:54:58,443 [INFO] gentest.py line:33: 执行测试步骤: 8|CHECK|通用^页面title
+2019-05-10 18:55:10,458 [INFO] web.py line:59: DATA:'数据概览 - 有米优投'
+2019-05-10 18:55:10,458 [INFO] web.py line:60: REAL:'数据概览 - 有米优投'
+2019-05-10 18:55:10,458 [INFO] gentest.py line:109: 执行测试步骤通过: 8|CHECK|通用^页面title
+2019-05-10 18:55:10,659 [INFO] gentest.py line:33: 执行测试步骤: 9|CLICK|通用^投放管理
+2019-05-10 18:55:14,272 [INFO] gentest.py line:109: 执行测试步骤通过: 9|CLICK|通用^投放管理
+2019-05-10 18:55:14,472 [INFO] gentest.py line:33: 执行测试步骤: 10|CLICK|通用^广告管理
+2019-05-10 18:55:17,094 [INFO] gentest.py line:109: 执行测试步骤通过: 10|CLICK|通用^广告管理
+2019-05-10 18:55:17,295 [INFO] gentest.py line:33: 执行测试步骤: 11|CHECK|通用^页面title
+2019-05-10 18:55:20,304 [INFO] web.py line:59: DATA:'推广计划 - 有米优投'
+2019-05-10 18:55:20,305 [INFO] web.py line:60: REAL:'推广计划 - 有米优投'
+2019-05-10 18:55:20,305 [INFO] gentest.py line:109: 执行测试步骤通过: 11|CHECK|通用^页面title
+2019-05-10 18:55:20,531 [INFO] gentest.py line:89: 用例片段执行结果:
+
+2019-05-10 18:55:20,531 [INFO] gentest.py line:90: Pass
+2019-05-10 18:55:20,531 [INFO] gentest.py line:109: 执行测试步骤通过: 1|EXECUTE|SNIPPET_001
+2019-05-10 18:55:20,732 [INFO] gentest.py line:33: 执行测试步骤: 2|EXECUTE|SNIPPET_003
+2019-05-10 18:55:20,733 [INFO] gentest.py line:33: 执行测试步骤: 1|CLICK|通用^新建广告订单按钮
+2019-05-10 18:55:23,385 [INFO] windows.py line:125: --- 注册新页面: '广告投放页'
+2019-05-10 18:55:23,386 [INFO] windows.py line:126: Pages:
+2019-05-10 18:55:23,386 [INFO] windows.py line:127: {'优投平台登录页': 'CDwindow-F1C1872F547928A71FFD4053C6E59351', '广告投放页': 'CDwindow-B4ABAED349FAFA5D13A1E1FB79A31139'}
+2019-05-10 18:55:23,386 [INFO] gentest.py line:109: 执行测试步骤通过: 1|CLICK|通用^新建广告订单按钮
+2019-05-10 18:55:23,586 [INFO] gentest.py line:33: 执行测试步骤: 2|CHECK|通用^页面title
+2019-05-10 18:55:35,616 [INFO] web.py line:59: DATA:'广告投放 - 有米优投'
+2019-05-10 18:55:35,616 [INFO] web.py line:60: REAL:'广告投放 - 有米优投'
+2019-05-10 18:55:35,616 [INFO] gentest.py line:109: 执行测试步骤通过: 2|CHECK|通用^页面title
+2019-05-10 18:55:35,816 [INFO] gentest.py line:33: 执行测试步骤: 3|CLICK|广告投放页^投放产品
+2019-05-10 18:55:38,438 [INFO] gentest.py line:109: 执行测试步骤通过: 3|CLICK|广告投放页^投放产品
+2019-05-10 18:55:38,638 [INFO] gentest.py line:33: 执行测试步骤: 4|INPUT|广告投放页^产品搜索框
+2019-05-10 18:55:44,269 [INFO] gentest.py line:109: 执行测试步骤通过: 4|INPUT|广告投放页^产品搜索框
+2019-05-10 18:55:44,470 [INFO] gentest.py line:33: 执行测试步骤: 5|CLICK|广告投放页^产品名称
+2019-05-10 18:55:52,107 [INFO] gentest.py line:109: 执行测试步骤通过: 5|CLICK|广告投放页^产品名称
+2019-05-10 18:55:52,308 [INFO] gentest.py line:33: 执行测试步骤: ^6|CHECK|广告投放页^广告组
+2019-05-10 18:56:04,353 [INFO] web.py line:59: DATA:''
+2019-05-10 18:56:04,353 [INFO] web.py line:60: REAL:'[2835]自动化测试广告组'
+2019-05-10 18:56:04,496 [ERROR] gentest.py line:139: 执行测试步骤失败: ^6|CHECK|广告投放页^广告组
+Traceback (most recent call last):
+  File "/home/youmi/CxhProjects/cxh/AutoTest/sweetest/sweetest/lib/gentest.py", line 61, in __call__
+    getattr(web, step['keyword'].lower())(step)
+  File "/home/youmi/CxhProjects/cxh/AutoTest/sweetest/sweetest/keywords/web.py", line 119, in check
+    detail_check(expected, real)
+  File "/home/youmi/CxhProjects/cxh/AutoTest/sweetest/sweetest/keywords/web.py", line 79, in detail_check
+    assert expected == real
+AssertionError
+2019-05-10 18:56:04,496 [INFO] gentest.py line:33: 执行测试步骤: 8|CLICK|广告投放页^下一步:投放媒体
+2019-05-10 18:56:17,187 [INFO] gentest.py line:109: 执行测试步骤通过: 8|CLICK|广告投放页^下一步:投放媒体
+2019-05-10 18:56:17,388 [INFO] gentest.py line:33: 执行测试步骤: 9|CLICK|广告投放页^媒体:微博
+2019-05-10 18:56:30,054 [INFO] gentest.py line:109: 执行测试步骤通过: 9|CLICK|广告投放页^媒体:微博
+2019-05-10 18:56:30,255 [INFO] gentest.py line:33: 执行测试步骤: 10|CLICK|广告投放页^广告位:标准图片创意_592x296
+2019-05-10 18:56:34,891 [INFO] gentest.py line:109: 执行测试步骤通过: 10|CLICK|广告投放页^广告位:标准图片创意_592x296
+2019-05-10 18:56:35,092 [INFO] gentest.py line:33: 执行测试步骤: 11|CLICK|广告投放页^下一步:受众定向
+2019-05-10 18:56:37,729 [INFO] gentest.py line:109: 执行测试步骤通过: 11|CLICK|广告投放页^下一步:受众定向
+2019-05-10 18:56:37,930 [INFO] gentest.py line:33: 执行测试步骤: 12|CLICK|广告投放页^下一步:基本信息
+2019-05-10 18:56:42,647 [INFO] gentest.py line:109: 执行测试步骤通过: 12|CLICK|广告投放页^下一步:基本信息
+2019-05-10 18:56:42,847 [INFO] gentest.py line:33: 执行测试步骤: 13|INPUT|广告投放页^每日预算
+2019-05-10 18:56:45,536 [INFO] gentest.py line:109: 执行测试步骤通过: 13|INPUT|广告投放页^每日预算
+2019-05-10 18:56:45,736 [INFO] gentest.py line:33: 执行测试步骤: 14|INPUT|广告投放页^计划出价
+2019-05-10 18:56:48,396 [INFO] gentest.py line:109: 执行测试步骤通过: 14|INPUT|广告投放页^计划出价
+2019-05-10 18:56:48,596 [INFO] gentest.py line:33: 执行测试步骤: 15|CALL|
+2019-05-10 18:56:48,597 [INFO] common.py line:127: Call function: {'mytime': 'time.getTime()'}
+2019-05-10 18:56:48,599 [INFO] common.py line:138: g.var[mytime]=18:56:48
+2019-05-10 18:56:48,599 [INFO] gentest.py line:109: 执行测试步骤通过: 15|CALL|
+2019-05-10 18:56:48,800 [INFO] gentest.py line:33: 执行测试步骤: 16|CALL|
+2019-05-10 18:56:48,800 [INFO] common.py line:127: Call function: {'mydate': 'time.getDate()'}
+2019-05-10 18:56:48,801 [INFO] common.py line:138: g.var[mydate]=0510
+2019-05-10 18:56:48,801 [INFO] gentest.py line:109: 执行测试步骤通过: 16|CALL|
+2019-05-10 18:56:49,001 [INFO] gentest.py line:33: 执行测试步骤: 17|INPUT|广告投放页^广告订单名称
+2019-05-10 18:56:51,842 [INFO] gentest.py line:109: 执行测试步骤通过: 17|INPUT|广告投放页^广告订单名称
+2019-05-10 18:56:52,043 [INFO] gentest.py line:33: 执行测试步骤: 18|CLICK|广告投放页^保存并返回列表
+2019-05-10 18:56:54,682 [INFO] gentest.py line:109: 执行测试步骤通过: 18|CLICK|广告投放页^保存并返回列表
+2019-05-10 18:56:54,882 [INFO] gentest.py line:33: 执行测试步骤: 19|CHECK|通用^页面title
+2019-05-10 18:57:08,908 [INFO] web.py line:59: DATA:'广告订单 - 有米优投'
+2019-05-10 18:57:08,908 [INFO] web.py line:60: REAL:'广告订单 - 有米优投'
+2019-05-10 18:57:08,912 [INFO] windows.py line:42: --- 注册标签页: '广告订单页'
+2019-05-10 18:57:08,913 [INFO] windows.py line:43: Pages:
+2019-05-10 18:57:08,913 [INFO] windows.py line:44: {'优投平台登录页': 'CDwindow-F1C1872F547928A71FFD4053C6E59351', '广告订单页': 'CDwindow-B4ABAED349FAFA5D13A1E1FB79A31139'}
+2019-05-10 18:57:08,913 [INFO] gentest.py line:109: 执行测试步骤通过: 19|CHECK|通用^页面title
+2019-05-10 18:57:09,114 [INFO] gentest.py line:33: 执行测试步骤: 20|REFRESH|
+2019-05-10 18:57:11,953 [INFO] gentest.py line:109: 执行测试步骤通过: 20|REFRESH|
+2019-05-10 18:57:12,153 [INFO] gentest.py line:33: 执行测试步骤: 21|CHECK|广告订单页^广告订单列名
+2019-05-10 18:57:26,199 [INFO] web.py line:59: DATA:'0510-微博-代理商自动测试18:56:48'
+2019-05-10 18:57:26,199 [INFO] web.py line:60: REAL:'0510-微博-代理商自动测试18:56:48'
+2019-05-10 18:57:26,199 [INFO] gentest.py line:109: 执行测试步骤通过: 21|CHECK|广告订单页^广告订单列名
+2019-05-10 18:57:26,400 [INFO] gentest.py line:33: 执行测试步骤: 22|CHECK|广告订单页^投放媒体列名
+2019-05-10 18:57:28,436 [INFO] web.py line:59: DATA:'*微博'
+2019-05-10 18:57:28,437 [INFO] web.py line:60: REAL:'\n                  微博\n                '
+2019-05-10 18:57:28,437 [INFO] gentest.py line:109: 执行测试步骤通过: 22|CHECK|广告订单页^投放媒体列名
+2019-05-10 18:57:28,637 [INFO] gentest.py line:33: 执行测试步骤: 23|CHECK|广告订单页^广告位列名
+2019-05-10 18:57:30,669 [INFO] web.py line:59: DATA:'*标准图片创意_592x296'
+2019-05-10 18:57:30,670 [INFO] web.py line:60: REAL:'标准图片创意_592x296'
+2019-05-10 18:57:30,670 [INFO] gentest.py line:109: 执行测试步骤通过: 23|CHECK|广告订单页^广告位列名
+2019-05-10 18:57:30,870 [INFO] gentest.py line:33: 执行测试步骤: 24|CHECK|广告订单页^计划出价列名
+2019-05-10 18:57:32,921 [INFO] web.py line:59: DATA:'0.5'
+2019-05-10 18:57:32,921 [INFO] web.py line:60: REAL:'0.5'
+2019-05-10 18:57:32,921 [INFO] gentest.py line:109: 执行测试步骤通过: 24|CHECK|广告订单页^计划出价列名
+2019-05-10 18:57:33,122 [INFO] gentest.py line:33: 执行测试步骤: 25|CHECK|广告订单页^每日预算列名
+2019-05-10 18:57:35,166 [INFO] web.py line:59: DATA:'1000'
+2019-05-10 18:57:35,166 [INFO] web.py line:60: REAL:'1000'
+2019-05-10 18:57:35,166 [INFO] gentest.py line:109: 执行测试步骤通过: 25|CHECK|广告订单页^每日预算列名
+2019-05-10 18:57:35,397 [INFO] gentest.py line:89: 用例片段执行结果:
+
+2019-05-10 18:57:35,397 [INFO] gentest.py line:90: Pass
+2019-05-10 18:57:35,397 [INFO] gentest.py line:109: 执行测试步骤通过: 2|EXECUTE|SNIPPET_003
+2019-05-10 18:57:35,598 [INFO] gentest.py line:33: 执行测试步骤: ^1|JUDGE|优投平台登录页^提示信息关闭图标
+2019-05-10 18:57:35,600 [INFO] windows.py line:53: --- 旧窗口: CDwindow-B4ABAED349FAFA5D13A1E1FB79A31139
+2019-05-10 18:57:35,600 [INFO] windows.py line:54: --- 切换到窗口: 'CDwindow-F1C1872F547928A71FFD4053C6E59351'
+2019-05-10 18:57:35,611 [INFO] windows.py line:57: --- 当前标签页: '优投平台登录页'
+2019-05-10 18:57:35,611 [INFO] windows.py line:58: Pages:
+2019-05-10 18:57:35,611 [INFO] windows.py line:59: {'优投平台登录页': 'CDwindow-F1C1872F547928A71FFD4053C6E59351', '广告订单页': 'CDwindow-B4ABAED349FAFA5D13A1E1FB79A31139'}
+2019-05-10 18:57:43,121 [INFO] web.py line:167: REAL:2
+2019-05-10 18:57:43,122 [INFO] web.py line:173: DATA:1
+2019-05-10 18:57:43,285 [ERROR] gentest.py line:139: 执行测试步骤失败: ^1|JUDGE|优投平台登录页^提示信息关闭图标
+Traceback (most recent call last):
+  File "/home/youmi/CxhProjects/cxh/AutoTest/sweetest/sweetest/lib/gentest.py", line 61, in __call__
+    getattr(web, step['keyword'].lower())(step)
+  File "/home/youmi/CxhProjects/cxh/AutoTest/sweetest/sweetest/keywords/web.py", line 174, in judge
+    assert flag == 1
+AssertionError
+2019-05-10 18:57:43,285 [INFO] gentest.py line:33: 执行测试步骤: 3|CLICK|优投平台登录页^用户图标
+2019-05-10 18:57:50,885 [INFO] gentest.py line:109: 执行测试步骤通过: 3|CLICK|优投平台登录页^用户图标
+2019-05-10 18:57:51,086 [INFO] gentest.py line:33: 执行测试步骤: 4|CLICK|优投平台登录页^退出登录按钮
+2019-05-10 18:57:56,993 [INFO] gentest.py line:109: 执行测试步骤通过: 4|CLICK|优投平台登录页^退出登录按钮
+2019-05-10 18:57:57,194 [INFO] gentest.py line:33: 执行测试步骤: 5|CHECK|通用^页面title
+2019-05-10 18:58:01,209 [INFO] web.py line:59: DATA:'有米优投-首页'
+2019-05-10 18:58:01,209 [INFO] web.py line:60: REAL:'有米优投-首页'
+2019-05-10 18:58:01,209 [INFO] gentest.py line:109: 执行测试步骤通过: 5|CHECK|通用^页面title
+2019-05-10 18:58:01,409 [INFO] myrunner.py line:19: 测试通过
+
+2019-05-10 18:58:01,410 [INFO] myrunner.py line:14: test_ORDER_002 (sweetest.lib.gentest.TestClass)用例开始运行... 
+2019-05-10 18:58:01,410 [INFO] gentest.py line:33: 执行测试步骤: 1|EXECUTE|SNIPPET_001
+2019-05-10 18:58:01,411 [INFO] gentest.py line:33: 执行测试步骤: 1|CLICK|优投平台登录页^登录按钮
+2019-05-10 18:58:10,380 [INFO] gentest.py line:109: 执行测试步骤通过: 1|CLICK|优投平台登录页^登录按钮
+2019-05-10 18:58:10,581 [INFO] gentest.py line:33: 执行测试步骤: 2|CHECK|通用^页面title
+2019-05-10 18:58:15,592 [INFO] web.py line:59: DATA:'有米优投登录 - 有米云'
+2019-05-10 18:58:15,592 [INFO] web.py line:60: REAL:'有米优投登录 - 有米云'
+2019-05-10 18:58:15,592 [INFO] gentest.py line:109: 执行测试步骤通过: 2|CHECK|通用^页面title
+2019-05-10 18:58:15,793 [INFO] gentest.py line:33: 执行测试步骤: 3|INPUT|优投平台登录页^账号
+2019-05-10 18:58:18,538 [INFO] gentest.py line:109: 执行测试步骤通过: 3|INPUT|优投平台登录页^账号
+2019-05-10 18:58:18,738 [INFO] gentest.py line:33: 执行测试步骤: 4|INPUT|优投平台登录页^密码
+2019-05-10 18:58:21,370 [INFO] gentest.py line:109: 执行测试步骤通过: 4|INPUT|优投平台登录页^密码
+2019-05-10 18:58:21,571 [INFO] gentest.py line:33: 执行测试步骤: 5|CLICK|优投平台登录页^登录
+2019-05-10 18:58:24,174 [INFO] gentest.py line:109: 执行测试步骤通过: 5|CLICK|优投平台登录页^登录
+2019-05-10 18:58:24,374 [INFO] gentest.py line:33: 执行测试步骤: ^6|CHECK|通用^页面title
+2019-05-10 18:58:31,392 [INFO] web.py line:59: DATA:'个人信息*'
+2019-05-10 18:58:31,392 [INFO] web.py line:60: REAL:'数据概览 - 有米优投'
+2019-05-10 18:58:31,559 [ERROR] gentest.py line:139: 执行测试步骤失败: ^6|CHECK|通用^页面title
+Traceback (most recent call last):
+  File "/home/youmi/CxhProjects/cxh/AutoTest/sweetest/sweetest/lib/gentest.py", line 61, in __call__
+    getattr(web, step['keyword'].lower())(step)
+  File "/home/youmi/CxhProjects/cxh/AutoTest/sweetest/sweetest/keywords/web.py", line 107, in check
+    getattr(Common, by)(data, output)
+  File "/home/youmi/CxhProjects/cxh/AutoTest/sweetest/sweetest/keywords/web.py", line 19, in title
+    detail_check(expected, real)
+  File "/home/youmi/CxhProjects/cxh/AutoTest/sweetest/sweetest/keywords/web.py", line 77, in detail_check
+    assert expected[:-1] in real
+AssertionError
+2019-05-10 18:58:31,559 [INFO] gentest.py line:33: 执行测试步骤: 8|CHECK|通用^页面title
+2019-05-10 18:58:43,581 [INFO] web.py line:59: DATA:'数据概览 - 有米优投'
+2019-05-10 18:58:43,582 [INFO] web.py line:60: REAL:'数据概览 - 有米优投'
+2019-05-10 18:58:43,582 [INFO] gentest.py line:109: 执行测试步骤通过: 8|CHECK|通用^页面title
+2019-05-10 18:58:43,782 [INFO] gentest.py line:33: 执行测试步骤: 9|CLICK|通用^投放管理
+2019-05-10 18:58:47,391 [INFO] gentest.py line:109: 执行测试步骤通过: 9|CLICK|通用^投放管理
+2019-05-10 18:58:47,592 [INFO] gentest.py line:33: 执行测试步骤: 10|CLICK|通用^广告管理
+2019-05-10 18:58:50,209 [INFO] gentest.py line:109: 执行测试步骤通过: 10|CLICK|通用^广告管理
+2019-05-10 18:58:50,410 [INFO] gentest.py line:33: 执行测试步骤: 11|CHECK|通用^页面title
+2019-05-10 18:58:53,423 [INFO] web.py line:59: DATA:'推广计划 - 有米优投'
+2019-05-10 18:58:53,423 [INFO] web.py line:60: REAL:'推广计划 - 有米优投'
+2019-05-10 18:58:53,424 [INFO] gentest.py line:109: 执行测试步骤通过: 11|CHECK|通用^页面title
+2019-05-10 18:58:53,656 [INFO] gentest.py line:89: 用例片段执行结果:
+
+2019-05-10 18:58:53,657 [INFO] gentest.py line:90: Pass
+2019-05-10 18:58:53,657 [INFO] gentest.py line:109: 执行测试步骤通过: 1|EXECUTE|SNIPPET_001
+2019-05-10 18:58:53,857 [INFO] gentest.py line:33: 执行测试步骤: 2|EXECUTE|SNIPPET_007
+2019-05-10 18:58:53,858 [INFO] gentest.py line:33: 执行测试步骤: 1|EXECUTE|SNIPPET_005
+2019-05-10 18:58:53,859 [INFO] gentest.py line:33: 执行测试步骤: 1|CLICK|通用^广告订单
+2019-05-10 18:58:56,694 [INFO] gentest.py line:109: 执行测试步骤通过: 1|CLICK|通用^广告订单
+2019-05-10 18:58:56,895 [INFO] gentest.py line:33: 执行测试步骤: 2|CHECK|通用^页面title
+2019-05-10 18:59:00,905 [INFO] web.py line:59: DATA:'广告订单 - 有米优投'
+2019-05-10 18:59:00,905 [INFO] web.py line:60: REAL:'广告订单 - 有米优投'
+2019-05-10 18:59:00,907 [INFO] windows.py line:53: --- 旧窗口: CDwindow-F1C1872F547928A71FFD4053C6E59351
+2019-05-10 18:59:00,907 [INFO] windows.py line:54: --- 切换到窗口: 'CDwindow-B4ABAED349FAFA5D13A1E1FB79A31139'
+2019-05-10 18:59:00,926 [INFO] windows.py line:57: --- 当前标签页: '广告订单页'
+2019-05-10 18:59:00,926 [INFO] windows.py line:58: Pages:
+2019-05-10 18:59:00,926 [INFO] windows.py line:59: {'优投平台登录页': 'CDwindow-F1C1872F547928A71FFD4053C6E59351', '广告订单页': 'CDwindow-B4ABAED349FAFA5D13A1E1FB79A31139'}
+2019-05-10 18:59:00,927 [INFO] gentest.py line:109: 执行测试步骤通过: 2|CHECK|通用^页面title
+2019-05-10 18:59:01,127 [INFO] gentest.py line:33: 执行测试步骤: 3|REFRESH|
+2019-05-10 18:59:04,165 [INFO] gentest.py line:109: 执行测试步骤通过: 3|REFRESH|
+2019-05-10 18:59:04,366 [INFO] gentest.py line:33: 执行测试步骤: 4|OBTAIN|广告订单页^投放媒体列名
+2019-05-10 18:59:18,413 [INFO] gentest.py line:109: 执行测试步骤通过: 4|OBTAIN|广告订单页^投放媒体列名
+2019-05-10 18:59:18,613 [INFO] gentest.py line:33: 执行测试步骤: 5|OBTAIN|广告订单页^广告位列名
+2019-05-10 18:59:20,644 [INFO] gentest.py line:109: 执行测试步骤通过: 5|OBTAIN|广告订单页^广告位列名
+2019-05-10 18:59:20,844 [INFO] gentest.py line:33: 执行测试步骤: 6|MOVE|广告订单页^广告订单列名
+2019-05-10 18:59:25,479 [INFO] gentest.py line:109: 执行测试步骤通过: 6|MOVE|广告订单页^广告订单列名
+2019-05-10 18:59:25,711 [INFO] gentest.py line:89: 用例片段执行结果:
+
+2019-05-10 18:59:25,711 [INFO] gentest.py line:90: Pass
+2019-05-10 18:59:25,711 [INFO] gentest.py line:109: 执行测试步骤通过: 1|EXECUTE|SNIPPET_005
+2019-05-10 18:59:25,912 [INFO] gentest.py line:33: 执行测试步骤: 2|CLICK|广告订单页^广告订单编辑图标
+2019-05-10 18:59:30,570 [INFO] windows.py line:125: --- 注册新页面: '广告投放页'
+2019-05-10 18:59:30,570 [INFO] windows.py line:126: Pages:
+2019-05-10 18:59:30,570 [INFO] windows.py line:127: {'优投平台登录页': 'CDwindow-F1C1872F547928A71FFD4053C6E59351', '广告订单页': 'CDwindow-B4ABAED349FAFA5D13A1E1FB79A31139', '广告投放页': 'CDwindow-8FBD2F6DDF7BC9A2C1882EAC5EBC233E'}
+2019-05-10 18:59:30,570 [INFO] gentest.py line:109: 执行测试步骤通过: 2|CLICK|广告订单页^广告订单编辑图标
+2019-05-10 18:59:30,770 [INFO] gentest.py line:33: 执行测试步骤: 3|EXECUTE|SNIPPET_006
+2019-05-10 18:59:30,771 [INFO] gentest.py line:33: 执行测试步骤: 1|CHECK|通用^页面title
+2019-05-10 18:59:44,817 [INFO] web.py line:59: DATA:'广告投放 - 有米优投'
+2019-05-10 18:59:44,817 [INFO] web.py line:60: REAL:'广告投放 - 有米优投'
+2019-05-10 18:59:44,817 [INFO] gentest.py line:109: 执行测试步骤通过: 1|CHECK|通用^页面title
+2019-05-10 18:59:45,017 [INFO] gentest.py line:33: 执行测试步骤: 2|INPUT|广告投放页^每日预算
+2019-05-10 18:59:47,719 [INFO] gentest.py line:109: 执行测试步骤通过: 2|INPUT|广告投放页^每日预算
+2019-05-10 18:59:47,919 [INFO] gentest.py line:33: 执行测试步骤: 3|INPUT|广告投放页^计划出价
+2019-05-10 18:59:50,605 [INFO] gentest.py line:109: 执行测试步骤通过: 3|INPUT|广告投放页^计划出价
+2019-05-10 18:59:50,806 [INFO] gentest.py line:33: 执行测试步骤: 4|INPUT|广告投放页^广告订单名称
+2019-05-10 18:59:55,485 [INFO] gentest.py line:109: 执行测试步骤通过: 4|INPUT|广告投放页^广告订单名称
+2019-05-10 18:59:55,685 [INFO] gentest.py line:33: 执行测试步骤: 5|CLICK|广告投放页^保存并返回列表
+2019-05-10 18:59:58,348 [INFO] gentest.py line:109: 执行测试步骤通过: 5|CLICK|广告投放页^保存并返回列表
+2019-05-10 18:59:58,548 [INFO] gentest.py line:33: 执行测试步骤: 6|CHECK|通用^页面title
+2019-05-10 19:00:10,563 [INFO] web.py line:59: DATA:'广告订单 - 有米优投'
+2019-05-10 19:00:10,564 [INFO] web.py line:60: REAL:'广告订单 - 有米优投'
+2019-05-10 19:00:10,566 [INFO] windows.py line:53: --- 旧窗口: CDwindow-8FBD2F6DDF7BC9A2C1882EAC5EBC233E
+2019-05-10 19:00:10,566 [INFO] windows.py line:54: --- 切换到窗口: 'CDwindow-B4ABAED349FAFA5D13A1E1FB79A31139'
+2019-05-10 19:00:10,600 [INFO] windows.py line:57: --- 当前标签页: '广告订单页'
+2019-05-10 19:00:10,600 [INFO] windows.py line:58: Pages:
+2019-05-10 19:00:10,600 [INFO] windows.py line:59: {'优投平台登录页': 'CDwindow-F1C1872F547928A71FFD4053C6E59351', '广告订单页': 'CDwindow-B4ABAED349FAFA5D13A1E1FB79A31139', '广告投放页': 'CDwindow-8FBD2F6DDF7BC9A2C1882EAC5EBC233E'}
+2019-05-10 19:00:10,600 [INFO] gentest.py line:109: 执行测试步骤通过: 6|CHECK|通用^页面title
+2019-05-10 19:00:10,801 [INFO] gentest.py line:33: 执行测试步骤: 7|REFRESH|
+2019-05-10 19:00:13,243 [INFO] gentest.py line:109: 执行测试步骤通过: 7|REFRESH|
+2019-05-10 19:00:13,443 [INFO] gentest.py line:33: 执行测试步骤: 8|CHECK|广告订单页^广告订单列名
+2019-05-10 19:00:25,488 [INFO] web.py line:59: DATA:'0510-微博-代理商自动测试18:56:48(重命名)'
+2019-05-10 19:00:25,488 [INFO] web.py line:60: REAL:'0510-微博-代理商自动测试18:56:48(重命名)'
+2019-05-10 19:00:25,488 [INFO] gentest.py line:109: 执行测试步骤通过: 8|CHECK|广告订单页^广告订单列名
+2019-05-10 19:00:25,689 [INFO] gentest.py line:33: 执行测试步骤: 9|CHECK|广告订单页^投放媒体列名
+2019-05-10 19:00:27,759 [INFO] web.py line:59: DATA:'\n                  微博\n                '
+2019-05-10 19:00:27,759 [INFO] web.py line:60: REAL:'\n                  微博\n                '
+2019-05-10 19:00:27,759 [INFO] gentest.py line:109: 执行测试步骤通过: 9|CHECK|广告订单页^投放媒体列名
+2019-05-10 19:00:27,960 [INFO] gentest.py line:33: 执行测试步骤: 10|CHECK|广告订单页^广告位列名
+2019-05-10 19:00:30,001 [INFO] web.py line:59: DATA:'标准图片创意_592x296'
+2019-05-10 19:00:30,001 [INFO] web.py line:60: REAL:'标准图片创意_592x296'
+2019-05-10 19:00:30,001 [INFO] gentest.py line:109: 执行测试步骤通过: 10|CHECK|广告订单页^广告位列名
+2019-05-10 19:00:30,202 [INFO] gentest.py line:33: 执行测试步骤: 11|CHECK|广告订单页^计划出价列名
+2019-05-10 19:00:32,252 [INFO] web.py line:59: DATA:'0.8'
+2019-05-10 19:00:32,252 [INFO] web.py line:60: REAL:'0.8'
+2019-05-10 19:00:32,253 [INFO] gentest.py line:109: 执行测试步骤通过: 11|CHECK|广告订单页^计划出价列名
+2019-05-10 19:00:32,453 [INFO] gentest.py line:33: 执行测试步骤: 12|CHECK|广告订单页^每日预算列名
+2019-05-10 19:00:34,503 [INFO] web.py line:59: DATA:'1800'
+2019-05-10 19:00:34,503 [INFO] web.py line:60: REAL:'1800'
+2019-05-10 19:00:34,503 [INFO] gentest.py line:109: 执行测试步骤通过: 12|CHECK|广告订单页^每日预算列名
+2019-05-10 19:00:34,735 [INFO] gentest.py line:89: 用例片段执行结果:
+
+2019-05-10 19:00:34,735 [INFO] gentest.py line:90: Pass
+2019-05-10 19:00:34,735 [INFO] gentest.py line:109: 执行测试步骤通过: 3|EXECUTE|SNIPPET_006
+2019-05-10 19:00:34,989 [INFO] gentest.py line:89: 用例片段执行结果:
+
+2019-05-10 19:00:34,990 [INFO] gentest.py line:90: Pass
+2019-05-10 19:00:34,990 [INFO] gentest.py line:109: 执行测试步骤通过: 2|EXECUTE|SNIPPET_007
+2019-05-10 19:00:35,190 [INFO] gentest.py line:33: 执行测试步骤: ^1|JUDGE|优投平台登录页^提示信息关闭图标
+2019-05-10 19:00:35,194 [INFO] windows.py line:53: --- 旧窗口: CDwindow-B4ABAED349FAFA5D13A1E1FB79A31139
+2019-05-10 19:00:35,195 [INFO] windows.py line:54: --- 切换到窗口: 'CDwindow-F1C1872F547928A71FFD4053C6E59351'
+2019-05-10 19:00:35,214 [INFO] windows.py line:57: --- 当前标签页: '优投平台登录页'
+2019-05-10 19:00:35,215 [INFO] windows.py line:58: Pages:
+2019-05-10 19:00:35,215 [INFO] windows.py line:59: {'优投平台登录页': 'CDwindow-F1C1872F547928A71FFD4053C6E59351', '广告订单页': 'CDwindow-B4ABAED349FAFA5D13A1E1FB79A31139', '广告投放页': 'CDwindow-8FBD2F6DDF7BC9A2C1882EAC5EBC233E'}
+2019-05-10 19:00:42,727 [INFO] web.py line:167: REAL:2
+2019-05-10 19:00:42,728 [INFO] web.py line:173: DATA:1
+2019-05-10 19:00:42,904 [ERROR] gentest.py line:139: 执行测试步骤失败: ^1|JUDGE|优投平台登录页^提示信息关闭图标
+Traceback (most recent call last):
+  File "/home/youmi/CxhProjects/cxh/AutoTest/sweetest/sweetest/lib/gentest.py", line 61, in __call__
+    getattr(web, step['keyword'].lower())(step)
+  File "/home/youmi/CxhProjects/cxh/AutoTest/sweetest/sweetest/keywords/web.py", line 174, in judge
+    assert flag == 1
+AssertionError
+2019-05-10 19:00:42,904 [INFO] gentest.py line:33: 执行测试步骤: 3|CLICK|优投平台登录页^用户图标
+2019-05-10 19:00:45,500 [INFO] gentest.py line:109: 执行测试步骤通过: 3|CLICK|优投平台登录页^用户图标
+2019-05-10 19:00:45,700 [INFO] gentest.py line:33: 执行测试步骤: 4|CLICK|优投平台登录页^退出登录按钮
+2019-05-10 19:00:48,651 [INFO] gentest.py line:109: 执行测试步骤通过: 4|CLICK|优投平台登录页^退出登录按钮
+2019-05-10 19:00:48,852 [INFO] gentest.py line:33: 执行测试步骤: 5|CHECK|通用^页面title
+2019-05-10 19:00:50,869 [INFO] web.py line:59: DATA:'有米优投-首页'
+2019-05-10 19:00:50,869 [INFO] web.py line:60: REAL:'有米优投-首页'
+2019-05-10 19:00:50,869 [INFO] gentest.py line:109: 执行测试步骤通过: 5|CHECK|通用^页面title
+2019-05-10 19:00:51,070 [INFO] myrunner.py line:19: 测试通过
+
+2019-05-10 19:00:51,070 [INFO] myrunner.py line:14: test_ORDER_003 (sweetest.lib.gentest.TestClass)用例开始运行... 
+2019-05-10 19:00:51,070 [INFO] gentest.py line:33: 执行测试步骤: 1|EXECUTE|SNIPPET_001
+2019-05-10 19:00:51,072 [INFO] gentest.py line:33: 执行测试步骤: 1|CLICK|优投平台登录页^登录按钮
+2019-05-10 19:01:00,067 [INFO] gentest.py line:109: 执行测试步骤通过: 1|CLICK|优投平台登录页^登录按钮
+2019-05-10 19:01:00,268 [INFO] gentest.py line:33: 执行测试步骤: 2|CHECK|通用^页面title
+2019-05-10 19:01:05,284 [INFO] web.py line:59: DATA:'有米优投登录 - 有米云'
+2019-05-10 19:01:05,284 [INFO] web.py line:60: REAL:'有米优投登录 - 有米云'
+2019-05-10 19:01:05,284 [INFO] gentest.py line:109: 执行测试步骤通过: 2|CHECK|通用^页面title
+2019-05-10 19:01:05,485 [INFO] gentest.py line:33: 执行测试步骤: 3|INPUT|优投平台登录页^账号
+2019-05-10 19:01:08,218 [INFO] gentest.py line:109: 执行测试步骤通过: 3|INPUT|优投平台登录页^账号
+2019-05-10 19:01:08,419 [INFO] gentest.py line:33: 执行测试步骤: 4|INPUT|优投平台登录页^密码
+2019-05-10 19:01:11,064 [INFO] gentest.py line:109: 执行测试步骤通过: 4|INPUT|优投平台登录页^密码
+2019-05-10 19:01:11,265 [INFO] gentest.py line:33: 执行测试步骤: 5|CLICK|优投平台登录页^登录
+2019-05-10 19:01:13,886 [INFO] gentest.py line:109: 执行测试步骤通过: 5|CLICK|优投平台登录页^登录
+2019-05-10 19:01:14,087 [INFO] gentest.py line:33: 执行测试步骤: ^6|CHECK|通用^页面title
+2019-05-10 19:01:21,102 [INFO] web.py line:59: DATA:'个人信息*'
+2019-05-10 19:01:21,103 [INFO] web.py line:60: REAL:'数据概览 - 有米优投'
+2019-05-10 19:01:21,274 [ERROR] gentest.py line:139: 执行测试步骤失败: ^6|CHECK|通用^页面title
+Traceback (most recent call last):
+  File "/home/youmi/CxhProjects/cxh/AutoTest/sweetest/sweetest/lib/gentest.py", line 61, in __call__
+    getattr(web, step['keyword'].lower())(step)
+  File "/home/youmi/CxhProjects/cxh/AutoTest/sweetest/sweetest/keywords/web.py", line 107, in check
+    getattr(Common, by)(data, output)
+  File "/home/youmi/CxhProjects/cxh/AutoTest/sweetest/sweetest/keywords/web.py", line 19, in title
+    detail_check(expected, real)
+  File "/home/youmi/CxhProjects/cxh/AutoTest/sweetest/sweetest/keywords/web.py", line 77, in detail_check
+    assert expected[:-1] in real
+AssertionError
+2019-05-10 19:01:21,274 [INFO] gentest.py line:33: 执行测试步骤: 8|CHECK|通用^页面title
+2019-05-10 19:01:33,293 [INFO] web.py line:59: DATA:'数据概览 - 有米优投'
+2019-05-10 19:01:33,293 [INFO] web.py line:60: REAL:'数据概览 - 有米优投'
+2019-05-10 19:01:33,293 [INFO] gentest.py line:109: 执行测试步骤通过: 8|CHECK|通用^页面title
+2019-05-10 19:01:33,493 [INFO] gentest.py line:33: 执行测试步骤: 9|CLICK|通用^投放管理
+2019-05-10 19:01:37,106 [INFO] gentest.py line:109: 执行测试步骤通过: 9|CLICK|通用^投放管理
+2019-05-10 19:01:37,307 [INFO] gentest.py line:33: 执行测试步骤: 10|CLICK|通用^广告管理
+2019-05-10 19:01:39,947 [INFO] gentest.py line:109: 执行测试步骤通过: 10|CLICK|通用^广告管理
+2019-05-10 19:01:40,147 [INFO] gentest.py line:33: 执行测试步骤: 11|CHECK|通用^页面title
+2019-05-10 19:01:43,159 [INFO] web.py line:59: DATA:'推广计划 - 有米优投'
+2019-05-10 19:01:43,159 [INFO] web.py line:60: REAL:'推广计划 - 有米优投'
+2019-05-10 19:01:43,159 [INFO] gentest.py line:109: 执行测试步骤通过: 11|CHECK|通用^页面title
+2019-05-10 19:01:43,413 [INFO] gentest.py line:89: 用例片段执行结果:
+
+2019-05-10 19:01:43,413 [INFO] gentest.py line:90: Pass
+2019-05-10 19:01:43,413 [INFO] gentest.py line:109: 执行测试步骤通过: 1|EXECUTE|SNIPPET_001
+2019-05-10 19:01:43,613 [INFO] gentest.py line:33: 执行测试步骤: 2|EXECUTE|SNIPPET_009
+2019-05-10 19:01:43,614 [INFO] gentest.py line:33: 执行测试步骤: 1|EXECUTE|SNIPPET_005
+2019-05-10 19:01:43,615 [INFO] gentest.py line:33: 执行测试步骤: 1|CLICK|通用^广告订单
+2019-05-10 19:01:46,474 [INFO] gentest.py line:109: 执行测试步骤通过: 1|CLICK|通用^广告订单
+2019-05-10 19:01:46,675 [INFO] gentest.py line:33: 执行测试步骤: 2|CHECK|通用^页面title
+2019-05-10 19:01:50,687 [INFO] web.py line:59: DATA:'广告订单 - 有米优投'
+2019-05-10 19:01:50,687 [INFO] web.py line:60: REAL:'广告订单 - 有米优投'
+2019-05-10 19:01:50,690 [INFO] windows.py line:53: --- 旧窗口: CDwindow-F1C1872F547928A71FFD4053C6E59351
+2019-05-10 19:01:50,691 [INFO] windows.py line:54: --- 切换到窗口: 'CDwindow-B4ABAED349FAFA5D13A1E1FB79A31139'
+2019-05-10 19:01:50,703 [INFO] windows.py line:57: --- 当前标签页: '广告订单页'
+2019-05-10 19:01:50,703 [INFO] windows.py line:58: Pages:
+2019-05-10 19:01:50,703 [INFO] windows.py line:59: {'优投平台登录页': 'CDwindow-F1C1872F547928A71FFD4053C6E59351', '广告订单页': 'CDwindow-B4ABAED349FAFA5D13A1E1FB79A31139', '广告投放页': 'CDwindow-8FBD2F6DDF7BC9A2C1882EAC5EBC233E'}
+2019-05-10 19:01:50,703 [INFO] gentest.py line:109: 执行测试步骤通过: 2|CHECK|通用^页面title
+2019-05-10 19:01:50,904 [INFO] gentest.py line:33: 执行测试步骤: 3|REFRESH|
+2019-05-10 19:01:53,882 [INFO] gentest.py line:109: 执行测试步骤通过: 3|REFRESH|
+2019-05-10 19:01:54,083 [INFO] gentest.py line:33: 执行测试步骤: 4|OBTAIN|广告订单页^投放媒体列名
+2019-05-10 19:02:08,122 [INFO] gentest.py line:109: 执行测试步骤通过: 4|OBTAIN|广告订单页^投放媒体列名
+2019-05-10 19:02:08,323 [INFO] gentest.py line:33: 执行测试步骤: 5|OBTAIN|广告订单页^广告位列名
+2019-05-10 19:02:10,357 [INFO] gentest.py line:109: 执行测试步骤通过: 5|OBTAIN|广告订单页^广告位列名
+2019-05-10 19:02:10,557 [INFO] gentest.py line:33: 执行测试步骤: 6|MOVE|广告订单页^广告订单列名
+2019-05-10 19:02:15,182 [INFO] gentest.py line:109: 执行测试步骤通过: 6|MOVE|广告订单页^广告订单列名
+2019-05-10 19:02:15,428 [INFO] gentest.py line:89: 用例片段执行结果:
+
+2019-05-10 19:02:15,429 [INFO] gentest.py line:90: Pass
+2019-05-10 19:02:15,429 [INFO] gentest.py line:109: 执行测试步骤通过: 1|EXECUTE|SNIPPET_005
+2019-05-10 19:02:15,629 [INFO] gentest.py line:33: 执行测试步骤: 2|CLICK|广告订单页^广告订单复制链接
+2019-05-10 19:02:20,338 [INFO] gentest.py line:109: 执行测试步骤通过: 2|CLICK|广告订单页^广告订单复制链接
+2019-05-10 19:02:20,539 [INFO] gentest.py line:33: 执行测试步骤: 3|EXECUTE|SNIPPET_006
+2019-05-10 19:02:20,540 [INFO] gentest.py line:33: 执行测试步骤: 1|CHECK|通用^页面title
+2019-05-10 19:02:32,544 [INFO] windows.py line:53: --- 旧窗口: CDwindow-B4ABAED349FAFA5D13A1E1FB79A31139
+2019-05-10 19:02:32,544 [INFO] windows.py line:54: --- 切换到窗口: 'CDwindow-8FBD2F6DDF7BC9A2C1882EAC5EBC233E'
+2019-05-10 19:02:32,546 [INFO] windows.py line:57: --- 当前标签页: '广告投放页'
+2019-05-10 19:02:32,546 [INFO] windows.py line:58: Pages:
+2019-05-10 19:02:32,546 [INFO] windows.py line:59: {'优投平台登录页': 'CDwindow-F1C1872F547928A71FFD4053C6E59351', '广告订单页': 'CDwindow-B4ABAED349FAFA5D13A1E1FB79A31139', '广告投放页': 'CDwindow-8FBD2F6DDF7BC9A2C1882EAC5EBC233E'}
+2019-05-10 19:02:34,563 [INFO] web.py line:59: DATA:'广告投放 - 有米优投'
+2019-05-10 19:02:34,564 [INFO] web.py line:60: REAL:'广告投放 - 有米优投'
+2019-05-10 19:02:34,564 [INFO] gentest.py line:109: 执行测试步骤通过: 1|CHECK|通用^页面title
+2019-05-10 19:02:34,764 [INFO] gentest.py line:33: 执行测试步骤: 2|INPUT|广告投放页^每日预算
+2019-05-10 19:02:37,583 [INFO] gentest.py line:109: 执行测试步骤通过: 2|INPUT|广告投放页^每日预算
+2019-05-10 19:02:37,784 [INFO] gentest.py line:33: 执行测试步骤: 3|INPUT|广告投放页^计划出价
+2019-05-10 19:02:40,469 [INFO] gentest.py line:109: 执行测试步骤通过: 3|INPUT|广告投放页^计划出价
+2019-05-10 19:02:40,669 [INFO] gentest.py line:33: 执行测试步骤: 4|INPUT|广告投放页^广告订单名称
+2019-05-10 19:02:45,348 [INFO] gentest.py line:109: 执行测试步骤通过: 4|INPUT|广告投放页^广告订单名称
+2019-05-10 19:02:45,548 [INFO] gentest.py line:33: 执行测试步骤: 5|CLICK|广告投放页^保存并返回列表
+2019-05-10 19:02:48,180 [INFO] gentest.py line:109: 执行测试步骤通过: 5|CLICK|广告投放页^保存并返回列表
+2019-05-10 19:02:48,380 [INFO] gentest.py line:33: 执行测试步骤: 6|CHECK|通用^页面title
+2019-05-10 19:03:00,403 [INFO] web.py line:59: DATA:'广告订单 - 有米优投'
+2019-05-10 19:03:00,404 [INFO] web.py line:60: REAL:'广告订单 - 有米优投'
+2019-05-10 19:03:00,407 [INFO] windows.py line:53: --- 旧窗口: CDwindow-8FBD2F6DDF7BC9A2C1882EAC5EBC233E
+2019-05-10 19:03:00,407 [INFO] windows.py line:54: --- 切换到窗口: 'CDwindow-B4ABAED349FAFA5D13A1E1FB79A31139'
+2019-05-10 19:03:00,431 [INFO] windows.py line:57: --- 当前标签页: '广告订单页'
+2019-05-10 19:03:00,431 [INFO] windows.py line:58: Pages:
+2019-05-10 19:03:00,431 [INFO] windows.py line:59: {'优投平台登录页': 'CDwindow-F1C1872F547928A71FFD4053C6E59351', '广告订单页': 'CDwindow-B4ABAED349FAFA5D13A1E1FB79A31139', '广告投放页': 'CDwindow-8FBD2F6DDF7BC9A2C1882EAC5EBC233E'}
+2019-05-10 19:03:00,431 [INFO] gentest.py line:109: 执行测试步骤通过: 6|CHECK|通用^页面title
+2019-05-10 19:03:00,631 [INFO] gentest.py line:33: 执行测试步骤: 7|REFRESH|
+2019-05-10 19:03:05,451 [INFO] gentest.py line:109: 执行测试步骤通过: 7|REFRESH|
+2019-05-10 19:03:05,651 [INFO] gentest.py line:33: 执行测试步骤: 8|CHECK|广告订单页^广告订单列名
+2019-05-10 19:03:17,700 [INFO] web.py line:59: DATA:'0510-微博-代理商自动测试18:56:48(重命名)(复制)'
+2019-05-10 19:03:17,700 [INFO] web.py line:60: REAL:'0510-微博-代理商自动测试18:56:48(重命名)(复制)'
+2019-05-10 19:03:17,700 [INFO] gentest.py line:109: 执行测试步骤通过: 8|CHECK|广告订单页^广告订单列名
+2019-05-10 19:03:17,900 [INFO] gentest.py line:33: 执行测试步骤: 9|CHECK|广告订单页^投放媒体列名
+2019-05-10 19:03:19,934 [INFO] web.py line:59: DATA:'\n                  微博\n                '
+2019-05-10 19:03:19,934 [INFO] web.py line:60: REAL:'\n                  微博\n                '
+2019-05-10 19:03:19,934 [INFO] gentest.py line:109: 执行测试步骤通过: 9|CHECK|广告订单页^投放媒体列名
+2019-05-10 19:03:20,135 [INFO] gentest.py line:33: 执行测试步骤: 10|CHECK|广告订单页^广告位列名
+2019-05-10 19:03:22,171 [INFO] web.py line:59: DATA:'标准图片创意_592x296'
+2019-05-10 19:03:22,171 [INFO] web.py line:60: REAL:'标准图片创意_592x296'
+2019-05-10 19:03:22,171 [INFO] gentest.py line:109: 执行测试步骤通过: 10|CHECK|广告订单页^广告位列名
+2019-05-10 19:03:22,371 [INFO] gentest.py line:33: 执行测试步骤: 11|CHECK|广告订单页^计划出价列名
+2019-05-10 19:03:24,422 [INFO] web.py line:59: DATA:'1.2'
+2019-05-10 19:03:24,422 [INFO] web.py line:60: REAL:'1.2'
+2019-05-10 19:03:24,422 [INFO] gentest.py line:109: 执行测试步骤通过: 11|CHECK|广告订单页^计划出价列名
+2019-05-10 19:03:24,622 [INFO] gentest.py line:33: 执行测试步骤: 12|CHECK|广告订单页^每日预算列名
+2019-05-10 19:03:26,666 [INFO] web.py line:59: DATA:'2000'
+2019-05-10 19:03:26,666 [INFO] web.py line:60: REAL:'2000'
+2019-05-10 19:03:26,666 [INFO] gentest.py line:109: 执行测试步骤通过: 12|CHECK|广告订单页^每日预算列名
+2019-05-10 19:03:26,910 [INFO] gentest.py line:89: 用例片段执行结果:
+
+2019-05-10 19:03:26,910 [INFO] gentest.py line:90: Pass
+2019-05-10 19:03:26,910 [INFO] gentest.py line:109: 执行测试步骤通过: 3|EXECUTE|SNIPPET_006
+2019-05-10 19:03:27,164 [INFO] gentest.py line:89: 用例片段执行结果:
+
+2019-05-10 19:03:27,164 [INFO] gentest.py line:90: Pass
+2019-05-10 19:03:27,164 [INFO] gentest.py line:109: 执行测试步骤通过: 2|EXECUTE|SNIPPET_009
+2019-05-10 19:03:27,365 [INFO] gentest.py line:33: 执行测试步骤: ^1|JUDGE|优投平台登录页^提示信息关闭图标
+2019-05-10 19:03:27,369 [INFO] windows.py line:53: --- 旧窗口: CDwindow-B4ABAED349FAFA5D13A1E1FB79A31139
+2019-05-10 19:03:27,369 [INFO] windows.py line:54: --- 切换到窗口: 'CDwindow-F1C1872F547928A71FFD4053C6E59351'
+2019-05-10 19:03:27,383 [INFO] windows.py line:57: --- 当前标签页: '优投平台登录页'
+2019-05-10 19:03:27,383 [INFO] windows.py line:58: Pages:
+2019-05-10 19:03:27,383 [INFO] windows.py line:59: {'优投平台登录页': 'CDwindow-F1C1872F547928A71FFD4053C6E59351', '广告订单页': 'CDwindow-B4ABAED349FAFA5D13A1E1FB79A31139', '广告投放页': 'CDwindow-8FBD2F6DDF7BC9A2C1882EAC5EBC233E'}
+2019-05-10 19:03:34,954 [INFO] web.py line:167: REAL:2
+2019-05-10 19:03:34,954 [INFO] web.py line:173: DATA:1
+2019-05-10 19:03:35,136 [ERROR] gentest.py line:139: 执行测试步骤失败: ^1|JUDGE|优投平台登录页^提示信息关闭图标
+Traceback (most recent call last):
+  File "/home/youmi/CxhProjects/cxh/AutoTest/sweetest/sweetest/lib/gentest.py", line 61, in __call__
+    getattr(web, step['keyword'].lower())(step)
+  File "/home/youmi/CxhProjects/cxh/AutoTest/sweetest/sweetest/keywords/web.py", line 174, in judge
+    assert flag == 1
+AssertionError
+2019-05-10 19:03:35,136 [INFO] gentest.py line:33: 执行测试步骤: 3|CLICK|优投平台登录页^用户图标
+2019-05-10 19:03:37,782 [INFO] gentest.py line:109: 执行测试步骤通过: 3|CLICK|优投平台登录页^用户图标
+2019-05-10 19:03:37,982 [INFO] gentest.py line:33: 执行测试步骤: 4|CLICK|优投平台登录页^退出登录按钮
+2019-05-10 19:03:40,934 [INFO] gentest.py line:109: 执行测试步骤通过: 4|CLICK|优投平台登录页^退出登录按钮
+2019-05-10 19:03:41,134 [INFO] gentest.py line:33: 执行测试步骤: 5|CHECK|通用^页面title
+2019-05-10 19:03:43,149 [INFO] web.py line:59: DATA:'有米优投-首页'
+2019-05-10 19:03:43,150 [INFO] web.py line:60: REAL:'有米优投-首页'
+2019-05-10 19:03:43,150 [INFO] gentest.py line:109: 执行测试步骤通过: 5|CHECK|通用^页面title
+2019-05-10 19:03:43,350 [INFO] myrunner.py line:19: 测试通过
+
+2019-05-10 19:03:43,351 [INFO] myrunner.py line:14: test_ORDER_004 (sweetest.lib.gentest.TestClass)用例开始运行... 
+2019-05-10 19:03:43,351 [INFO] gentest.py line:33: 执行测试步骤: 1|EXECUTE|SNIPPET_001
+2019-05-10 19:03:43,352 [INFO] gentest.py line:33: 执行测试步骤: 1|CLICK|优投平台登录页^登录按钮
+2019-05-10 19:03:52,300 [INFO] gentest.py line:109: 执行测试步骤通过: 1|CLICK|优投平台登录页^登录按钮
+2019-05-10 19:03:52,500 [INFO] gentest.py line:33: 执行测试步骤: 2|CHECK|通用^页面title
+2019-05-10 19:03:57,513 [INFO] web.py line:59: DATA:'有米优投登录 - 有米云'
+2019-05-10 19:03:57,513 [INFO] web.py line:60: REAL:'有米优投登录 - 有米云'
+2019-05-10 19:03:57,513 [INFO] gentest.py line:109: 执行测试步骤通过: 2|CHECK|通用^页面title
+2019-05-10 19:03:57,714 [INFO] gentest.py line:33: 执行测试步骤: 3|INPUT|优投平台登录页^账号
+2019-05-10 19:04:00,533 [INFO] gentest.py line:109: 执行测试步骤通过: 3|INPUT|优投平台登录页^账号
+2019-05-10 19:04:00,733 [INFO] gentest.py line:33: 执行测试步骤: 4|INPUT|优投平台登录页^密码
+2019-05-10 19:04:03,383 [INFO] gentest.py line:109: 执行测试步骤通过: 4|INPUT|优投平台登录页^密码
+2019-05-10 19:04:03,584 [INFO] gentest.py line:33: 执行测试步骤: 5|CLICK|优投平台登录页^登录
+2019-05-10 19:04:06,189 [INFO] gentest.py line:109: 执行测试步骤通过: 5|CLICK|优投平台登录页^登录
+2019-05-10 19:04:06,390 [INFO] gentest.py line:33: 执行测试步骤: ^6|CHECK|通用^页面title
+2019-05-10 19:04:13,411 [INFO] web.py line:59: DATA:'个人信息*'
+2019-05-10 19:04:13,411 [INFO] web.py line:60: REAL:'数据概览 - 有米优投'
+2019-05-10 19:04:13,564 [ERROR] gentest.py line:139: 执行测试步骤失败: ^6|CHECK|通用^页面title
+Traceback (most recent call last):
+  File "/home/youmi/CxhProjects/cxh/AutoTest/sweetest/sweetest/lib/gentest.py", line 61, in __call__
+    getattr(web, step['keyword'].lower())(step)
+  File "/home/youmi/CxhProjects/cxh/AutoTest/sweetest/sweetest/keywords/web.py", line 107, in check
+    getattr(Common, by)(data, output)
+  File "/home/youmi/CxhProjects/cxh/AutoTest/sweetest/sweetest/keywords/web.py", line 19, in title
+    detail_check(expected, real)
+  File "/home/youmi/CxhProjects/cxh/AutoTest/sweetest/sweetest/keywords/web.py", line 77, in detail_check
+    assert expected[:-1] in real
+AssertionError
+2019-05-10 19:04:13,565 [INFO] gentest.py line:33: 执行测试步骤: 8|CHECK|通用^页面title
+2019-05-10 19:04:25,584 [INFO] web.py line:59: DATA:'数据概览 - 有米优投'
+2019-05-10 19:04:25,584 [INFO] web.py line:60: REAL:'数据概览 - 有米优投'
+2019-05-10 19:04:25,584 [INFO] gentest.py line:109: 执行测试步骤通过: 8|CHECK|通用^页面title
+2019-05-10 19:04:25,785 [INFO] gentest.py line:33: 执行测试步骤: 9|CLICK|通用^投放管理
+2019-05-10 19:04:29,385 [INFO] gentest.py line:109: 执行测试步骤通过: 9|CLICK|通用^投放管理
+2019-05-10 19:04:29,585 [INFO] gentest.py line:33: 执行测试步骤: 10|CLICK|通用^广告管理
+2019-05-10 19:04:32,202 [INFO] gentest.py line:109: 执行测试步骤通过: 10|CLICK|通用^广告管理
+2019-05-10 19:04:32,402 [INFO] gentest.py line:33: 执行测试步骤: 11|CHECK|通用^页面title
+2019-05-10 19:04:35,414 [INFO] web.py line:59: DATA:'推广计划 - 有米优投'
+2019-05-10 19:04:35,414 [INFO] web.py line:60: REAL:'推广计划 - 有米优投'
+2019-05-10 19:04:35,414 [INFO] gentest.py line:109: 执行测试步骤通过: 11|CHECK|通用^页面title
+2019-05-10 19:04:35,660 [INFO] gentest.py line:89: 用例片段执行结果:
+
+2019-05-10 19:04:35,660 [INFO] gentest.py line:90: Pass
+2019-05-10 19:04:35,660 [INFO] gentest.py line:109: 执行测试步骤通过: 1|EXECUTE|SNIPPET_001
+2019-05-10 19:04:35,861 [INFO] gentest.py line:33: 执行测试步骤: 2|EXECUTE|SNIPPET_003
+2019-05-10 19:04:35,863 [INFO] gentest.py line:33: 执行测试步骤: 1|CLICK|通用^新建广告订单按钮
+2019-05-10 19:04:38,756 [INFO] windows.py line:125: --- 注册新页面: '广告投放页'
+2019-05-10 19:04:38,756 [INFO] windows.py line:126: Pages:
+2019-05-10 19:04:38,756 [INFO] windows.py line:127: {'优投平台登录页': 'CDwindow-F1C1872F547928A71FFD4053C6E59351', '广告订单页': 'CDwindow-B4ABAED349FAFA5D13A1E1FB79A31139', '广告投放页': 'CDwindow-EF03D57AE2BC8EF82FDB3770E68854A2'}
+2019-05-10 19:04:38,756 [INFO] gentest.py line:109: 执行测试步骤通过: 1|CLICK|通用^新建广告订单按钮
+2019-05-10 19:04:38,957 [INFO] gentest.py line:33: 执行测试步骤: 2|CHECK|通用^页面title
+2019-05-10 19:04:51,000 [INFO] web.py line:59: DATA:'广告投放 - 有米优投'
+2019-05-10 19:04:51,001 [INFO] web.py line:60: REAL:'广告投放 - 有米优投'
+2019-05-10 19:04:51,001 [INFO] gentest.py line:109: 执行测试步骤通过: 2|CHECK|通用^页面title
+2019-05-10 19:04:51,201 [INFO] gentest.py line:33: 执行测试步骤: 3|CLICK|广告投放页^投放产品
+2019-05-10 19:04:53,822 [INFO] gentest.py line:109: 执行测试步骤通过: 3|CLICK|广告投放页^投放产品
+2019-05-10 19:04:54,022 [INFO] gentest.py line:33: 执行测试步骤: 4|INPUT|广告投放页^产品搜索框
+2019-05-10 19:04:59,673 [INFO] gentest.py line:109: 执行测试步骤通过: 4|INPUT|广告投放页^产品搜索框
+2019-05-10 19:04:59,874 [INFO] gentest.py line:33: 执行测试步骤: 5|CLICK|广告投放页^产品名称
+2019-05-10 19:05:07,526 [INFO] gentest.py line:109: 执行测试步骤通过: 5|CLICK|广告投放页^产品名称
+2019-05-10 19:05:07,727 [INFO] gentest.py line:33: 执行测试步骤: ^6|CHECK|广告投放页^广告组
+2019-05-10 19:05:19,767 [INFO] web.py line:59: DATA:''
+2019-05-10 19:05:19,767 [INFO] web.py line:60: REAL:'[2835]自动化测试广告组'
+2019-05-10 19:05:19,917 [ERROR] gentest.py line:139: 执行测试步骤失败: ^6|CHECK|广告投放页^广告组
+Traceback (most recent call last):
+  File "/home/youmi/CxhProjects/cxh/AutoTest/sweetest/sweetest/lib/gentest.py", line 61, in __call__
+    getattr(web, step['keyword'].lower())(step)
+  File "/home/youmi/CxhProjects/cxh/AutoTest/sweetest/sweetest/keywords/web.py", line 119, in check
+    detail_check(expected, real)
+  File "/home/youmi/CxhProjects/cxh/AutoTest/sweetest/sweetest/keywords/web.py", line 79, in detail_check
+    assert expected == real
+AssertionError
+2019-05-10 19:05:19,918 [INFO] gentest.py line:33: 执行测试步骤: 8|CLICK|广告投放页^下一步:投放媒体
+2019-05-10 19:05:32,581 [INFO] gentest.py line:109: 执行测试步骤通过: 8|CLICK|广告投放页^下一步:投放媒体
+2019-05-10 19:05:32,782 [INFO] gentest.py line:33: 执行测试步骤: 9|CLICK|广告投放页^媒体:微博
+2019-05-10 19:05:45,426 [INFO] gentest.py line:109: 执行测试步骤通过: 9|CLICK|广告投放页^媒体:微博
+2019-05-10 19:05:45,627 [INFO] gentest.py line:33: 执行测试步骤: 10|CLICK|广告投放页^广告位:标准图片创意_592x296
+2019-05-10 19:05:50,264 [INFO] gentest.py line:109: 执行测试步骤通过: 10|CLICK|广告投放页^广告位:标准图片创意_592x296
+2019-05-10 19:05:50,465 [INFO] gentest.py line:33: 执行测试步骤: 11|CLICK|广告投放页^下一步:受众定向
+2019-05-10 19:05:53,106 [INFO] gentest.py line:109: 执行测试步骤通过: 11|CLICK|广告投放页^下一步:受众定向
+2019-05-10 19:05:53,306 [INFO] gentest.py line:33: 执行测试步骤: 12|CLICK|广告投放页^下一步:基本信息
+2019-05-10 19:05:58,104 [INFO] gentest.py line:109: 执行测试步骤通过: 12|CLICK|广告投放页^下一步:基本信息
+2019-05-10 19:05:58,305 [INFO] gentest.py line:33: 执行测试步骤: 13|INPUT|广告投放页^每日预算
+2019-05-10 19:06:00,980 [INFO] gentest.py line:109: 执行测试步骤通过: 13|INPUT|广告投放页^每日预算
+2019-05-10 19:06:01,180 [INFO] gentest.py line:33: 执行测试步骤: 14|INPUT|广告投放页^计划出价
+2019-05-10 19:06:03,870 [INFO] gentest.py line:109: 执行测试步骤通过: 14|INPUT|广告投放页^计划出价
+2019-05-10 19:06:04,071 [INFO] gentest.py line:33: 执行测试步骤: 15|CALL|
+2019-05-10 19:06:04,071 [INFO] common.py line:127: Call function: {'mytime': 'time.getTime()'}
+2019-05-10 19:06:04,072 [INFO] common.py line:138: g.var[mytime]=19:06:04
+2019-05-10 19:06:04,072 [INFO] gentest.py line:109: 执行测试步骤通过: 15|CALL|
+2019-05-10 19:06:04,273 [INFO] gentest.py line:33: 执行测试步骤: 16|CALL|
+2019-05-10 19:06:04,273 [INFO] common.py line:127: Call function: {'mydate': 'time.getDate()'}
+2019-05-10 19:06:04,274 [INFO] common.py line:138: g.var[mydate]=0510
+2019-05-10 19:06:04,274 [INFO] gentest.py line:109: 执行测试步骤通过: 16|CALL|
+2019-05-10 19:06:04,474 [INFO] gentest.py line:33: 执行测试步骤: 17|INPUT|广告投放页^广告订单名称
+2019-05-10 19:06:07,293 [INFO] gentest.py line:109: 执行测试步骤通过: 17|INPUT|广告投放页^广告订单名称
+2019-05-10 19:06:07,493 [INFO] gentest.py line:33: 执行测试步骤: 18|CLICK|广告投放页^保存并返回列表
+2019-05-10 19:06:10,130 [INFO] gentest.py line:109: 执行测试步骤通过: 18|CLICK|广告投放页^保存并返回列表
+2019-05-10 19:06:10,331 [INFO] gentest.py line:33: 执行测试步骤: 19|CHECK|通用^页面title
+2019-05-10 19:06:24,349 [INFO] web.py line:59: DATA:'广告订单 - 有米优投'
+2019-05-10 19:06:24,349 [INFO] web.py line:60: REAL:'广告订单 - 有米优投'
+2019-05-10 19:06:24,351 [INFO] windows.py line:53: --- 旧窗口: CDwindow-EF03D57AE2BC8EF82FDB3770E68854A2
+2019-05-10 19:06:24,351 [INFO] windows.py line:54: --- 切换到窗口: 'CDwindow-B4ABAED349FAFA5D13A1E1FB79A31139'
+2019-05-10 19:06:24,360 [INFO] windows.py line:57: --- 当前标签页: '广告订单页'
+2019-05-10 19:06:24,360 [INFO] windows.py line:58: Pages:
+2019-05-10 19:06:24,360 [INFO] windows.py line:59: {'优投平台登录页': 'CDwindow-F1C1872F547928A71FFD4053C6E59351', '广告订单页': 'CDwindow-B4ABAED349FAFA5D13A1E1FB79A31139', '广告投放页': 'CDwindow-EF03D57AE2BC8EF82FDB3770E68854A2'}
+2019-05-10 19:06:24,360 [INFO] gentest.py line:109: 执行测试步骤通过: 19|CHECK|通用^页面title
+2019-05-10 19:06:24,561 [INFO] gentest.py line:33: 执行测试步骤: 20|REFRESH|
+2019-05-10 19:06:27,033 [INFO] gentest.py line:109: 执行测试步骤通过: 20|REFRESH|
+2019-05-10 19:06:27,234 [INFO] gentest.py line:33: 执行测试步骤: 21|CHECK|广告订单页^广告订单列名
+2019-05-10 19:06:41,281 [INFO] web.py line:59: DATA:'0510-微博-客户自动测试19:06:04'
+2019-05-10 19:06:41,281 [INFO] web.py line:60: REAL:'0510-微博-客户自动测试19:06:04'
+2019-05-10 19:06:41,281 [INFO] gentest.py line:109: 执行测试步骤通过: 21|CHECK|广告订单页^广告订单列名
+2019-05-10 19:06:41,481 [INFO] gentest.py line:33: 执行测试步骤: 22|CHECK|广告订单页^投放媒体列名
+2019-05-10 19:06:43,520 [INFO] web.py line:59: DATA:'*微博'
+2019-05-10 19:06:43,520 [INFO] web.py line:60: REAL:'\n                  微博\n                '
+2019-05-10 19:06:43,520 [INFO] gentest.py line:109: 执行测试步骤通过: 22|CHECK|广告订单页^投放媒体列名
+2019-05-10 19:06:43,720 [INFO] gentest.py line:33: 执行测试步骤: 23|CHECK|广告订单页^广告位列名
+2019-05-10 19:06:45,758 [INFO] web.py line:59: DATA:'*标准图片创意_592x296'
+2019-05-10 19:06:45,758 [INFO] web.py line:60: REAL:'标准图片创意_592x296'
+2019-05-10 19:06:45,758 [INFO] gentest.py line:109: 执行测试步骤通过: 23|CHECK|广告订单页^广告位列名
+2019-05-10 19:06:45,958 [INFO] gentest.py line:33: 执行测试步骤: 24|CHECK|广告订单页^计划出价列名
+2019-05-10 19:06:48,007 [INFO] web.py line:59: DATA:'0.5'
+2019-05-10 19:06:48,007 [INFO] web.py line:60: REAL:'0.5'
+2019-05-10 19:06:48,007 [INFO] gentest.py line:109: 执行测试步骤通过: 24|CHECK|广告订单页^计划出价列名
+2019-05-10 19:06:48,208 [INFO] gentest.py line:33: 执行测试步骤: 25|CHECK|广告订单页^每日预算列名
+2019-05-10 19:06:50,258 [INFO] web.py line:59: DATA:'1000'
+2019-05-10 19:06:50,258 [INFO] web.py line:60: REAL:'1000'
+2019-05-10 19:06:50,258 [INFO] gentest.py line:109: 执行测试步骤通过: 25|CHECK|广告订单页^每日预算列名
+2019-05-10 19:06:50,534 [INFO] gentest.py line:89: 用例片段执行结果:
+
+2019-05-10 19:06:50,534 [INFO] gentest.py line:90: Pass
+2019-05-10 19:06:50,534 [INFO] gentest.py line:109: 执行测试步骤通过: 2|EXECUTE|SNIPPET_003
+2019-05-10 19:06:50,735 [INFO] gentest.py line:33: 执行测试步骤: ^1|JUDGE|优投平台登录页^提示信息关闭图标
+2019-05-10 19:06:50,738 [INFO] windows.py line:53: --- 旧窗口: CDwindow-B4ABAED349FAFA5D13A1E1FB79A31139
+2019-05-10 19:06:50,739 [INFO] windows.py line:54: --- 切换到窗口: 'CDwindow-F1C1872F547928A71FFD4053C6E59351'
+2019-05-10 19:06:50,753 [INFO] windows.py line:57: --- 当前标签页: '优投平台登录页'
+2019-05-10 19:06:50,753 [INFO] windows.py line:58: Pages:
+2019-05-10 19:06:50,753 [INFO] windows.py line:59: {'优投平台登录页': 'CDwindow-F1C1872F547928A71FFD4053C6E59351', '广告订单页': 'CDwindow-B4ABAED349FAFA5D13A1E1FB79A31139', '广告投放页': 'CDwindow-EF03D57AE2BC8EF82FDB3770E68854A2'}
+2019-05-10 19:06:58,272 [INFO] web.py line:167: REAL:2
+2019-05-10 19:06:58,272 [INFO] web.py line:173: DATA:1
+2019-05-10 19:06:58,432 [ERROR] gentest.py line:139: 执行测试步骤失败: ^1|JUDGE|优投平台登录页^提示信息关闭图标
+Traceback (most recent call last):
+  File "/home/youmi/CxhProjects/cxh/AutoTest/sweetest/sweetest/lib/gentest.py", line 61, in __call__
+    getattr(web, step['keyword'].lower())(step)
+  File "/home/youmi/CxhProjects/cxh/AutoTest/sweetest/sweetest/keywords/web.py", line 174, in judge
+    assert flag == 1
+AssertionError
+2019-05-10 19:06:58,433 [INFO] gentest.py line:33: 执行测试步骤: 3|CLICK|优投平台登录页^用户图标
+2019-05-10 19:07:01,028 [INFO] gentest.py line:109: 执行测试步骤通过: 3|CLICK|优投平台登录页^用户图标
+2019-05-10 19:07:01,228 [INFO] gentest.py line:33: 执行测试步骤: 4|CLICK|优投平台登录页^退出登录按钮
+2019-05-10 19:07:04,165 [INFO] gentest.py line:109: 执行测试步骤通过: 4|CLICK|优投平台登录页^退出登录按钮
+2019-05-10 19:07:04,366 [INFO] gentest.py line:33: 执行测试步骤: 5|CHECK|通用^页面title
+2019-05-10 19:07:06,381 [INFO] web.py line:59: DATA:'有米优投-首页'
+2019-05-10 19:07:06,382 [INFO] web.py line:60: REAL:'有米优投-首页'
+2019-05-10 19:07:06,382 [INFO] gentest.py line:109: 执行测试步骤通过: 5|CHECK|通用^页面title
+2019-05-10 19:07:06,582 [INFO] myrunner.py line:19: 测试通过
+
+2019-05-10 19:07:06,582 [INFO] myrunner.py line:14: test_ORDER_005 (sweetest.lib.gentest.TestClass)用例开始运行... 
+2019-05-10 19:07:06,583 [INFO] gentest.py line:33: 执行测试步骤: 1|EXECUTE|SNIPPET_001
+2019-05-10 19:07:06,583 [INFO] gentest.py line:33: 执行测试步骤: 1|CLICK|优投平台登录页^登录按钮
+2019-05-10 19:07:15,569 [INFO] gentest.py line:109: 执行测试步骤通过: 1|CLICK|优投平台登录页^登录按钮
+2019-05-10 19:07:15,769 [INFO] gentest.py line:33: 执行测试步骤: 2|CHECK|通用^页面title
+2019-05-10 19:07:20,784 [INFO] web.py line:59: DATA:'有米优投登录 - 有米云'
+2019-05-10 19:07:20,785 [INFO] web.py line:60: REAL:'有米优投登录 - 有米云'
+2019-05-10 19:07:20,785 [INFO] gentest.py line:109: 执行测试步骤通过: 2|CHECK|通用^页面title
+2019-05-10 19:07:20,985 [INFO] gentest.py line:33: 执行测试步骤: 3|INPUT|优投平台登录页^账号
+2019-05-10 19:07:23,780 [INFO] gentest.py line:109: 执行测试步骤通过: 3|INPUT|优投平台登录页^账号
+2019-05-10 19:07:23,980 [INFO] gentest.py line:33: 执行测试步骤: 4|INPUT|优投平台登录页^密码
+2019-05-10 19:07:26,629 [INFO] gentest.py line:109: 执行测试步骤通过: 4|INPUT|优投平台登录页^密码
+2019-05-10 19:07:26,829 [INFO] gentest.py line:33: 执行测试步骤: 5|CLICK|优投平台登录页^登录
+2019-05-10 19:07:29,448 [INFO] gentest.py line:109: 执行测试步骤通过: 5|CLICK|优投平台登录页^登录
+2019-05-10 19:07:29,648 [INFO] gentest.py line:33: 执行测试步骤: ^6|CHECK|通用^页面title
+2019-05-10 19:07:36,668 [INFO] web.py line:59: DATA:'个人信息*'
+2019-05-10 19:07:36,668 [INFO] web.py line:60: REAL:'数据概览 - 有米优投'
+2019-05-10 19:07:36,831 [ERROR] gentest.py line:139: 执行测试步骤失败: ^6|CHECK|通用^页面title
+Traceback (most recent call last):
+  File "/home/youmi/CxhProjects/cxh/AutoTest/sweetest/sweetest/lib/gentest.py", line 61, in __call__
+    getattr(web, step['keyword'].lower())(step)
+  File "/home/youmi/CxhProjects/cxh/AutoTest/sweetest/sweetest/keywords/web.py", line 107, in check
+    getattr(Common, by)(data, output)
+  File "/home/youmi/CxhProjects/cxh/AutoTest/sweetest/sweetest/keywords/web.py", line 19, in title
+    detail_check(expected, real)
+  File "/home/youmi/CxhProjects/cxh/AutoTest/sweetest/sweetest/keywords/web.py", line 77, in detail_check
+    assert expected[:-1] in real
+AssertionError
+2019-05-10 19:07:36,831 [INFO] gentest.py line:33: 执行测试步骤: 8|CHECK|通用^页面title
+2019-05-10 19:07:48,853 [INFO] web.py line:59: DATA:'数据概览 - 有米优投'
+2019-05-10 19:07:48,854 [INFO] web.py line:60: REAL:'数据概览 - 有米优投'
+2019-05-10 19:07:48,854 [INFO] gentest.py line:109: 执行测试步骤通过: 8|CHECK|通用^页面title
+2019-05-10 19:07:49,054 [INFO] gentest.py line:33: 执行测试步骤: 9|CLICK|通用^投放管理
+2019-05-10 19:07:52,670 [INFO] gentest.py line:109: 执行测试步骤通过: 9|CLICK|通用^投放管理
+2019-05-10 19:07:52,870 [INFO] gentest.py line:33: 执行测试步骤: 10|CLICK|通用^广告管理
+2019-05-10 19:07:55,507 [INFO] gentest.py line:109: 执行测试步骤通过: 10|CLICK|通用^广告管理
+2019-05-10 19:07:55,707 [INFO] gentest.py line:33: 执行测试步骤: 11|CHECK|通用^页面title
+2019-05-10 19:07:58,714 [INFO] web.py line:59: DATA:'推广计划 - 有米优投'
+2019-05-10 19:07:58,715 [INFO] web.py line:60: REAL:'推广计划 - 有米优投'
+2019-05-10 19:07:58,715 [INFO] gentest.py line:109: 执行测试步骤通过: 11|CHECK|通用^页面title
+2019-05-10 19:07:58,989 [INFO] gentest.py line:89: 用例片段执行结果:
+
+2019-05-10 19:07:58,989 [INFO] gentest.py line:90: Pass
+2019-05-10 19:07:58,989 [INFO] gentest.py line:109: 执行测试步骤通过: 1|EXECUTE|SNIPPET_001
+2019-05-10 19:07:59,190 [INFO] gentest.py line:33: 执行测试步骤: 2|EXECUTE|SNIPPET_007
+2019-05-10 19:07:59,190 [INFO] gentest.py line:33: 执行测试步骤: 1|EXECUTE|SNIPPET_005
+2019-05-10 19:07:59,191 [INFO] gentest.py line:33: 执行测试步骤: 1|CLICK|通用^广告订单
+2019-05-10 19:08:02,050 [INFO] gentest.py line:109: 执行测试步骤通过: 1|CLICK|通用^广告订单
+2019-05-10 19:08:02,250 [INFO] gentest.py line:33: 执行测试步骤: 2|CHECK|通用^页面title
+2019-05-10 19:08:06,261 [INFO] web.py line:59: DATA:'广告订单 - 有米优投'
+2019-05-10 19:08:06,261 [INFO] web.py line:60: REAL:'广告订单 - 有米优投'
+2019-05-10 19:08:06,263 [INFO] windows.py line:53: --- 旧窗口: CDwindow-F1C1872F547928A71FFD4053C6E59351
+2019-05-10 19:08:06,263 [INFO] windows.py line:54: --- 切换到窗口: 'CDwindow-B4ABAED349FAFA5D13A1E1FB79A31139'
+2019-05-10 19:08:06,274 [INFO] windows.py line:57: --- 当前标签页: '广告订单页'
+2019-05-10 19:08:06,275 [INFO] windows.py line:58: Pages:
+2019-05-10 19:08:06,275 [INFO] windows.py line:59: {'优投平台登录页': 'CDwindow-F1C1872F547928A71FFD4053C6E59351', '广告订单页': 'CDwindow-B4ABAED349FAFA5D13A1E1FB79A31139', '广告投放页': 'CDwindow-EF03D57AE2BC8EF82FDB3770E68854A2'}
+2019-05-10 19:08:06,275 [INFO] gentest.py line:109: 执行测试步骤通过: 2|CHECK|通用^页面title
+2019-05-10 19:08:06,476 [INFO] gentest.py line:33: 执行测试步骤: 3|REFRESH|
+2019-05-10 19:08:09,261 [INFO] gentest.py line:109: 执行测试步骤通过: 3|REFRESH|
+2019-05-10 19:08:09,461 [INFO] gentest.py line:33: 执行测试步骤: 4|OBTAIN|广告订单页^投放媒体列名
+2019-05-10 19:08:23,512 [INFO] gentest.py line:109: 执行测试步骤通过: 4|OBTAIN|广告订单页^投放媒体列名
+2019-05-10 19:08:23,712 [INFO] gentest.py line:33: 执行测试步骤: 5|OBTAIN|广告订单页^广告位列名
+2019-05-10 19:08:25,744 [INFO] gentest.py line:109: 执行测试步骤通过: 5|OBTAIN|广告订单页^广告位列名
+2019-05-10 19:08:25,945 [INFO] gentest.py line:33: 执行测试步骤: 6|MOVE|广告订单页^广告订单列名
+2019-05-10 19:08:30,606 [INFO] gentest.py line:109: 执行测试步骤通过: 6|MOVE|广告订单页^广告订单列名
+2019-05-10 19:08:30,867 [INFO] gentest.py line:89: 用例片段执行结果:
+
+2019-05-10 19:08:30,867 [INFO] gentest.py line:90: Pass
+2019-05-10 19:08:30,867 [INFO] gentest.py line:109: 执行测试步骤通过: 1|EXECUTE|SNIPPET_005
+2019-05-10 19:08:31,067 [INFO] gentest.py line:33: 执行测试步骤: 2|CLICK|广告订单页^广告订单编辑图标
+2019-05-10 19:08:36,207 [INFO] windows.py line:125: --- 注册新页面: '广告投放页'
+2019-05-10 19:08:36,207 [INFO] windows.py line:126: Pages:
+2019-05-10 19:08:36,207 [INFO] windows.py line:127: {'优投平台登录页': 'CDwindow-F1C1872F547928A71FFD4053C6E59351', '广告订单页': 'CDwindow-B4ABAED349FAFA5D13A1E1FB79A31139', '广告投放页': 'CDwindow-8137D7FD75E4F959D8FFE6182B096B76'}
+2019-05-10 19:08:36,207 [INFO] gentest.py line:109: 执行测试步骤通过: 2|CLICK|广告订单页^广告订单编辑图标
+2019-05-10 19:08:36,407 [INFO] gentest.py line:33: 执行测试步骤: 3|EXECUTE|SNIPPET_006
+2019-05-10 19:08:36,408 [INFO] gentest.py line:33: 执行测试步骤: 1|CHECK|通用^页面title
+2019-05-10 19:08:50,444 [INFO] web.py line:59: DATA:'广告投放 - 有米优投'
+2019-05-10 19:08:50,444 [INFO] web.py line:60: REAL:'广告投放 - 有米优投'
+2019-05-10 19:08:50,444 [INFO] gentest.py line:109: 执行测试步骤通过: 1|CHECK|通用^页面title
+2019-05-10 19:08:50,644 [INFO] gentest.py line:33: 执行测试步骤: 2|INPUT|广告投放页^每日预算
+2019-05-10 19:08:53,368 [INFO] gentest.py line:109: 执行测试步骤通过: 2|INPUT|广告投放页^每日预算
+2019-05-10 19:08:53,569 [INFO] gentest.py line:33: 执行测试步骤: 3|INPUT|广告投放页^计划出价
+2019-05-10 19:08:56,236 [INFO] gentest.py line:109: 执行测试步骤通过: 3|INPUT|广告投放页^计划出价
+2019-05-10 19:08:56,436 [INFO] gentest.py line:33: 执行测试步骤: 4|INPUT|广告投放页^广告订单名称
+2019-05-10 19:09:01,100 [INFO] gentest.py line:109: 执行测试步骤通过: 4|INPUT|广告投放页^广告订单名称
+2019-05-10 19:09:01,301 [INFO] gentest.py line:33: 执行测试步骤: 5|CLICK|广告投放页^保存并返回列表
+2019-05-10 19:09:03,943 [INFO] gentest.py line:109: 执行测试步骤通过: 5|CLICK|广告投放页^保存并返回列表
+2019-05-10 19:09:04,144 [INFO] gentest.py line:33: 执行测试步骤: 6|CHECK|通用^页面title
+2019-05-10 19:09:16,163 [INFO] web.py line:59: DATA:'广告订单 - 有米优投'
+2019-05-10 19:09:16,163 [INFO] web.py line:60: REAL:'广告订单 - 有米优投'
+2019-05-10 19:09:16,165 [INFO] windows.py line:53: --- 旧窗口: CDwindow-8137D7FD75E4F959D8FFE6182B096B76
+2019-05-10 19:09:16,165 [INFO] windows.py line:54: --- 切换到窗口: 'CDwindow-B4ABAED349FAFA5D13A1E1FB79A31139'
+2019-05-10 19:09:16,176 [INFO] windows.py line:57: --- 当前标签页: '广告订单页'
+2019-05-10 19:09:16,176 [INFO] windows.py line:58: Pages:
+2019-05-10 19:09:16,176 [INFO] windows.py line:59: {'优投平台登录页': 'CDwindow-F1C1872F547928A71FFD4053C6E59351', '广告订单页': 'CDwindow-B4ABAED349FAFA5D13A1E1FB79A31139', '广告投放页': 'CDwindow-8137D7FD75E4F959D8FFE6182B096B76'}
+2019-05-10 19:09:16,176 [INFO] gentest.py line:109: 执行测试步骤通过: 6|CHECK|通用^页面title
+2019-05-10 19:09:16,376 [INFO] gentest.py line:33: 执行测试步骤: 7|REFRESH|
+2019-05-10 19:09:18,905 [INFO] gentest.py line:109: 执行测试步骤通过: 7|REFRESH|
+2019-05-10 19:09:19,106 [INFO] gentest.py line:33: 执行测试步骤: 8|CHECK|广告订单页^广告订单列名
+2019-05-10 19:09:31,150 [INFO] web.py line:59: DATA:'0510-微博-客户自动测试19:06:04(重命名)'
+2019-05-10 19:09:31,150 [INFO] web.py line:60: REAL:'0510-微博-客户自动测试19:06:04(重命名)'
+2019-05-10 19:09:31,150 [INFO] gentest.py line:109: 执行测试步骤通过: 8|CHECK|广告订单页^广告订单列名
+2019-05-10 19:09:31,350 [INFO] gentest.py line:33: 执行测试步骤: 9|CHECK|广告订单页^投放媒体列名
+2019-05-10 19:09:33,446 [INFO] web.py line:59: DATA:'\n                  微博\n                '
+2019-05-10 19:09:33,446 [INFO] web.py line:60: REAL:'\n                  微博\n                '
+2019-05-10 19:09:33,446 [INFO] gentest.py line:109: 执行测试步骤通过: 9|CHECK|广告订单页^投放媒体列名
+2019-05-10 19:09:33,646 [INFO] gentest.py line:33: 执行测试步骤: 10|CHECK|广告订单页^广告位列名
+2019-05-10 19:09:35,684 [INFO] web.py line:59: DATA:'标准图片创意_592x296'
+2019-05-10 19:09:35,684 [INFO] web.py line:60: REAL:'标准图片创意_592x296'
+2019-05-10 19:09:35,684 [INFO] gentest.py line:109: 执行测试步骤通过: 10|CHECK|广告订单页^广告位列名
+2019-05-10 19:09:35,885 [INFO] gentest.py line:33: 执行测试步骤: 11|CHECK|广告订单页^计划出价列名
+2019-05-10 19:09:37,932 [INFO] web.py line:59: DATA:'0.8'
+2019-05-10 19:09:37,932 [INFO] web.py line:60: REAL:'0.8'
+2019-05-10 19:09:37,932 [INFO] gentest.py line:109: 执行测试步骤通过: 11|CHECK|广告订单页^计划出价列名
+2019-05-10 19:09:38,132 [INFO] gentest.py line:33: 执行测试步骤: 12|CHECK|广告订单页^每日预算列名
+2019-05-10 19:09:40,179 [INFO] web.py line:59: DATA:'1800'
+2019-05-10 19:09:40,179 [INFO] web.py line:60: REAL:'1800'
+2019-05-10 19:09:40,179 [INFO] gentest.py line:109: 执行测试步骤通过: 12|CHECK|广告订单页^每日预算列名
+2019-05-10 19:09:40,432 [INFO] gentest.py line:89: 用例片段执行结果:
+
+2019-05-10 19:09:40,432 [INFO] gentest.py line:90: Pass
+2019-05-10 19:09:40,432 [INFO] gentest.py line:109: 执行测试步骤通过: 3|EXECUTE|SNIPPET_006
+2019-05-10 19:09:40,728 [INFO] gentest.py line:89: 用例片段执行结果:
+
+2019-05-10 19:09:40,728 [INFO] gentest.py line:90: Pass
+2019-05-10 19:09:40,728 [INFO] gentest.py line:109: 执行测试步骤通过: 2|EXECUTE|SNIPPET_007
+2019-05-10 19:09:40,929 [INFO] gentest.py line:33: 执行测试步骤: ^1|JUDGE|优投平台登录页^提示信息关闭图标
+2019-05-10 19:09:40,931 [INFO] windows.py line:53: --- 旧窗口: CDwindow-B4ABAED349FAFA5D13A1E1FB79A31139
+2019-05-10 19:09:40,932 [INFO] windows.py line:54: --- 切换到窗口: 'CDwindow-F1C1872F547928A71FFD4053C6E59351'
+2019-05-10 19:09:40,947 [INFO] windows.py line:57: --- 当前标签页: '优投平台登录页'
+2019-05-10 19:09:40,947 [INFO] windows.py line:58: Pages:
+2019-05-10 19:09:40,948 [INFO] windows.py line:59: {'优投平台登录页': 'CDwindow-F1C1872F547928A71FFD4053C6E59351', '广告订单页': 'CDwindow-B4ABAED349FAFA5D13A1E1FB79A31139', '广告投放页': 'CDwindow-8137D7FD75E4F959D8FFE6182B096B76'}
+2019-05-10 19:09:48,499 [INFO] web.py line:167: REAL:2
+2019-05-10 19:09:48,499 [INFO] web.py line:173: DATA:1
+2019-05-10 19:09:48,691 [ERROR] gentest.py line:139: 执行测试步骤失败: ^1|JUDGE|优投平台登录页^提示信息关闭图标
+Traceback (most recent call last):
+  File "/home/youmi/CxhProjects/cxh/AutoTest/sweetest/sweetest/lib/gentest.py", line 61, in __call__
+    getattr(web, step['keyword'].lower())(step)
+  File "/home/youmi/CxhProjects/cxh/AutoTest/sweetest/sweetest/keywords/web.py", line 174, in judge
+    assert flag == 1
+AssertionError
+2019-05-10 19:09:48,691 [INFO] gentest.py line:33: 执行测试步骤: 3|CLICK|优投平台登录页^用户图标
+2019-05-10 19:09:51,295 [INFO] gentest.py line:109: 执行测试步骤通过: 3|CLICK|优投平台登录页^用户图标
+2019-05-10 19:09:51,496 [INFO] gentest.py line:33: 执行测试步骤: 4|CLICK|优投平台登录页^退出登录按钮
+2019-05-10 19:09:54,396 [INFO] gentest.py line:109: 执行测试步骤通过: 4|CLICK|优投平台登录页^退出登录按钮
+2019-05-10 19:09:54,596 [INFO] gentest.py line:33: 执行测试步骤: 5|CHECK|通用^页面title
+2019-05-10 19:09:56,606 [INFO] web.py line:59: DATA:'有米优投-首页'
+2019-05-10 19:09:56,606 [INFO] web.py line:60: REAL:'有米优投-首页'
+2019-05-10 19:09:56,606 [INFO] gentest.py line:109: 执行测试步骤通过: 5|CHECK|通用^页面title
+2019-05-10 19:09:56,807 [INFO] myrunner.py line:19: 测试通过
+
+2019-05-10 19:09:56,808 [INFO] myrunner.py line:14: test_ORDER_006 (sweetest.lib.gentest.TestClass)用例开始运行... 
+2019-05-10 19:09:56,808 [INFO] gentest.py line:33: 执行测试步骤: 1|EXECUTE|SNIPPET_001
+2019-05-10 19:09:56,809 [INFO] gentest.py line:33: 执行测试步骤: 1|CLICK|优投平台登录页^登录按钮
+2019-05-10 19:10:05,786 [INFO] gentest.py line:109: 执行测试步骤通过: 1|CLICK|优投平台登录页^登录按钮
+2019-05-10 19:10:05,986 [INFO] gentest.py line:33: 执行测试步骤: 2|CHECK|通用^页面title
+2019-05-10 19:10:10,997 [INFO] web.py line:59: DATA:'有米优投登录 - 有米云'
+2019-05-10 19:10:10,997 [INFO] web.py line:60: REAL:'有米优投登录 - 有米云'
+2019-05-10 19:10:10,997 [INFO] gentest.py line:109: 执行测试步骤通过: 2|CHECK|通用^页面title
+2019-05-10 19:10:11,197 [INFO] gentest.py line:33: 执行测试步骤: 3|INPUT|优投平台登录页^账号
+2019-05-10 19:10:14,026 [INFO] gentest.py line:109: 执行测试步骤通过: 3|INPUT|优投平台登录页^账号
+2019-05-10 19:10:14,227 [INFO] gentest.py line:33: 执行测试步骤: 4|INPUT|优投平台登录页^密码
+2019-05-10 19:10:16,885 [INFO] gentest.py line:109: 执行测试步骤通过: 4|INPUT|优投平台登录页^密码
+2019-05-10 19:10:17,086 [INFO] gentest.py line:33: 执行测试步骤: 5|CLICK|优投平台登录页^登录
+2019-05-10 19:10:19,700 [INFO] gentest.py line:109: 执行测试步骤通过: 5|CLICK|优投平台登录页^登录
+2019-05-10 19:10:19,900 [INFO] gentest.py line:33: 执行测试步骤: ^6|CHECK|通用^页面title
+2019-05-10 19:10:26,920 [INFO] web.py line:59: DATA:'个人信息*'
+2019-05-10 19:10:26,920 [INFO] web.py line:60: REAL:'数据概览 - 有米优投'
+2019-05-10 19:10:27,078 [ERROR] gentest.py line:139: 执行测试步骤失败: ^6|CHECK|通用^页面title
+Traceback (most recent call last):
+  File "/home/youmi/CxhProjects/cxh/AutoTest/sweetest/sweetest/lib/gentest.py", line 61, in __call__
+    getattr(web, step['keyword'].lower())(step)
+  File "/home/youmi/CxhProjects/cxh/AutoTest/sweetest/sweetest/keywords/web.py", line 107, in check
+    getattr(Common, by)(data, output)
+  File "/home/youmi/CxhProjects/cxh/AutoTest/sweetest/sweetest/keywords/web.py", line 19, in title
+    detail_check(expected, real)
+  File "/home/youmi/CxhProjects/cxh/AutoTest/sweetest/sweetest/keywords/web.py", line 77, in detail_check
+    assert expected[:-1] in real
+AssertionError
+2019-05-10 19:10:27,078 [INFO] gentest.py line:33: 执行测试步骤: 8|CHECK|通用^页面title
+2019-05-10 19:10:39,099 [INFO] web.py line:59: DATA:'数据概览 - 有米优投'
+2019-05-10 19:10:39,100 [INFO] web.py line:60: REAL:'数据概览 - 有米优投'
+2019-05-10 19:10:39,100 [INFO] gentest.py line:109: 执行测试步骤通过: 8|CHECK|通用^页面title
+2019-05-10 19:10:39,300 [INFO] gentest.py line:33: 执行测试步骤: 9|CLICK|通用^投放管理
+2019-05-10 19:10:42,915 [INFO] gentest.py line:109: 执行测试步骤通过: 9|CLICK|通用^投放管理
+2019-05-10 19:10:43,116 [INFO] gentest.py line:33: 执行测试步骤: 10|CLICK|通用^广告管理
+2019-05-10 19:10:45,743 [INFO] gentest.py line:109: 执行测试步骤通过: 10|CLICK|通用^广告管理
+2019-05-10 19:10:45,943 [INFO] gentest.py line:33: 执行测试步骤: 11|CHECK|通用^页面title
+2019-05-10 19:10:48,954 [INFO] web.py line:59: DATA:'推广计划 - 有米优投'
+2019-05-10 19:10:48,954 [INFO] web.py line:60: REAL:'推广计划 - 有米优投'
+2019-05-10 19:10:48,954 [INFO] gentest.py line:109: 执行测试步骤通过: 11|CHECK|通用^页面title
+2019-05-10 19:10:49,242 [INFO] gentest.py line:89: 用例片段执行结果:
+
+2019-05-10 19:10:49,242 [INFO] gentest.py line:90: Pass
+2019-05-10 19:10:49,242 [INFO] gentest.py line:109: 执行测试步骤通过: 1|EXECUTE|SNIPPET_001
+2019-05-10 19:10:49,442 [INFO] gentest.py line:33: 执行测试步骤: 2|EXECUTE|SNIPPET_009
+2019-05-10 19:10:49,443 [INFO] gentest.py line:33: 执行测试步骤: 1|EXECUTE|SNIPPET_005
+2019-05-10 19:10:49,444 [INFO] gentest.py line:33: 执行测试步骤: 1|CLICK|通用^广告订单
+2019-05-10 19:10:52,309 [INFO] gentest.py line:109: 执行测试步骤通过: 1|CLICK|通用^广告订单
+2019-05-10 19:10:52,510 [INFO] gentest.py line:33: 执行测试步骤: 2|CHECK|通用^页面title
+2019-05-10 19:10:56,518 [INFO] web.py line:59: DATA:'广告订单 - 有米优投'
+2019-05-10 19:10:56,518 [INFO] web.py line:60: REAL:'广告订单 - 有米优投'
+2019-05-10 19:10:56,521 [INFO] windows.py line:53: --- 旧窗口: CDwindow-F1C1872F547928A71FFD4053C6E59351
+2019-05-10 19:10:56,521 [INFO] windows.py line:54: --- 切换到窗口: 'CDwindow-B4ABAED349FAFA5D13A1E1FB79A31139'
+2019-05-10 19:10:56,551 [INFO] windows.py line:57: --- 当前标签页: '广告订单页'
+2019-05-10 19:10:56,551 [INFO] windows.py line:58: Pages:
+2019-05-10 19:10:56,552 [INFO] windows.py line:59: {'优投平台登录页': 'CDwindow-F1C1872F547928A71FFD4053C6E59351', '广告订单页': 'CDwindow-B4ABAED349FAFA5D13A1E1FB79A31139', '广告投放页': 'CDwindow-8137D7FD75E4F959D8FFE6182B096B76'}
+2019-05-10 19:10:56,552 [INFO] gentest.py line:109: 执行测试步骤通过: 2|CHECK|通用^页面title
+2019-05-10 19:10:56,752 [INFO] gentest.py line:33: 执行测试步骤: 3|REFRESH|
+2019-05-10 19:10:59,208 [INFO] gentest.py line:109: 执行测试步骤通过: 3|REFRESH|
+2019-05-10 19:10:59,409 [INFO] gentest.py line:33: 执行测试步骤: 4|OBTAIN|广告订单页^投放媒体列名
+2019-05-10 19:11:13,450 [INFO] gentest.py line:109: 执行测试步骤通过: 4|OBTAIN|广告订单页^投放媒体列名
+2019-05-10 19:11:13,650 [INFO] gentest.py line:33: 执行测试步骤: 5|OBTAIN|广告订单页^广告位列名
+2019-05-10 19:11:15,686 [INFO] gentest.py line:109: 执行测试步骤通过: 5|OBTAIN|广告订单页^广告位列名
+2019-05-10 19:11:15,887 [INFO] gentest.py line:33: 执行测试步骤: 6|MOVE|广告订单页^广告订单列名
+2019-05-10 19:11:20,534 [INFO] gentest.py line:109: 执行测试步骤通过: 6|MOVE|广告订单页^广告订单列名
+2019-05-10 19:11:20,801 [INFO] gentest.py line:89: 用例片段执行结果:
+
+2019-05-10 19:11:20,801 [INFO] gentest.py line:90: Pass
+2019-05-10 19:11:20,801 [INFO] gentest.py line:109: 执行测试步骤通过: 1|EXECUTE|SNIPPET_005
+2019-05-10 19:11:21,002 [INFO] gentest.py line:33: 执行测试步骤: 2|CLICK|广告订单页^广告订单复制链接
+2019-05-10 19:11:25,697 [INFO] gentest.py line:109: 执行测试步骤通过: 2|CLICK|广告订单页^广告订单复制链接
+2019-05-10 19:11:25,897 [INFO] gentest.py line:33: 执行测试步骤: 3|EXECUTE|SNIPPET_006
+2019-05-10 19:11:25,898 [INFO] gentest.py line:33: 执行测试步骤: 1|CHECK|通用^页面title
+2019-05-10 19:11:37,909 [INFO] windows.py line:53: --- 旧窗口: CDwindow-B4ABAED349FAFA5D13A1E1FB79A31139
+2019-05-10 19:11:37,909 [INFO] windows.py line:54: --- 切换到窗口: 'CDwindow-8137D7FD75E4F959D8FFE6182B096B76'
+2019-05-10 19:11:37,911 [INFO] windows.py line:57: --- 当前标签页: '广告投放页'
+2019-05-10 19:11:37,911 [INFO] windows.py line:58: Pages:
+2019-05-10 19:11:37,911 [INFO] windows.py line:59: {'优投平台登录页': 'CDwindow-F1C1872F547928A71FFD4053C6E59351', '广告订单页': 'CDwindow-B4ABAED349FAFA5D13A1E1FB79A31139', '广告投放页': 'CDwindow-8137D7FD75E4F959D8FFE6182B096B76'}
+2019-05-10 19:11:39,923 [INFO] web.py line:59: DATA:'广告投放 - 有米优投'
+2019-05-10 19:11:39,923 [INFO] web.py line:60: REAL:'广告投放 - 有米优投'
+2019-05-10 19:11:39,923 [INFO] gentest.py line:109: 执行测试步骤通过: 1|CHECK|通用^页面title
+2019-05-10 19:11:40,124 [INFO] gentest.py line:33: 执行测试步骤: 2|INPUT|广告投放页^每日预算
+2019-05-10 19:11:42,833 [INFO] gentest.py line:109: 执行测试步骤通过: 2|INPUT|广告投放页^每日预算
+2019-05-10 19:11:43,033 [INFO] gentest.py line:33: 执行测试步骤: 3|INPUT|广告投放页^计划出价
+2019-05-10 19:11:45,731 [INFO] gentest.py line:109: 执行测试步骤通过: 3|INPUT|广告投放页^计划出价
+2019-05-10 19:11:45,932 [INFO] gentest.py line:33: 执行测试步骤: 4|INPUT|广告投放页^广告订单名称
+2019-05-10 19:11:50,598 [INFO] gentest.py line:109: 执行测试步骤通过: 4|INPUT|广告投放页^广告订单名称
+2019-05-10 19:11:50,798 [INFO] gentest.py line:33: 执行测试步骤: 5|CLICK|广告投放页^保存并返回列表
+2019-05-10 19:11:53,463 [INFO] gentest.py line:109: 执行测试步骤通过: 5|CLICK|广告投放页^保存并返回列表
+2019-05-10 19:11:53,663 [INFO] gentest.py line:33: 执行测试步骤: 6|CHECK|通用^页面title
+2019-05-10 19:12:05,681 [INFO] web.py line:59: DATA:'广告订单 - 有米优投'
+2019-05-10 19:12:05,681 [INFO] web.py line:60: REAL:'广告订单 - 有米优投'
+2019-05-10 19:12:05,684 [INFO] windows.py line:53: --- 旧窗口: CDwindow-8137D7FD75E4F959D8FFE6182B096B76
+2019-05-10 19:12:05,684 [INFO] windows.py line:54: --- 切换到窗口: 'CDwindow-B4ABAED349FAFA5D13A1E1FB79A31139'
+2019-05-10 19:12:05,710 [INFO] windows.py line:57: --- 当前标签页: '广告订单页'
+2019-05-10 19:12:05,710 [INFO] windows.py line:58: Pages:
+2019-05-10 19:12:05,711 [INFO] windows.py line:59: {'优投平台登录页': 'CDwindow-F1C1872F547928A71FFD4053C6E59351', '广告订单页': 'CDwindow-B4ABAED349FAFA5D13A1E1FB79A31139', '广告投放页': 'CDwindow-8137D7FD75E4F959D8FFE6182B096B76'}
+2019-05-10 19:12:05,711 [INFO] gentest.py line:109: 执行测试步骤通过: 6|CHECK|通用^页面title
+2019-05-10 19:12:05,912 [INFO] gentest.py line:33: 执行测试步骤: 7|REFRESH|
+2019-05-10 19:12:08,324 [INFO] gentest.py line:109: 执行测试步骤通过: 7|REFRESH|
+2019-05-10 19:12:08,525 [INFO] gentest.py line:33: 执行测试步骤: 8|CHECK|广告订单页^广告订单列名
+2019-05-10 19:12:20,565 [INFO] web.py line:59: DATA:'0510-微博-客户自动测试19:06:04(重命名)(复制)'
+2019-05-10 19:12:20,565 [INFO] web.py line:60: REAL:'0510-微博-客户自动测试19:06:04(重命名)(复制)'
+2019-05-10 19:12:20,565 [INFO] gentest.py line:109: 执行测试步骤通过: 8|CHECK|广告订单页^广告订单列名
+2019-05-10 19:12:20,765 [INFO] gentest.py line:33: 执行测试步骤: 9|CHECK|广告订单页^投放媒体列名
+2019-05-10 19:12:22,805 [INFO] web.py line:59: DATA:'\n                  微博\n                '
+2019-05-10 19:12:22,805 [INFO] web.py line:60: REAL:'\n                  微博\n                '
+2019-05-10 19:12:22,805 [INFO] gentest.py line:109: 执行测试步骤通过: 9|CHECK|广告订单页^投放媒体列名
+2019-05-10 19:12:23,005 [INFO] gentest.py line:33: 执行测试步骤: 10|CHECK|广告订单页^广告位列名
+2019-05-10 19:12:25,044 [INFO] web.py line:59: DATA:'标准图片创意_592x296'
+2019-05-10 19:12:25,044 [INFO] web.py line:60: REAL:'标准图片创意_592x296'
+2019-05-10 19:12:25,044 [INFO] gentest.py line:109: 执行测试步骤通过: 10|CHECK|广告订单页^广告位列名
+2019-05-10 19:12:25,244 [INFO] gentest.py line:33: 执行测试步骤: 11|CHECK|广告订单页^计划出价列名
+2019-05-10 19:12:27,293 [INFO] web.py line:59: DATA:'1.2'
+2019-05-10 19:12:27,294 [INFO] web.py line:60: REAL:'1.2'
+2019-05-10 19:12:27,294 [INFO] gentest.py line:109: 执行测试步骤通过: 11|CHECK|广告订单页^计划出价列名
+2019-05-10 19:12:27,494 [INFO] gentest.py line:33: 执行测试步骤: 12|CHECK|广告订单页^每日预算列名
+2019-05-10 19:12:29,543 [INFO] web.py line:59: DATA:'2000'
+2019-05-10 19:12:29,543 [INFO] web.py line:60: REAL:'2000'
+2019-05-10 19:12:29,543 [INFO] gentest.py line:109: 执行测试步骤通过: 12|CHECK|广告订单页^每日预算列名
+2019-05-10 19:12:29,803 [INFO] gentest.py line:89: 用例片段执行结果:
+
+2019-05-10 19:12:29,803 [INFO] gentest.py line:90: Pass
+2019-05-10 19:12:29,803 [INFO] gentest.py line:109: 执行测试步骤通过: 3|EXECUTE|SNIPPET_006
+2019-05-10 19:12:30,113 [INFO] gentest.py line:89: 用例片段执行结果:
+
+2019-05-10 19:12:30,113 [INFO] gentest.py line:90: Pass
+2019-05-10 19:12:30,113 [INFO] gentest.py line:109: 执行测试步骤通过: 2|EXECUTE|SNIPPET_009
+2019-05-10 19:12:30,313 [INFO] gentest.py line:33: 执行测试步骤: ^1|JUDGE|优投平台登录页^提示信息关闭图标
+2019-05-10 19:12:30,317 [INFO] windows.py line:53: --- 旧窗口: CDwindow-B4ABAED349FAFA5D13A1E1FB79A31139
+2019-05-10 19:12:30,317 [INFO] windows.py line:54: --- 切换到窗口: 'CDwindow-F1C1872F547928A71FFD4053C6E59351'
+2019-05-10 19:12:30,330 [INFO] windows.py line:57: --- 当前标签页: '优投平台登录页'
+2019-05-10 19:12:30,330 [INFO] windows.py line:58: Pages:
+2019-05-10 19:12:30,330 [INFO] windows.py line:59: {'优投平台登录页': 'CDwindow-F1C1872F547928A71FFD4053C6E59351', '广告订单页': 'CDwindow-B4ABAED349FAFA5D13A1E1FB79A31139', '广告投放页': 'CDwindow-8137D7FD75E4F959D8FFE6182B096B76'}
+2019-05-10 19:12:37,862 [INFO] web.py line:167: REAL:2
+2019-05-10 19:12:37,862 [INFO] web.py line:173: DATA:1
+2019-05-10 19:12:38,029 [ERROR] gentest.py line:139: 执行测试步骤失败: ^1|JUDGE|优投平台登录页^提示信息关闭图标
+Traceback (most recent call last):
+  File "/home/youmi/CxhProjects/cxh/AutoTest/sweetest/sweetest/lib/gentest.py", line 61, in __call__
+    getattr(web, step['keyword'].lower())(step)
+  File "/home/youmi/CxhProjects/cxh/AutoTest/sweetest/sweetest/keywords/web.py", line 174, in judge
+    assert flag == 1
+AssertionError
+2019-05-10 19:12:38,030 [INFO] gentest.py line:33: 执行测试步骤: 3|CLICK|优投平台登录页^用户图标
+2019-05-10 19:12:40,625 [INFO] gentest.py line:109: 执行测试步骤通过: 3|CLICK|优投平台登录页^用户图标
+2019-05-10 19:12:40,826 [INFO] gentest.py line:33: 执行测试步骤: 4|CLICK|优投平台登录页^退出登录按钮
+2019-05-10 19:12:43,769 [INFO] gentest.py line:109: 执行测试步骤通过: 4|CLICK|优投平台登录页^退出登录按钮
+2019-05-10 19:12:43,970 [INFO] gentest.py line:33: 执行测试步骤: 5|CHECK|通用^页面title
+2019-05-10 19:12:45,984 [INFO] web.py line:59: DATA:'有米优投-首页'
+2019-05-10 19:12:45,985 [INFO] web.py line:60: REAL:'有米优投-首页'
+2019-05-10 19:12:45,986 [INFO] gentest.py line:109: 执行测试步骤通过: 5|CHECK|通用^页面title
+2019-05-10 19:12:46,186 [INFO] myrunner.py line:19: 测试通过
+
+2019-05-10 19:12:46,187 [INFO] myrunner.py line:14: test_ORDER_007 (sweetest.lib.gentest.TestClass)用例开始运行... 
+2019-05-10 19:12:46,188 [INFO] gentest.py line:33: 执行测试步骤: 1|EXECUTE|SNIPPET_001
+2019-05-10 19:12:46,189 [INFO] gentest.py line:33: 执行测试步骤: 1|CLICK|优投平台登录页^登录按钮
+2019-05-10 19:12:55,176 [INFO] gentest.py line:109: 执行测试步骤通过: 1|CLICK|优投平台登录页^登录按钮
+2019-05-10 19:12:55,376 [INFO] gentest.py line:33: 执行测试步骤: 2|CHECK|通用^页面title
+2019-05-10 19:13:00,393 [INFO] web.py line:59: DATA:'有米优投登录 - 有米云'
+2019-05-10 19:13:00,393 [INFO] web.py line:60: REAL:'有米优投登录 - 有米云'
+2019-05-10 19:13:00,393 [INFO] gentest.py line:109: 执行测试步骤通过: 2|CHECK|通用^页面title
+2019-05-10 19:13:00,593 [INFO] gentest.py line:33: 执行测试步骤: 3|INPUT|优投平台登录页^账号
+2019-05-10 19:13:03,313 [INFO] gentest.py line:109: 执行测试步骤通过: 3|INPUT|优投平台登录页^账号
+2019-05-10 19:13:03,514 [INFO] gentest.py line:33: 执行测试步骤: 4|INPUT|优投平台登录页^密码
+2019-05-10 19:13:06,167 [INFO] gentest.py line:109: 执行测试步骤通过: 4|INPUT|优投平台登录页^密码
+2019-05-10 19:13:06,368 [INFO] gentest.py line:33: 执行测试步骤: 5|CLICK|优投平台登录页^登录
+2019-05-10 19:13:08,993 [INFO] gentest.py line:109: 执行测试步骤通过: 5|CLICK|优投平台登录页^登录
+2019-05-10 19:13:09,194 [INFO] gentest.py line:33: 执行测试步骤: ^6|CHECK|通用^页面title
+2019-05-10 19:13:16,205 [INFO] web.py line:59: DATA:'个人信息*'
+2019-05-10 19:13:16,205 [INFO] web.py line:60: REAL:'有米优投登录 - 有米云'
+2019-05-10 19:13:16,396 [ERROR] gentest.py line:139: 执行测试步骤失败: ^6|CHECK|通用^页面title
+Traceback (most recent call last):
+  File "/home/youmi/CxhProjects/cxh/AutoTest/sweetest/sweetest/lib/gentest.py", line 61, in __call__
+    getattr(web, step['keyword'].lower())(step)
+  File "/home/youmi/CxhProjects/cxh/AutoTest/sweetest/sweetest/keywords/web.py", line 107, in check
+    getattr(Common, by)(data, output)
+  File "/home/youmi/CxhProjects/cxh/AutoTest/sweetest/sweetest/keywords/web.py", line 19, in title
+    detail_check(expected, real)
+  File "/home/youmi/CxhProjects/cxh/AutoTest/sweetest/sweetest/keywords/web.py", line 77, in detail_check
+    assert expected[:-1] in real
+AssertionError
+2019-05-10 19:13:16,396 [INFO] gentest.py line:33: 执行测试步骤: 8|CHECK|通用^页面title
+2019-05-10 19:13:28,413 [INFO] web.py line:59: DATA:'数据概览 - 有米优投'
+2019-05-10 19:13:28,413 [INFO] web.py line:60: REAL:'有米优投登录 - 有米云'
+2019-05-10 19:13:28,603 [ERROR] gentest.py line:139: 执行测试步骤失败: 8|CHECK|通用^页面title
+Traceback (most recent call last):
+  File "/home/youmi/CxhProjects/cxh/AutoTest/sweetest/sweetest/lib/gentest.py", line 61, in __call__
+    getattr(web, step['keyword'].lower())(step)
+  File "/home/youmi/CxhProjects/cxh/AutoTest/sweetest/sweetest/keywords/web.py", line 107, in check
+    getattr(Common, by)(data, output)
+  File "/home/youmi/CxhProjects/cxh/AutoTest/sweetest/sweetest/keywords/web.py", line 19, in title
+    detail_check(expected, real)
+  File "/home/youmi/CxhProjects/cxh/AutoTest/sweetest/sweetest/keywords/web.py", line 79, in detail_check
+    assert expected == real
+AssertionError
+2019-05-10 19:13:28,702 [INFO] gentest.py line:89: 用例片段执行结果:
+
+2019-05-10 19:13:28,702 [INFO] gentest.py line:90: Fail
+2019-05-10 19:13:28,702 [INFO] gentest.py line:33: 执行测试步骤: ^1|JUDGE|优投平台登录页^提示信息关闭图标
+2019-05-10 19:13:36,247 [INFO] web.py line:167: REAL:2
+2019-05-10 19:13:36,247 [INFO] web.py line:173: DATA:1
+2019-05-10 19:13:36,443 [ERROR] gentest.py line:139: 执行测试步骤失败: ^1|JUDGE|优投平台登录页^提示信息关闭图标
+Traceback (most recent call last):
+  File "/home/youmi/CxhProjects/cxh/AutoTest/sweetest/sweetest/lib/gentest.py", line 61, in __call__
+    getattr(web, step['keyword'].lower())(step)
+  File "/home/youmi/CxhProjects/cxh/AutoTest/sweetest/sweetest/keywords/web.py", line 174, in judge
+    assert flag == 1
+AssertionError
+2019-05-10 19:13:36,443 [INFO] gentest.py line:33: 执行测试步骤: 3|CLICK|优投平台登录页^用户图标
+2019-05-10 19:13:44,203 [ERROR] gentest.py line:139: 执行测试步骤失败: 3|CLICK|优投平台登录页^用户图标
+Traceback (most recent call last):
+  File "/home/youmi/CxhProjects/cxh/AutoTest/sweetest/sweetest/lib/gentest.py", line 61, in __call__
+    getattr(web, step['keyword'].lower())(step)
+  File "/home/youmi/CxhProjects/cxh/AutoTest/sweetest/sweetest/keywords/web.py", line 203, in click
+    element_location = locating_element(element, 'CLICK')
+  File "/home/youmi/CxhProjects/cxh/AutoTest/sweetest/sweetest/lib/locator.py", line 25, in locating_element
+    (getattr(By, el['by'].upper()), value)))
+  File "/usr/local/lib/python3.6/dist-packages/selenium/webdriver/support/wait.py", line 80, in until
+    raise TimeoutException(message, screen, stacktrace)
+selenium.common.exceptions.TimeoutException: Message: 
+
+2019-05-10 19:13:44,205 [ERROR] myrunner.py line:33: 测试失败
+
+2019-05-10 19:13:44,205 [ERROR] myrunner.py line:33: 测试失败
+
+2019-05-10 19:13:44,205 [INFO] myrunner.py line:14: test_ORDER_008 (sweetest.lib.gentest.TestClass)用例开始运行... 
+2019-05-10 19:13:44,205 [INFO] gentest.py line:33: 执行测试步骤: 1|EXECUTE|SNIPPET_001
+2019-05-10 19:13:44,206 [INFO] gentest.py line:33: 执行测试步骤: 1|CLICK|优投平台登录页^登录按钮
+2019-05-10 19:13:56,913 [ERROR] gentest.py line:139: 执行测试步骤失败: 1|CLICK|优投平台登录页^登录按钮
+Traceback (most recent call last):
+  File "/home/youmi/CxhProjects/cxh/AutoTest/sweetest/sweetest/lib/gentest.py", line 61, in __call__
+    getattr(web, step['keyword'].lower())(step)
+  File "/home/youmi/CxhProjects/cxh/AutoTest/sweetest/sweetest/keywords/web.py", line 203, in click
+    element_location = locating_element(element, 'CLICK')
+  File "/home/youmi/CxhProjects/cxh/AutoTest/sweetest/sweetest/lib/locator.py", line 25, in locating_element
+    (getattr(By, el['by'].upper()), value)))
+  File "/usr/local/lib/python3.6/dist-packages/selenium/webdriver/support/wait.py", line 80, in until
+    raise TimeoutException(message, screen, stacktrace)
+selenium.common.exceptions.TimeoutException: Message: 
+
+2019-05-10 19:13:57,021 [INFO] gentest.py line:89: 用例片段执行结果:
+
+2019-05-10 19:13:57,021 [INFO] gentest.py line:90: Fail
+2019-05-10 19:13:57,022 [INFO] gentest.py line:33: 执行测试步骤: ^1|JUDGE|优投平台登录页^提示信息关闭图标
+2019-05-10 19:14:04,565 [INFO] web.py line:167: REAL:2
+2019-05-10 19:14:04,565 [INFO] web.py line:173: DATA:1
+2019-05-10 19:14:04,758 [ERROR] gentest.py line:139: 执行测试步骤失败: ^1|JUDGE|优投平台登录页^提示信息关闭图标
+Traceback (most recent call last):
+  File "/home/youmi/CxhProjects/cxh/AutoTest/sweetest/sweetest/lib/gentest.py", line 61, in __call__
+    getattr(web, step['keyword'].lower())(step)
+  File "/home/youmi/CxhProjects/cxh/AutoTest/sweetest/sweetest/keywords/web.py", line 174, in judge
+    assert flag == 1
+AssertionError
+2019-05-10 19:14:04,758 [INFO] gentest.py line:33: 执行测试步骤: 3|CLICK|优投平台登录页^用户图标
+2019-05-10 19:14:12,509 [ERROR] gentest.py line:139: 执行测试步骤失败: 3|CLICK|优投平台登录页^用户图标
+Traceback (most recent call last):
+  File "/home/youmi/CxhProjects/cxh/AutoTest/sweetest/sweetest/lib/gentest.py", line 61, in __call__
+    getattr(web, step['keyword'].lower())(step)
+  File "/home/youmi/CxhProjects/cxh/AutoTest/sweetest/sweetest/keywords/web.py", line 203, in click
+    element_location = locating_element(element, 'CLICK')
+  File "/home/youmi/CxhProjects/cxh/AutoTest/sweetest/sweetest/lib/locator.py", line 25, in locating_element
+    (getattr(By, el['by'].upper()), value)))
+  File "/usr/local/lib/python3.6/dist-packages/selenium/webdriver/support/wait.py", line 80, in until
+    raise TimeoutException(message, screen, stacktrace)
+selenium.common.exceptions.TimeoutException: Message: 
+
+2019-05-10 19:14:12,510 [ERROR] myrunner.py line:33: 测试失败
+
+2019-05-10 19:14:12,510 [ERROR] myrunner.py line:33: 测试失败
+
+2019-05-10 19:14:12,510 [INFO] myrunner.py line:14: test_ORDER_009 (sweetest.lib.gentest.TestClass)用例开始运行... 
+2019-05-10 19:14:12,510 [INFO] gentest.py line:33: 执行测试步骤: 1|EXECUTE|SNIPPET_001
+2019-05-10 19:14:12,510 [INFO] gentest.py line:33: 执行测试步骤: 1|CLICK|优投平台登录页^登录按钮
+2019-05-10 19:14:25,270 [ERROR] gentest.py line:139: 执行测试步骤失败: 1|CLICK|优投平台登录页^登录按钮
+Traceback (most recent call last):
+  File "/home/youmi/CxhProjects/cxh/AutoTest/sweetest/sweetest/lib/gentest.py", line 61, in __call__
+    getattr(web, step['keyword'].lower())(step)
+  File "/home/youmi/CxhProjects/cxh/AutoTest/sweetest/sweetest/keywords/web.py", line 203, in click
+    element_location = locating_element(element, 'CLICK')
+  File "/home/youmi/CxhProjects/cxh/AutoTest/sweetest/sweetest/lib/locator.py", line 25, in locating_element
+    (getattr(By, el['by'].upper()), value)))
+  File "/usr/local/lib/python3.6/dist-packages/selenium/webdriver/support/wait.py", line 80, in until
+    raise TimeoutException(message, screen, stacktrace)
+selenium.common.exceptions.TimeoutException: Message: 
+
+2019-05-10 19:14:25,385 [INFO] gentest.py line:89: 用例片段执行结果:
+
+2019-05-10 19:14:25,385 [INFO] gentest.py line:90: Fail
+2019-05-10 19:14:25,386 [INFO] gentest.py line:33: 执行测试步骤: ^1|JUDGE|优投平台登录页^提示信息关闭图标
+2019-05-10 19:14:32,919 [INFO] web.py line:167: REAL:2
+2019-05-10 19:14:32,920 [INFO] web.py line:173: DATA:1
+2019-05-10 19:14:33,111 [ERROR] gentest.py line:139: 执行测试步骤失败: ^1|JUDGE|优投平台登录页^提示信息关闭图标
+Traceback (most recent call last):
+  File "/home/youmi/CxhProjects/cxh/AutoTest/sweetest/sweetest/lib/gentest.py", line 61, in __call__
+    getattr(web, step['keyword'].lower())(step)
+  File "/home/youmi/CxhProjects/cxh/AutoTest/sweetest/sweetest/keywords/web.py", line 174, in judge
+    assert flag == 1
+AssertionError
+2019-05-10 19:14:33,112 [INFO] gentest.py line:33: 执行测试步骤: 3|CLICK|优投平台登录页^用户图标
+2019-05-10 19:14:40,853 [ERROR] gentest.py line:139: 执行测试步骤失败: 3|CLICK|优投平台登录页^用户图标
+Traceback (most recent call last):
+  File "/home/youmi/CxhProjects/cxh/AutoTest/sweetest/sweetest/lib/gentest.py", line 61, in __call__
+    getattr(web, step['keyword'].lower())(step)
+  File "/home/youmi/CxhProjects/cxh/AutoTest/sweetest/sweetest/keywords/web.py", line 203, in click
+    element_location = locating_element(element, 'CLICK')
+  File "/home/youmi/CxhProjects/cxh/AutoTest/sweetest/sweetest/lib/locator.py", line 25, in locating_element
+    (getattr(By, el['by'].upper()), value)))
+  File "/usr/local/lib/python3.6/dist-packages/selenium/webdriver/support/wait.py", line 80, in until
+    raise TimeoutException(message, screen, stacktrace)
+selenium.common.exceptions.TimeoutException: Message: 
+
+2019-05-10 19:14:40,853 [ERROR] myrunner.py line:33: 测试失败
+
+2019-05-10 19:14:40,853 [ERROR] myrunner.py line:33: 测试失败
+
+2019-05-10 19:14:41,052 [ERROR] myrunner.py line:67: 
+FAIL: test_ORDER_007 (sweetest.lib.gentest.TestClass)
+Traceback (most recent call last):
+  File "/home/youmi/CxhProjects/cxh/AutoTest/sweetest/sweetest/lib/gentest.py", line 151, in __call__
+    assert self.testcase['result'] == 'Pass'
+AssertionError
+
+
+2019-05-10 19:14:41,052 [ERROR] myrunner.py line:67: 
+FAIL: test_ORDER_007 (sweetest.lib.gentest.TestClass)
+Traceback (most recent call last):
+  File "/home/youmi/CxhProjects/cxh/AutoTest/sweetest/sweetest/lib/gentest.py", line 151, in __call__
+    assert self.testcase['result'] == 'Pass'
+AssertionError
+
+
+2019-05-10 19:14:41,052 [ERROR] myrunner.py line:67: 
+FAIL: test_ORDER_008 (sweetest.lib.gentest.TestClass)
+Traceback (most recent call last):
+  File "/home/youmi/CxhProjects/cxh/AutoTest/sweetest/sweetest/lib/gentest.py", line 151, in __call__
+    assert self.testcase['result'] == 'Pass'
+AssertionError
+
+
+2019-05-10 19:14:41,052 [ERROR] myrunner.py line:67: 
+FAIL: test_ORDER_008 (sweetest.lib.gentest.TestClass)
+Traceback (most recent call last):
+  File "/home/youmi/CxhProjects/cxh/AutoTest/sweetest/sweetest/lib/gentest.py", line 151, in __call__
+    assert self.testcase['result'] == 'Pass'
+AssertionError
+
+
+2019-05-10 19:14:41,052 [ERROR] myrunner.py line:67: 
+FAIL: test_ORDER_009 (sweetest.lib.gentest.TestClass)
+Traceback (most recent call last):
+  File "/home/youmi/CxhProjects/cxh/AutoTest/sweetest/sweetest/lib/gentest.py", line 151, in __call__
+    assert self.testcase['result'] == 'Pass'
+AssertionError
+
+
+2019-05-10 19:14:41,052 [ERROR] myrunner.py line:67: 
+FAIL: test_ORDER_009 (sweetest.lib.gentest.TestClass)
+Traceback (most recent call last):
+  File "/home/youmi/CxhProjects/cxh/AutoTest/sweetest/sweetest/lib/gentest.py", line 151, in __call__
+    assert self.testcase['result'] == 'Pass'
+AssertionError
+
+
+2019-05-10 19:14:41,052 [INFO] myrunner.py line:109: ----------------------------------------------------------------------
+2019-05-10 19:14:41,052 [INFO] myrunner.py line:112: Ran 9 tests in 1221.615s
+
+2019-05-10 19:14:41,052 [ERROR] myrunner.py line:128: FAILED!
+
+2019-05-10 19:14:41,052 [INFO] myrunner.py line:143:  (failures=6)
