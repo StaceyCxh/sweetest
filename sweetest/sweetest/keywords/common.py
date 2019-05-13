@@ -9,7 +9,7 @@ import re
 import json
 
 
-def execute(step):
+def execute(step, caseID):
     # 先处理循环结束条件
     condition = ''
     for k in ('循环结束条件', 'condition'):
@@ -44,12 +44,15 @@ def execute(step):
     if element != '变量赋值':
         for t in range(times):
             name = key+'_1'
-            g.snippet[name]=deepcopy(g.snippet[key])
+            g.snippet[name] = deepcopy(g.snippet[key])
             sweetest.lib.gentest.genSnippest(name)
             try:
                 getattr(sweetest.lib.gentest.TestClass, name)()
             except:
                 result = 'Fail'
+
+            # 将用例片段的测试步骤及结果写入excel报告中
+            g.report_workbook.insert_rows(g.snippet[name], caseID, step['no'])
 
             delattr(sweetest.lib.gentest.TestClass, name)
 

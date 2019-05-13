@@ -84,9 +84,9 @@ class _Factory(object):
                     elif step['keyword'].lower() == 'execute':
                         if step['page'] in ('SNIPPET', '用例片段'):
                             result = getattr(
-                                common, step['keyword'].lower())(step)
+                                common, step['keyword'].lower())(step, self.testcase['id'])
 
-                            logger.info('测试片段执行结果:\n')
+                            logger.info('用例片段执行结果:\n')
                             logger.info(result)
 
                             self.testcase['result'] = result

@@ -3,6 +3,8 @@ from openpyxl import Workbook
 from openpyxl import load_workbook
 from openpyxl.styles import Font, colors
 from openpyxl.styles.fills import PatternFill
+from sweetest.globals import g
+import re
 
 
 DarkRedFill = PatternFill("solid", fgColor="CD3700")
@@ -101,45 +103,103 @@ class Excel(object):
             data.append(d)
         return data
 
-    def write(self, testsuite, sheet_name, filename):
+    def write(self):
         '''
         将测试结果写入excel报告中，并进行格式化
-        :param testsuite: 测试用例集
-        :param sheet_name: 表单名
-        :param filename: 文件名
         '''
-        sheet = self.workbook.get_sheet_by_name(sheet_name)
+        sheet = self.workbook.get_sheet_by_name(g.current_sheet_name)
+        # 首行用例标题设置红色底色、字体白色
         for cell in sheet[1]:
             cell.fill = DarkRedFill
             cell.font = Font(color=colors.WHITE)
         m = 0
         n = 2
-        while n < (sheet.max_row + 1):
+        while m < len(g.testsuite):
             self.length = 0
+
+            cell_result = '%s%d' % (chr(111), n)
+            sheet[cell_result].value = g.testsuite[m].get('result', '')
+            # 用例结果列设置底色
+            if sheet[cell_result].value:
+                sheet[cell_result].fill = Fills[sheet[cell_result].value]
+                sheet[cell_result].font = Font(color=colors.WHITE)
+
+            for step in g.testsuite[m].get('steps'):
+                cell_keyword = '%s%d' % (chr(101), (n+self.length))
+                cell_score = '%s%d' % (chr(110), (n+self.length))
+                cell_remark = '%s%d' % (chr(112), (n+self.length))
+                sheet[cell_score].value = step.get('score', '')
+                sheet[cell_score].font = Font(color=colors.BLACK)
+                if sheet[cell_score].value == 'NO':
+                    sheet[cell_score].fill = GrayFill
+                    sheet[cell_score].font = Font(color=colors.WHITE)
+                sheet[cell_remark].value = step.get('remark', '')
+                sheet[cell_remark].font = Font(color=colors.BLACK)
+
+                z = 1
+                if sheet[cell_keyword].value in ['EXECUTE', 'execute', '执行']:
+                    is_match = 1
+                    while is_match:
+                        cell_condition = '%s%d' % (chr(99), (n + self.length + z))
+                        if re.findall(r'SNIPPET_(.+?)', str(sheet[cell_condition].value)):
+                            z += 1
+                        else:
+                            is_match = 0
+                self.length = self.length + z
+
+            m = m + 1
+            n = n + self.length
+
+        self.workbook.save(g.report_file)
+
+    def insert_rows(self, rows, row, no):
+        sheet = self.workbook.get_sheet_by_name(g.current_sheet_name)
+        nrows = len(rows.get('steps'))
+        n = 2
+        is_match = 0
+        while n < (sheet.max_row + 1):
             i = '%s%d' % (chr(97), n)
-            # 单元格数据
-            # cell = sheet[i].value, ''
+            if row == sheet[i].value:
+                while n < (sheet.max_row + 1):
+                    j = '%s%d' % (chr(99), n)
+                    k = '%s%d' % (chr(100), n)
+                    if sheet[j].value in [None] and str(sheet[k].value)[-1] == no:
+                        n += 1
+                        is_match = 1
+                        break
+                    n += 1
+                if is_match == 1:
+                    break
+                n += 1
+            n += 1
+        sheet.insert_rows(n, nrows)
+        for index, step in enumerate(rows.get('steps')):
+            cell_no = '%s%d' % (chr(100), (n + index))
+            cell_keyword = '%s%d' % (chr(101), (n + index))
+            cell_page = '%s%d' % (chr(102), (n + index))
+            cell_element = '%s%d' % (chr(103), (n + index))
+            cell_data = '%s%d' % (chr(104), (n + index))
+            cell_expected = '%s%d' % (chr(105), (n + index))
+            cell_output = '%s%d' % (chr(106), (n + index))
+            cell_score = '%s%d' % (chr(110), (n + index))
+            cell_remark = '%s%d' % (chr(112), (n + index))
+            sheet[cell_no].value = step.get('no', '')
+            sheet[cell_keyword].value = step.get('keyword', '')
+            sheet[cell_page].value = step.get('page', '')
+            sheet[cell_element].value = str(step.get('element', ''))
+            sheet[cell_data].value = str(step.get('data', ''))
+            sheet[cell_expected].value = str(step.get('expected')) if step.get('expected', '') else None
+            sheet[cell_output].value = str(step.get('output')) if str(step.get('output', '')) else None
+            sheet[cell_score].value = step.get('score', '')
+            sheet[cell_score].font = Font(color=colors.BLACK)
+            if sheet[cell_score].value == 'NO':
+                sheet[cell_score].fill = GrayFill
+                sheet[cell_score].font = Font(color=colors.WHITE)
+            sheet[cell_remark].value = step.get('remark', '')
+            cell_title = '%s%d' % (chr(99), (n + index))
+            sheet[cell_title].value = rows.get('id')
 
-            j = '%s%d' % (chr(111), n)
-            sheet[j].value = testsuite[m].get('result', '')
-            if sheet[j].value:
-                sheet[j].fill = Fills[sheet[j].value]
-                sheet[j].font = Font(color=colors.WHITE)
-            for index, step in enumerate(testsuite[m].get('steps')):
-                    k = '%s%d' % (chr(110), (n+index))
-                    l = '%s%d' % (chr(112), (n+index))
-                    sheet[k].value = step.get('score', '')
-                    sheet[k].font = Font(color=colors.BLACK)
-                    if sheet[k].value == 'NO':
-                        sheet[k].fill = GrayFill
-                        sheet[k].font = Font(color=colors.WHITE)
-                    sheet[l].value = step.get('remark', '')
-                    sheet[l].font = Font(color=colors.BLACK)
-                    self.length += 1
-            m = m+1
-            n = n+self.length
-
-        self.workbook.save(filename)
+        self.workbook.save(g.report_file)
 
     @classmethod
     def copy_excel(cls, filename1, filename2):

@@ -56,15 +56,16 @@ class AutoTest(object):
         g.results['beginTime'] = time.strftime("%Y-%m-%d %H:%M:%S", time.localtime())
         # 逐个执行测试套件
         for sheet_name in g.sheet_names:
+            g.current_sheet_name = sheet_name
             # 测试准备工作：解析测试用例集 -> 解析全局变量 -> 初始化浏览器和窗口 -> 初始化 unittest.testcase
-            cls.ready(sheet_name)
+            cls.ready()
             # 执行测试
             cls.test()
 
             # 测试结果写入excel报告中
-            g.report_workbook.write(g.testsuite, sheet_name, g.report_file)
+            g.report_workbook.write()
             # 存储测试结果
-            cls.output(sheet_name)
+            cls.output()
         # 测试结果赋值
         g.results['testResult'] = g.suite
         # 生成html格式的报告
@@ -75,7 +76,7 @@ class AutoTest(object):
         # DingTalk().send_markdown()
 
     @staticmethod
-    def ready(sheet_name):
+    def ready():
         '''
         测试准备工作：解析测试用例集 -> 解析全局变量 -> 初始化浏览器和窗口 -> 初始化 unittest.testcase
         :param sheet_name: excel格式的测试用例集
@@ -111,9 +112,9 @@ class AutoTest(object):
         '''
 
         # 1.从 Excel 获取、解析测试用例集
-        parse_suite(sheet_name)
+        parse_suite(g.current_sheet_name)
         # 2.从 Csv 获取、解析全局变量
-        parse_var(sheet_name)
+        parse_var(g.current_sheet_name)
 
         # 3.初始化浏览器和窗口
         try:
@@ -138,7 +139,7 @@ class AutoTest(object):
         runner.run(suite)
 
     @staticmethod
-    def output(suiteName):
+    def output():
         '''
         将测试后的用例详情存储到g.suite
         :param suiteName: 用例集名称
@@ -153,7 +154,7 @@ class AutoTest(object):
         '''
         for case in g.normal_testcases:
             suite = {}
-            suite['suiteName'] = suiteName
+            suite['suiteName'] = g.current_sheet_name
             suite['id'] = case['id']
             suite['caseName'] = case['title']
             suite['log'] = case['steps']
@@ -169,7 +170,7 @@ class AutoTest(object):
         for case in g.testsuite:
             if case['result'] == 'Skip':
                 suite = {}
-                suite['suiteName'] = suiteName
+                suite['suiteName'] = g.current_sheet_name
                 suite['id'] = case['id']
                 suite['caseName'] = case['title']
                 suite['status'] = '跳过'
