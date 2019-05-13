@@ -253,6 +253,9 @@ def context_click(step):
     actions.perform()
     sleep(0.5)
 
+    # 获取元素其他属性
+    get_Ouput(step, el)
+
 
 def double_click(step):
     actions = ActionChains(g.driver)
@@ -261,6 +264,15 @@ def double_click(step):
     actions.double_click(el)
     actions.perform()
     sleep(0.5)
+
+    # 获取元素其他属性
+    get_Ouput(step, el)
+
+    # 判断是否打开了新的窗口，并将新窗口添加到pages映射表中
+    all_handles = g.driver.window_handles
+    for handle in all_handles:
+        if handle not in w.pages.values():
+            w.register(step, handle)
 
 
 def drag_and_drop(step):
@@ -271,6 +283,9 @@ def drag_and_drop(step):
     actions.drag_and_drop(source, target)
     actions.perform()
     sleep(0.5)
+
+    # 获取元素其他属性
+    get_Ouput(step, el)
 
 
 def swipe(step):
@@ -284,6 +299,9 @@ def swipe(step):
     actions.drag_and_drop_by_offset(source, x, y)
     actions.perform()
     sleep(0.5)
+
+    # 获取元素其他属性
+    get_Ouput(step, el)
 
 
 def script(step):
@@ -329,7 +347,3 @@ def upload(step):
 def refresh(step):
     g.driver.refresh()
 
-
-def switch(step):
-    data = step['data']
-    w.switch_tab(data['text'])

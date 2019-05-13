@@ -72,7 +72,7 @@ def execute(step, caseID):
         # 执行结束，还没有触发循环退出条件，则返回结果为 Fail
         if condition:
             return 'Fail'
-        return result
+    return result
 
 
 def sql(step):
