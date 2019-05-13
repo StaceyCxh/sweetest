@@ -24,6 +24,79 @@
 ## 三、目录结构
 ![image](https://github.com/StaceyCxh/sweetest/blob/master/sweetest/img/%E7%9B%AE%E5%BD%95%E7%BB%93%E6%9E%84.png)
 
+<table cellspacing="0" border="0">
+	<colgroup width="148"></colgroup>
+	<colgroup width="482"></colgroup>
+	<tr>
+		<td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" height="18" align="center" valign=middle bgcolor="#ADC5E7"><font color="#000000">目录</font></td>
+		<td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="center" valign=middle bgcolor="#ADC5E7"><font color="#000000">说明</font></td>
+	</tr>
+	<tr>
+		<td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" height="46" align="left" valign=middle><font face="Calibri,DejaVu Sans" color="#000000">data<br>&nbsp;&nbsp;xx.csv</font></td>
+		<td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="left" valign=middle><font color="#000000">测试数据，文件名称格式为：project_name-sheet_name.csv <br>每个testsuite对应一份数据文件</font></td>
+	</tr>
+	<tr>
+		<td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" height="38" align="left" valign=middle><font face="宋体" color="#000000">element<br>&nbsp;&nbsp;xx.xlsx</font></td>
+		<td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="left" valign=middle>元素定位表，文件名称格式为：project_name-Elements.xlsx</td>
+	</tr>
+	<tr>
+		<td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" height="46" align="left" valign=middle><font face="宋体" color="#000000">testcase<br>&nbsp;&nbsp;xx.xlsx</font></td>
+		<td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="left" valign=middle>测试用例，文件名称格式为：project_name-Testcase.xlsx<br>excel文件中每个sheet相当于testsuite</td>
+	</tr>
+	<tr>
+		<td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" height="38" align="left" valign=middle><font face="宋体" color="#000000">template<br>&nbsp;&nbsp;Template.html</font></td>
+		<td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="left" valign=middle>Html格式测试报告的模板</td>
+	</tr>
+	<tr>
+		<td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" height="68" align="left" valign=middle><font face="宋体" color="#000000">report<br>&nbsp;&nbsp;xx.xlsx</font></td>
+		<td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="left" valign=middle><font color="#000000">Excel格式测试报告，每次自动化测试结束后自动生成一份，名称格式为：project_name-Report@yyyymmdd_HHMMSS.xlsx<br>report目录可以不存在，程序运行后会自动创建</font></td>
+	</tr>
+	<tr>
+		<td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" height="68" align="left" valign=middle><font face="宋体" color="#000000">htmlreport<br>&nbsp;&nbsp;xx.html</font></td>
+		<td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="left" valign=middle><font color="#000000">Html格式测试报告，每次自动化测试结束后自动生成一份，名称格式为：project_name-Report@yyyymmdd_HHMMSS.html<br>htmlreport目录可以不存在，程序运行后会自动创建</font></td>
+	</tr>
+	<tr>
+		<td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" height="62" align="left" valign=middle><font color="#000000">log<br>&nbsp;&nbsp;xx.log</font></td>
+		<td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="left" valign=middle>运行日志，每次自动化测试会自动生成一份，名称格式为：yyyymmdd_HHMMSS.log<br>log目录可以不存在，程序运行后会自动创建</td>
+	</tr>
+	<tr>
+		<td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" height="62" align="left" valign=middle><font color="#000000">snapshot<br>&nbsp;&nbsp;xx.png</font></td>
+		<td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="left" valign=middle>错误截图图片，文件名称格式为：project_name-sheet_name-yyyymmdd_HHMMSS#testcase_title-testcase_step.png<br>snapshot目录可以不存在，程序运行后会自动创建</td>
+	</tr>
+	<tr>
+		<td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" height="24" align="left" valign=middle><font face="Calibri,DejaVu Sans">requirements.txt</font></td>
+		<td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="left" valign=middle>依赖包清单</td>
+	</tr>
+	<tr>
+		<td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" height="24" align="left" valign=middle><font face="Calibri,DejaVu Sans">start.py</font></td>
+		<td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="left" valign=middle>启动文件</td>
+	</tr>
+	<tr>
+		<td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" height="24" align="left" valign=middle><font face="Calibri,DejaVu Sans">sweetest</font></td>
+		<td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="left" valign=middle>主程序代码</td>
+	</tr>
+	<tr>
+		<td style="border-top: 1px solid #000000; border-left: 1px solid #000000" height="24" align="left" valign=middle><font face="Calibri,DejaVu Sans">&nbsp;&nbsp;keywords</font></td>
+		<td style="border-top: 1px solid #000000; border-right: 1px solid #000000" align="left" valign=middle>关键字</td>
+	</tr>
+	<tr>
+		<td style="border-left: 1px solid #000000" height="24" align="left" valign=middle><font color="#000000">&nbsp;&nbsp;lib</font></td>
+		<td style="border-right: 1px solid #000000" align="left" valign=middle>辅助模块</td>
+	</tr>
+	<tr>
+		<td style="border-left: 1px solid #000000" height="68" align="left" valign=middle><font color="#000000">&nbsp;&nbsp;config.py</font></td>
+		<td style="border-right: 1px solid #000000" align="left" valign=middle>配置文件<br>配置关键字、文件名后缀、元素/用例属性的中英文对照、元素超时时间、页面刷新超时时间、钉钉及邮件相关信息等</td>
+	</tr>
+	<tr>
+		<td style="border-left: 1px solid #000000" height="68" align="left" valign=middle><font color="#000000">&nbsp;&nbsp;globals.py</font></td>
+		<td style="border-right: 1px solid #000000" align="left" valign=middle>全局变量文件<br>定义浏览器对象、测试项目名称、要执行的测试用例集名称、环境配置信息、用例筛选条件等 </td>
+	</tr>
+	<tr>
+		<td style="border-bottom: 1px solid #000000; border-left: 1px solid #000000" height="24" align="left" valign=middle><font color="#000000">&nbsp;&nbsp;autotest.py</font></td>
+		<td style="border-bottom: 1px solid #000000; border-right: 1px solid #000000" align="left" valign=middle>测试类</td>
+	</tr>
+</table>
+
 ## 四、元素定位
 在excel中书写元素定位信息，将元素定位与代码分隔开，方便维护，可读性高。
 
