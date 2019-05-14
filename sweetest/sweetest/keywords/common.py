@@ -46,13 +46,15 @@ def execute(step, caseID):
             name = key+'_1'
             g.snippet[name] = deepcopy(g.snippet[key])
             sweetest.lib.gentest.genSnippest(name)
+            # 将用例片段的测试步骤写入excel报告中
+            n = g.report_workbook.insert_rows(g.snippet[name], caseID, step['no'])
             try:
                 getattr(sweetest.lib.gentest.TestClass, name)()
             except:
                 result = 'Fail'
 
-            # 将用例片段的测试步骤及结果写入excel报告中
-            g.report_workbook.insert_rows(g.snippet[name], caseID, step['no'])
+            # 将用例片段的各测试步骤的结果写入excel报告中
+            g.report_workbook.set_snippet_score(g.snippet[name], n)
 
             delattr(sweetest.lib.gentest.TestClass, name)
 

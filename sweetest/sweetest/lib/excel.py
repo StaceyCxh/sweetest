@@ -157,22 +157,53 @@ class Excel(object):
         nrows = len(rows.get('steps'))
         n = 2
         is_match = 0
+
         while n < (sheet.max_row + 1):
-            i = '%s%d' % (chr(97), n)
-            if row == sheet[i].value:
-                while n < (sheet.max_row + 1):
-                    j = '%s%d' % (chr(99), n)
-                    k = '%s%d' % (chr(100), n)
-                    if sheet[j].value in [None] and str(sheet[k].value)[-1] == no:
+            if row.upper().startswith('SNIPPET'):
+                cell_case_id = '%s%d' % (chr(99), n)
+                if row == sheet[cell_case_id].value:
+                    while n < (sheet.max_row + 1):
+                        cell_step_no = '%s%d' % (chr(100), n)
+                        cell_step_keyword = '%s%d' % (chr(101), n)
+                        cell_step_element = '%s%d' % (chr(103), n)
+                        cell_next_condition = '%s%d' % (chr(99), (n+1))
+                        if str(sheet[cell_step_no].value)[-1] == no and \
+                                sheet[cell_step_keyword].value == 'EXECUTE' and \
+                                sheet[cell_step_element].value == rows.get('id') and \
+                                sheet[cell_next_condition].value != rows.get('id'):
+                            n += 1
+                            is_match = 1
+                            break
                         n += 1
-                        is_match = 1
+                    if is_match == 1:
                         break
                     n += 1
-                if is_match == 1:
-                    break
-                n += 1
+            else:
+                cell_case_id = '%s%d' % (chr(97), n)
+                if row == sheet[cell_case_id].value:
+                    while n < (sheet.max_row + 1):
+                        cell_condition = '%s%d' % (chr(99), n)
+                        cell_step_no = '%s%d' % (chr(100), n)
+                        if sheet[cell_condition].value in [None] and str(sheet[cell_step_no].value)[-1] == no:
+                            n += 1
+                            is_match = 1
+                            break
+                        n += 1
+                    if is_match == 1:
+                        break
+                    n += 1
             n += 1
+
+        # 插入空白行
         sheet.insert_rows(n, nrows)
+        # 空白行写入测试片段各步骤的内容
+        self.insert_snippet(sheet, n, rows)
+        # 保存文件
+        self.workbook.save(g.report_file)
+
+        return n
+
+    def insert_snippet(self, sheet, n, rows):
         for index, step in enumerate(rows.get('steps')):
             cell_no = '%s%d' % (chr(100), (n + index))
             cell_keyword = '%s%d' % (chr(101), (n + index))
@@ -181,25 +212,33 @@ class Excel(object):
             cell_data = '%s%d' % (chr(104), (n + index))
             cell_expected = '%s%d' % (chr(105), (n + index))
             cell_output = '%s%d' % (chr(106), (n + index))
-            cell_score = '%s%d' % (chr(110), (n + index))
             cell_remark = '%s%d' % (chr(112), (n + index))
             sheet[cell_no].value = step.get('no', '')
             sheet[cell_keyword].value = step.get('keyword', '')
             sheet[cell_page].value = step.get('page', '')
             sheet[cell_element].value = str(step.get('element', ''))
-            sheet[cell_data].value = str(step.get('data', ''))
+            sheet[cell_data].value = str(step.get('data', '')) if step.get('data', '') else None
             sheet[cell_expected].value = str(step.get('expected')) if step.get('expected', '') else None
             sheet[cell_output].value = str(step.get('output')) if step.get('output', '') else None
-            sheet[cell_score].value = step.get('score', '')
-            sheet[cell_score].font = Font(color=colors.BLACK)
-            if sheet[cell_score].value == 'NO':
-                sheet[cell_score].fill = GrayFill
-                sheet[cell_score].font = Font(color=colors.WHITE)
             sheet[cell_remark].value = step.get('remark', '')
             cell_title = '%s%d' % (chr(99), (n + index))
             sheet[cell_title].value = rows.get('id')
 
-        self.workbook.save(g.report_file)
+    def set_snippet_score(self, rows, n):
+        sheet = self.workbook.get_sheet_by_name(g.current_sheet_name)
+        times = len(rows.get('steps'))
+        i = 0
+        while i < times:
+            cell_condition = '%s%d' % (chr(99), n)
+            if sheet[cell_condition].value == rows.get('id'):
+                cell_score = '%s%d' % (chr(110), n)
+                sheet[cell_score].value = rows.get('steps')[i].get('score', '')
+                sheet[cell_score].font = Font(color=colors.BLACK)
+                if sheet[cell_score].value == 'NO':
+                    sheet[cell_score].fill = GrayFill
+                    sheet[cell_score].font = Font(color=colors.WHITE)
+                i += 1
+            n += 1
 
     @classmethod
     def copy_excel(cls, filename1, filename2):
