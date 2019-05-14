@@ -72,9 +72,9 @@ class AutoTest(object):
         htmlreport()
 
         # 发送钉钉群消息
-        DingTalk().send_markdown()
+        # DingTalk().send_markdown()
         # 发送邮件
-        Mail().sendmail()
+        # Mail().sendmail()
 
     @staticmethod
     def ready():
