@@ -787,9 +787,17 @@ excel文件中每个表单表示1个测试用例集，表单名sheet_name是测�
 
 
 ## 九、测试报告
+![image](https://github.com/StaceyCxh/sweetest/blob/master/sweetest/img/excel%E6%8A%A5%E5%91%8A1.png)
+
+![image](https://github.com/StaceyCxh/sweetest/blob/master/sweetest/img/excel%E6%8A%A5%E5%91%8A2.png)
+
+![image](https://github.com/StaceyCxh/sweetest/blob/master/sweetest/img/html%E6%8A%A5%E5%91%8A.png)
 
 
 ## 十、消息通知
+![image](https://github.com/StaceyCxh/sweetest/blob/master/sweetest/img/%E9%92%89%E9%92%89%E7%BE%A4%E9%80%9A%E7%9F%A5.png)
+
+![image](https://github.com/StaceyCxh/sweetest/blob/master/sweetest/img/%E9%82%AE%E4%BB%B6%E9%80%9A%E7%9F%A5.png)
 
 
 ## 十一、致谢
