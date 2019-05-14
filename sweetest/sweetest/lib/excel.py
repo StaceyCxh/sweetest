@@ -189,7 +189,7 @@ class Excel(object):
             sheet[cell_element].value = str(step.get('element', ''))
             sheet[cell_data].value = str(step.get('data', ''))
             sheet[cell_expected].value = str(step.get('expected')) if step.get('expected', '') else None
-            sheet[cell_output].value = str(step.get('output')) if str(step.get('output', '')) else None
+            sheet[cell_output].value = str(step.get('output')) if step.get('output', '') else None
             sheet[cell_score].value = step.get('score', '')
             sheet[cell_score].font = Font(color=colors.BLACK)
             if sheet[cell_score].value == 'NO':

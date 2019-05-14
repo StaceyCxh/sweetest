@@ -70,10 +70,11 @@ class AutoTest(object):
         g.results['testResult'] = g.suite
         # 生成html格式的报告
         htmlreport()
-        # 发送邮件
-        # Mail().sendmail()
+
         # 发送钉钉群消息
-        # DingTalk().send_markdown()
+        DingTalk().send_markdown()
+        # 发送邮件
+        Mail().sendmail()
 
     @staticmethod
     def ready():
