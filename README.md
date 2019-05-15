@@ -298,6 +298,7 @@ excel文件中每个表单表示1个测试用例集，表单名sheet_name是测�
     - data中+、-、*、/、%、(、)左边或右边字符 非数字，也可不转义；
     - data中可以带按键操作，如：text=<Keys.ENTER>、<Keys.CONTROL\,'a'>；
     - data中可带运算表达式，代码自动执行计算; 
+    - data中设置等待时间=x，可强制先等待x秒再执行操作；
     
 - 预期结果 / expected
     - 测试数据(data)为空时，可以将预期结果（expected）放在测试数据(data)列
