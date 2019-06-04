@@ -304,7 +304,7 @@ def parse_suite(sheet_name):
     # 将测试用例解析为可执行参数
     g.testsuite = analyze_suite(testsuite)
     # 将测试用例集分解为base、end、setup、teardown、normal、snippet 6类用例
-    decompose_suite(testsuite)
+    decompose_suite()
 
 
 def parse_var(sheet_name):
@@ -396,11 +396,9 @@ def analyze_suite(testsuite):
         sys.exit(g.code)
 
 
-def decompose_suite(testsuite):
+def decompose_suite():
     '''
     将测试用例集分解为base、end、setup、teardown、normal、snippet 6类用例，并且将用例片段存储在g.snippet中
-    :param testsuite: 测试用例集
-    :return: base_testcase, end_testcase, setup_testcase, teardown_testcase, normal_testcases
     g.snippet格式：
     {
       id1: testcase1,
@@ -419,7 +417,7 @@ def decompose_suite(testsuite):
     g.teardown_testcase = {}
     # 普通测试用例
     g.normal_testcases = []
-    for testcase in testsuite:
+    for testcase in g.testsuite:
         if testcase['condition'].lower() == 'base':
             g.base_testcase = testcase
             testcase['flag'] = 'N'

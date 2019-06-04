@@ -1,4 +1,4 @@
-import sys, time, unittest
+import sys, time, unittest, json
 from sweetest.globals import g
 from sweetest.lib.windows import w
 from sweetest.lib.log import logger
@@ -8,6 +8,7 @@ import sweetest.lib.gentest
 from sweetest.lib.gentest import gentest
 from sweetest.lib.myrunner import myTextTestRunner
 from sweetest.lib.report import htmlreport
+from sweetest.lib.db import DB
 from sweetest.lib.mail import Mail
 from sweetest.lib.dingtalk import DingTalk
 
@@ -28,7 +29,8 @@ class AutoTest(object):
 
         # 初始化目录和各文件
         path()
-
+        # 初始化数据库
+        # g.db = DB()
         '''
         从 Excel 获取、解析元素表
         元素表的结构：二元dict
@@ -54,8 +56,10 @@ class AutoTest(object):
 
         # 记录测试开始时间，格式 yyyy-mm-dd HH:MM:SS
         g.results['beginTime'] = time.strftime("%Y-%m-%d %H:%M:%S", time.localtime())
+        # g.db.insert_result(g.results['beginTime'])
         # 逐个执行测试套件
         for sheet_name in g.sheet_names:
+            # g.db.insert_suite(sheet_name)
             g.current_sheet_name = sheet_name
             # 测试准备工作：解析测试用例集 -> 解析全局变量 -> 初始化浏览器和窗口 -> 初始化 unittest.testcase
             cls.ready()
@@ -102,7 +106,8 @@ class AutoTest(object):
                 'expected':{变量1：值1,变量2:值2}, #预期结果
                 'output': {变量1：值1,变量2:值2},  #输出数据
                 'score': '',                     #测试结果
-                'remark': ''                     #备注
+                'remark': '',                    #备注
+                'snippets': [[{},{},...],[],...] #调用的用例片段各步骤
                 },
                 {……}
                 ……
@@ -145,35 +150,65 @@ class AutoTest(object):
         将测试后的用例详情存储到g.suite
         :param suiteName: 用例集名称
         g.suite格式：
-        [{'suiteName': suiteName,   #用例集
-          'id': id,                 #用例id
-          'caseName': title,        #用例标题
-          'status': '成功',          #用例结果
-          'log': step               #用例各步骤记录
-          }
-         ...]
+        [{  "testsuite": "Order",                           #用例集
+            "testcases": [
+                {
+                    "id": "ORDER_001",                      #用例id
+                    "title": "代理商编辑广告订单",             #用例标题
+                    "result": "成功",                        #用例结果
+                    "steps":[
+                        {
+                            'no': 1,                        #测试步骤
+                            'keyword': 'Input',               #关键字
+                            'page': '产品管系统登录页',        #页面
+                            'custom': ,                     #frame
+                            'element': [元素1,元素2],         #元素
+                            'data': {变量1：值1,变量2:值2},    #测试数据
+                            'expected':{变量1：值1,变量2:值2}, #预期结果
+                            'output': {变量1：值1,变量2:值2},  #输出数据
+                            'score': '',                     #测试结果
+                            'remark': '',                    #备注
+                            'snippets': [[{},{},...],[],...] #调用的用例片段各步骤
+                        },
+                        {……}
+                }
+            ]
+         }
+         {……}
+        ]
         '''
+        suite = {}
+        suite['testsuite'] = g.current_sheet_name
+        suite['testcases'] = []
         for case in g.normal_testcases:
-            suite = {}
-            suite['suiteName'] = g.current_sheet_name
-            suite['id'] = case['id']
-            suite['caseName'] = case['title']
-            suite['log'] = case['steps']
+            testcase = {}
+            testcase['id'] = case['id']
+            testcase['title'] = case['title']
+            testcase['steps'] = case['steps']
             if case['result'] == 'Pass':
                 # 通过用例数统计
                 g.results['testPass'] += 1
-                suite['status'] = '成功'
+                testcase['result'] = '成功'
             else:
                 g.results['testFail'] += 1
                 # 失败用例数统计
-                suite['status'] = '失败'
-            g.suite.append(suite)
+                testcase['result'] = '失败'
+            suite['testcases'].append(testcase)
         for case in g.testsuite:
             if case['result'] == 'Skip':
-                suite = {}
-                suite['suiteName'] = g.current_sheet_name
-                suite['id'] = case['id']
-                suite['caseName'] = case['title']
-                suite['status'] = '跳过'
-                suite['log'] = case['steps']
-                g.suite.append(suite)
+                testcase = {}
+                testcase['id'] = case['id']
+                testcase['title'] = case['title']
+                testcase['result'] = '跳过'
+                testcase['steps'] = case['steps']
+                suite['testcases'].append(testcase)
+        g.suite.append(suite)
+        # g.db.update_result(g.results)
+
+    @staticmethod
+    def get_result():
+        logger.info('测试结果:\n' +
+                    json.dumps(g.results, ensure_ascii=False, indent=4))
+        return g.results
+
+

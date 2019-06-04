@@ -7092,7 +7092,7 @@ body.skin-3 {
             "suiteName": "Order",
             "id": "ORDER_002",
             "caseName": "代理商编辑广告订单",
-            "log": [
+            "steps": [
                 {
                     "control": "",
                     "no": "1",
@@ -7123,14 +7123,14 @@ body.skin-3 {
                     "custom": ""
                 }
             ],
-            "status": "成功"
+            "result": "成功"
         },
         {
             "suiteName": "Order",
             "id": "ORDER_001",
             "caseName": "代理商新建广告订单",
-            "status": "跳过",
-            "log": [
+            "result": "跳过",
+            "steps": [
                 {
                     "control": "",
                     "no": "1",
@@ -7168,8 +7168,8 @@ body.skin-3 {
             "suiteName": "Order",
             "id": "ORDER_003",
             "caseName": "代理商复制广告订单",
-            "status": "跳过",
-            "log": [
+            "result": "跳过",
+            "steps": [
                 {
                     "control": "",
                     "no": "1",
@@ -7205,8 +7205,8 @@ body.skin-3 {
             "suiteName": "Order",
             "id": "ORDER_004",
             "caseName": "客户新建广告订单",
-            "status": "跳过",
-            "log": [
+            "result": "跳过",
+            "steps": [
                 {
                     "control": "",
                     "no": "1",
@@ -7244,8 +7244,8 @@ body.skin-3 {
             "suiteName": "Order",
             "id": "ORDER_005",
             "caseName": "客户编辑广告订单",
-            "status": "跳过",
-            "log": [
+            "result": "跳过",
+            "steps": [
                 {
                     "control": "",
                     "no": "1",
@@ -7281,8 +7281,8 @@ body.skin-3 {
             "suiteName": "Order",
             "id": "ORDER_006",
             "caseName": "客户复制广告订单",
-            "status": "跳过",
-            "log": [
+            "result": "跳过",
+            "steps": [
                 {
                     "control": "",
                     "no": "1",
@@ -7318,8 +7318,8 @@ body.skin-3 {
             "suiteName": "Order",
             "id": "ORDER_007",
             "caseName": "财务专员无法新建广告订单",
-            "status": "跳过",
-            "log": [
+            "result": "跳过",
+            "steps": [
                 {
                     "control": "",
                     "no": "1",
@@ -7355,8 +7355,8 @@ body.skin-3 {
             "suiteName": "Order",
             "id": "ORDER_008",
             "caseName": "财务专员无法编辑广告订单",
-            "status": "跳过",
-            "log": [
+            "result": "跳过",
+            "steps": [
                 {
                     "control": "",
                     "no": "1",
@@ -7392,8 +7392,8 @@ body.skin-3 {
             "suiteName": "Order",
             "id": "ORDER_009",
             "caseName": "财务专员无法复制广告订单",
-            "status": "跳过",
-            "log": [
+            "result": "跳过",
+            "steps": [
                 {
                     "control": "",
                     "no": "1",
@@ -7431,7 +7431,7 @@ body.skin-3 {
         if ($(obj).text() == '展开') {
             var len = $(obj).parent().parent().children().length;
             var detailLog = "";
-            var logs = resultData["testResult"][parseInt($(obj).attr("buttonIndex"))]["log"];
+            var logs = resultData["testResult"][parseInt($(obj).attr("buttonIndex"))]["steps"];
             $(obj).text("收缩");
             $(obj).removeClass("btn-primary");
             $(obj).addClass("btn-danger");
@@ -7460,8 +7460,8 @@ body.skin-3 {
             if(suiteNames.indexOf(n["suiteName"])==-1){
                 suiteNames.push(n["suiteName"]);
             }
-            if(results.indexOf(n["status"])==-1){
-                results.push(n["status"]);
+            if(results.indexOf(n["result"])==-1){
+                results.push(n["result"]);
             }
         });
 
@@ -7482,20 +7482,20 @@ body.skin-3 {
             var filterFail = 0;
             var filterSkip = 0;
             $.each(resultData["testResult"], function (i, n) {
-                if((suiteName=="" || n["suiteName"]==suiteName) && (caseResult=="" || n["status"]==caseResult)){
+                if((suiteName=="" || n["suiteName"]==suiteName) && (caseResult=="" || n["result"]==caseResult)){
                     filterAll += 1;
                     var status = "";
-                    if (n["status"] == '成功') {
+                    if (n["result"] == '成功') {
                         filterPass += 1;
                         status = "<td><span class='text-navy'>成功</span></td>";
-                    } else if (n["status"] == '失败') {
+                    } else if (n["result"] == '失败') {
                         filterFail += 1;
                         status = "<td><span class='text-danger'>失败</span></td>";
-                    } else if (n["status"] == '跳过') {
+                    } else if (n["result"] == '跳过') {
                         filterSkip += 1;
                         status = "<td><span class='text-warning'>跳过</span></td>";
                     } else {
-                        status = "<td><span>" + n["status"] + "</span></td>";
+                        status = "<td><span>" + n["result"] + "</span></td>";
                     }
                     var tr = "<tr style='font-family: Consolas'>" +
                         "<td>" + n["id"] + "</td>" +

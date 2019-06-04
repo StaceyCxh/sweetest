@@ -157,6 +157,11 @@ header = {
 element_wait_timeout = 5  # 等待元素出现超时时间，单位：秒
 page_flash_timeout = 90  # 页面刷新超时时间，单位：秒
 
+# 数据库名称
+db_name = "AutoTestDB"
+# 数据库表初始脚本
+db_initsql = 'db.sql'
+
 # 钉钉相关设置
 webhook = 'https://oapi.dingtalk.com/robot/send?access_token=fec1cc32dfeaf0c2c012b042f979402379ec101e3d4cc7a2d8f0855758cd92e1'
 title = '自动化测试报告'

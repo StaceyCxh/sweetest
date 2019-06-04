@@ -9,7 +9,7 @@ import re
 import json
 
 
-def execute(step, caseID):
+def execute(step):
     # 先处理循环结束条件
     condition = ''
     for k in ('循环结束条件', 'condition'):
@@ -46,16 +46,12 @@ def execute(step, caseID):
             name = key+'_1'
             g.snippet[name] = deepcopy(g.snippet[key])
             sweetest.lib.gentest.genSnippest(name)
-            # 将用例片段的测试步骤写入excel报告中
-            n = g.report_workbook.insert_rows(g.snippet[name], caseID, step['no'])
             try:
                 getattr(sweetest.lib.gentest.TestClass, name)()
             except:
                 result = 'Fail'
 
-            # 将用例片段的各测试步骤的结果写入excel报告中
-            g.report_workbook.set_snippet_score(g.snippet[name], n)
-
+            step['snippets'].append(g.snippet[name]['steps'])
             delattr(sweetest.lib.gentest.TestClass, name)
 
             # 用例片段执行失败时
@@ -74,7 +70,7 @@ def execute(step, caseID):
         # 执行结束，还没有触发循环退出条件，则返回结果为 Fail
         if condition:
             return 'Fail'
-    return result
+    return result, step['snippets']
 
 
 def sql(step):

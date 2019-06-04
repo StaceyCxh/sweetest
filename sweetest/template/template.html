@@ -7085,7 +7085,18 @@ body.skin-3 {
         if ($(obj).text() == '展开') {
             var len = $(obj).parent().parent().children().length;
             var detailLog = "";
-            var logs = resultData["testResult"][parseInt($(obj).attr("buttonIndex"))]["log"];
+            var logs = "";
+            $.each(resultData["testResult"], function (i, n) {
+                var testsuite = $(obj).parent().parent().children().eq(1).text()
+                if ( n["testsuite"] == testsuite){
+                    $.each(n["testcases"], function (j, m) {
+                        var id = testsuite = $(obj).parent().parent().children().eq(0).text()
+                        if(m["id"]==id){
+                            logs = m["steps"];
+                        }
+                    })
+                }
+            });
             $(obj).text("收缩");
             $(obj).removeClass("btn-primary");
             $(obj).addClass("btn-danger");
@@ -7111,12 +7122,14 @@ body.skin-3 {
         var suiteNames = [];
         var results = [];
         $.each(resultData["testResult"], function (i, n) {
-            if(suiteNames.indexOf(n["suiteName"])==-1){
-                suiteNames.push(n["suiteName"]);
+            if(suiteNames.indexOf(n["testsuite"])==-1){
+                suiteNames.push(n["testsuite"]);
             }
-            if(results.indexOf(n["status"])==-1){
-                results.push(n["status"]);
-            }
+            $.each(n["testcases"], function (j, m) {
+                if(results.indexOf(m["result"])==-1){
+                    results.push(m["result"]);
+                }
+            })
         });
 
         $.each(suiteNames, function (i, n) {
@@ -7135,28 +7148,32 @@ body.skin-3 {
             var filterPass = 0;
             var filterFail = 0;
             var filterSkip = 0;
-            $.each(resultData["testResult"], function (i, n) {
-                if((suiteName=="" || n["suiteName"]==suiteName) && (caseResult=="" || n["status"]==caseResult)){
-                    filterAll += 1;
-                    var status = "";
-                    if (n["status"] == '成功') {
-                        filterPass += 1;
-                        status = "<td><span class='text-navy'>成功</span></td>";
-                    } else if (n["status"] == '失败') {
-                        filterFail += 1;
-                        status = "<td><span class='text-danger'>失败</span></td>";
-                    } else if (n["status"] == '跳过') {
-                        filterSkip += 1;
-                        status = "<td><span class='text-warning'>跳过</span></td>";
-                    } else {
-                        status = "<td><span>" + n["status"] + "</span></td>";
-                    }
-                    var tr = "<tr style='font-family: Consolas'>" +
-                        "<td>" + n["id"] + "</td>" +
-                        "<td>" + n["suiteName"] + "</td>" +
-                        "<td>" + n["caseName"] + "</td>" +
-                        status + "<td><button type='button' onclick='details(this)' buttonIndex='" + i + "' class='btn btn-primary btn-xs' style='margin-bottom: 0px'>展开</button></td></tr>"
-                    $("#detailBody").append(tr);
+            $.each(resultData["testResult"], function (j, m) {
+                if(suiteName=="" || m["testsuite"]==suiteName){
+                    $.each(m["testcases"], function (i, n) {
+                        if(caseResult=="" || n["result"]==caseResult){
+                            filterAll += 1;
+                            var status = "";
+                            if (n["result"] == '成功') {
+                                filterPass += 1;
+                                status = "<td><span class='text-navy'>成功</span></td>";
+                            } else if (n["result"] == '失败') {
+                                filterFail += 1;
+                                status = "<td><span class='text-danger'>失败</span></td>";
+                            } else if (n["result"] == '跳过') {
+                                filterSkip += 1;
+                                status = "<td><span class='text-warning'>跳过</span></td>";
+                            } else {
+                                status = "<td><span>" + n["result"] + "</span></td>";
+                            }
+                            var tr = "<tr style='font-family: Consolas'>" +
+                            "<td>" + n["id"] + "</td>" +
+                            "<td>" + m["testsuite"] + "</td>" +
+                            "<td>" + n["title"] + "</td>" +
+                            status + "<td><button type='button' onclick='details(this)' buttonIndex='" + i + "' class='btn btn-primary btn-xs' style='margin-bottom: 0px'>展开</button></td></tr>"
+                            $("#detailBody").append(tr);
+                        }
+                    });
                 }
             });
             $("#filterAll").text(filterAll);
