@@ -4,31 +4,7 @@
     <bookmark url="file://$PROJECT_DIR$/sweetest/sweetest/lib/db.py" line="14" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="922f7b62-9ba8-4787-ac2e-331c578dff2a" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/sweetest/sweetest/lib/db.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sweetest/sweetest/lib/excel1.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sweetest/htmlreport/Baidu-Report@20190514_100908.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sweetest/htmlreport/UT-Report@20190514_172047.html" beforeDir="false" afterPath="$PROJECT_DIR$/sweetest/htmlreport/UT-Report@20190514_172047.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sweetest/htmlreport/image1.png" beforeDir="false" afterPath="$PROJECT_DIR$/sweetest/htmlreport/image1.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sweetest/htmlreport/image2.png" beforeDir="false" afterPath="$PROJECT_DIR$/sweetest/htmlreport/image2.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sweetest/htmlreport/pdf.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/sweetest/htmlreport/pdf.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sweetest/report/Baidu-Report@20190514_100908.xlsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sweetest/report/UT-Report@20190514_172047.xlsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sweetest/report/UT-Report@20190514_172621.xlsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sweetest/start.py" beforeDir="false" afterPath="$PROJECT_DIR$/sweetest/start.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sweetest/sweetest/autotest.py" beforeDir="false" afterPath="$PROJECT_DIR$/sweetest/sweetest/autotest.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sweetest/sweetest/config.py" beforeDir="false" afterPath="$PROJECT_DIR$/sweetest/sweetest/config.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sweetest/sweetest/globals.py" beforeDir="false" afterPath="$PROJECT_DIR$/sweetest/sweetest/globals.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sweetest/sweetest/keywords/common.py" beforeDir="false" afterPath="$PROJECT_DIR$/sweetest/sweetest/keywords/common.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sweetest/sweetest/lib/excel.py" beforeDir="false" afterPath="$PROJECT_DIR$/sweetest/sweetest/lib/excel.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sweetest/sweetest/lib/gentest.py" beforeDir="false" afterPath="$PROJECT_DIR$/sweetest/sweetest/lib/gentest.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sweetest/sweetest/lib/parse.py" beforeDir="false" afterPath="$PROJECT_DIR$/sweetest/sweetest/lib/parse.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sweetest/template/template.html" beforeDir="false" afterPath="$PROJECT_DIR$/sweetest/template/template.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sweetest/testcase/Baidu-TestCase.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/sweetest/testcase/Baidu-TestCase.xlsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/自动化测试框架整理.xmind" beforeDir="false" afterPath="$PROJECT_DIR$/自动化测试框架整理.xmind" afterDir="false" />
-    </list>
+    <list default="true" id="922f7b62-9ba8-4787-ac2e-331c578dff2a" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -137,8 +113,8 @@
         <entry file="file://$PROJECT_DIR$/README.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="113">
-                <caret line="815" selection-start-line="815" selection-end-line="815" />
+              <first_editor relative-caret-position="865">
+                <caret line="870" column="3" lean-forward="true" selection-start-line="870" selection-start-column="3" selection-end-line="870" selection-end-column="3" />
               </first_editor>
               <second_editor />
             </state>
@@ -506,7 +482,28 @@
       <option name="project" value="LOCAL" />
       <updated>1557827832753</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="重构REPORT：兼容嵌套调用用例片段的场景；">
+      <created>1559636961826</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1559636961827</updated>
+    </task>
+    <task id="LOCAL-00023" summary="重构REPORT：兼容嵌套调用用例片段的场景；">
+      <created>1559636988137</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1559636988137</updated>
+    </task>
+    <task id="LOCAL-00024" summary="添加测试结果接口">
+      <created>1559637278101</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1559637278101</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
@@ -548,7 +545,8 @@
     <MESSAGE value="重构report模块：用例调用的用例片段各测试步骤及测试结果均体现在excel报告中，提高报告的完整性；" />
     <MESSAGE value="重构REPORT模块：用例调用的用例片段各测试步骤及测试结果均体现在EXCEL报告中，提高报告的完整性；" />
     <MESSAGE value="重构REPORT：兼容嵌套调用用例片段的场景；" />
-    <option name="LAST_COMMIT_MESSAGE" value="重构REPORT：兼容嵌套调用用例片段的场景；" />
+    <MESSAGE value="添加测试结果接口" />
+    <option name="LAST_COMMIT_MESSAGE" value="添加测试结果接口" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -902,8 +900,8 @@
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="113">
-            <caret line="815" selection-start-line="815" selection-end-line="815" />
+          <first_editor relative-caret-position="865">
+            <caret line="870" column="3" lean-forward="true" selection-start-line="870" selection-start-column="3" selection-end-line="870" selection-end-column="3" />
           </first_editor>
           <second_editor />
         </state>
