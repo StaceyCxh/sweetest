@@ -1,4 +1,4 @@
-import re
+import re, ast
 from selenium.webdriver.common.action_chains import ActionChains
 from time import sleep
 from sweetest.globals import g
@@ -55,28 +55,44 @@ def open(step):
     sleep(0.5)
 
 
+def detail_match(expected, real):
+    if expected.startswith('^'):
+        if expected.endswith('$'):
+            return real == expected[1:-1]
+        elif expected.endswith('*'):
+            return real.startswith(expected[1:-1])
+        else:
+            return real.startswith(expected[1:])
+    elif expected.startswith('*'):
+        if expected.endswith('$'):
+            return real.endswith(expected[1:-1])
+        else:
+            return expected[1:] in real
+    elif expected.endswith('$'):
+        return real.endswith(expected[:-1])
+    elif expected.endswith('*'):
+        return expected[:-1] in real
+    else:
+        return expected == real
+
+
 def detail_check(expected, real):
     logger.info('DATA:%s' % repr(expected))
     logger.info('REAL:%s' % repr(real))
     if isinstance(expected, str):
-        if expected.startswith('^'):
-            if expected.endswith('$'):
-                assert real == expected[1:-1]
-            elif expected.endswith('*'):
-                assert real.startswith(expected[1:-1])
-            else:
-                assert real.startswith(expected[1:])
-        elif expected.startswith('*'):
-            if expected.endswith('$'):
-                assert real.endswith(expected[1:-1])
-            else:
-                assert expected[1:] in real
-        elif expected.endswith('$'):
-            assert real.endswith(expected[:-1])
-        elif expected.endswith('*'):
-            assert expected[:-1] in real
+        try:
+            expected = ast.literal_eval(expected)
+        except:
+            pass
+        if isinstance(expected, list):
+            for item in expected:
+                if detail_match(item, real):
+                    flag = 1
+                    break
+            assert flag == 1
         else:
-            assert expected == real
+            expected = str(expected)
+            assert detail_match(expected, real) is True
     elif isinstance(expected, int):
         real = str2int(real)
         assert real == round(expected)
