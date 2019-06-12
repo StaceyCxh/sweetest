@@ -150,41 +150,103 @@ class AutoTest(object):
         将测试后的用例详情存储到g.suite
         :param suiteName: 用例集名称
         g.suite格式：
-        [{  "testsuite": "Order",                           #用例集
-            "testcases": [
-                {
-                    "id": "ORDER_001",                      #用例id
-                    "title": "代理商编辑广告订单",             #用例标题
-                    "result": "成功",                        #用例结果
-                    "steps":[
+        [{
+            "testsuite": "baidu",           #测试用例集
+            "testcases": [                  #测试用例
+            {
+                    "id": "BAIDU_001",                   #用例ID
+                    "title": "搜索：自动化测试",            #用例标题
+                    "result": "成功",                     #用例结果
+                    "setup": {                           #用例准备工作（即setup用例内容）
+                        "id": "HOME_001",
+                        "title": "打开百度",
+                        "result": "Pass",
+                        "steps": [
+                            {
+                                "control": "",
+                                "no": "1",
+                                "keyword": "EXECUTE",
+                                "page": "用例片段",
+                                "element": "SNIPPET_003",
+                                "data": {},
+                                "expected": {},
+                                "output": {},
+                                "score": "OK",
+                                "remark": "",
+                                "custom": "",
+                                "snippets": [
+                                ]
+                            }
+                        ]
+                    },
+                    "steps": [
                         {
-                            'no': 1,                        #测试步骤
-                            'keyword': 'Input',               #关键字
-                            'page': '产品管系统登录页',        #页面
-                            'custom': ,                     #frame
-                            'element': [元素1,元素2],         #元素
-                            'data': {变量1：值1,变量2:值2},    #测试数据
-                            'expected':{变量1：值1,变量2:值2}, #预期结果
-                            'output': {变量1：值1,变量2:值2},  #输出数据
-                            'score': '',                     #测试结果
-                            'remark': '',                    #备注
-                            'snippets': [[{},{},...],[],...] #调用的用例片段各步骤
+                            "control": "",                      #测试步骤逻辑控制符（if、else、then）
+                            "no": "1",                          #测试步骤
+                            "keyword": "INPUT",                 #关键字
+                            "page": "百度搜索页面",               #测试页面
+                            "element": "百度搜索页面^搜索框",      #测试元素
+                            "data": {                           #测试数据
+                                "text": "自动化测试",
+                                "text1": ""
+                            },
+                            "expected": {},                     #预期结果
+                            "output": {},                       #输出数据
+                            "score": "OK",                      #执行结果
+                            "remark": "",                       #备注说明
+                            "custom": ""                        #frame信息
                         },
-                        {……}
-                }
-            ]
-         }
-         {……}
-        ]
+                        {...},
+                        ...
+                    ],
+                    "teardown": {                           #用例清理工作（即teardown用例内容）
+                        "id": "HOME_002",
+                        "title": "打开百度",
+                        "result": "Pass",
+                        "steps": [
+                            {
+                                "control": "",
+                                "no": "1",
+                                "keyword": "EXECUTE",
+                                "page": "用例片段",
+                                "element": "SNIPPET_003",
+                                "data": {},
+                                "expected": {},
+                                "output": {},
+                                "score": "OK",
+                                "remark": "",
+                                "custom": "",
+                                "snippets": [
+                                ]
+                            }
+                        ]
+                    },
+            },
+            {...},
+            ...
+        }
+        {   "testsuite": "baidu",           #测试用例集
+            "testcases": [  ]                #测试用例
+        }]
         '''
+
         suite = {}
         suite['testsuite'] = g.current_sheet_name
         suite['testcases'] = []
-        for case in g.normal_testcases:
+        for i, case in enumerate(g.normal_testcases):
             testcase = {}
             testcase['id'] = case['id']
             testcase['title'] = case['title']
+            if case['setup']:
+                setup = {}
+                setup['id'] = case['setup'].get('id')
+                setup['title'] = case['setup'].get('title')
+                setup['result'] = case['setup'].get('result')
+                setup['steps'] = case['setup'].get('steps')
+            testcase['setup'] = setup
             testcase['steps'] = case['steps']
+            if g.teardowns:
+                testcase['teardown'] = g.teardowns[i]
             if case['result'] == 'Pass':
                 # 通过用例数统计
                 g.results['testPass'] += 1

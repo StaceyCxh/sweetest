@@ -7085,14 +7085,18 @@ body.skin-3 {
         if ($(obj).text() == '展开') {
             var len = $(obj).parent().parent().children().length;
             var detailLog = "";
+            var setups = "";
             var logs = "";
+            var teardowns = "";
             $.each(resultData["testResult"], function (i, n) {
                 var testsuite = $(obj).parent().parent().children().eq(1).text()
-                if ( n["testsuite"] == testsuite){
+                if ( n["testsuite"] == testsuite ){
                     $.each(n["testcases"], function (j, m) {
-                        var id = testsuite = $(obj).parent().parent().children().eq(0).text()
-                        if(m["id"]==id){
+                        var id = $(obj).parent().parent().children().eq(0).text()
+                        if(m["id"] == id){
+                            setups = m["setup"];
                             logs = m["steps"];
+                            teardowns = m["teardown"];
                         }
                     })
                 }
@@ -7100,9 +7104,18 @@ body.skin-3 {
             $(obj).text("收缩");
             $(obj).removeClass("btn-primary");
             $(obj).addClass("btn-danger");
+            if ( setups != undefined) {
+                detailLog = "<p style='word-break: break-word'>" + "测试准备：" + "</p>";
+                detailLog = detailLog + "<p style='word-break: break-word'>" + JSON.stringify(setups, null, 2) + "</p>";
+            }
+            detailLog = detailLog + "<p style='word-break: break-word'>" + "测试步骤：" + "</p>";
             $.each(logs, function (i, n) {
                 detailLog = detailLog + "<p style='word-break: break-word'>" + JSON.stringify(n, null, 2) + "</p>";
             });
+            if ( teardowns != undefined) {
+                detailLog = detailLog + "<p style='word-break: break-word'>" + "测试清理：" + "</p>";
+                detailLog = detailLog + "<p style='word-break: break-word'>" + JSON.stringify(teardowns, null, 2) + "</p>";
+            }
             $(obj).parent().parent().after("<tr><td colspan='" + len + "'><div style='font-family: Consolas;font-size:12px'>" + detailLog + "</div></td></tr>");
         } else if ($(obj).text() == '收缩') {
             $(obj).parent().parent().next().remove();
@@ -7110,7 +7123,6 @@ body.skin-3 {
             $(obj).removeClass("btn-danger");
             $(obj).addClass("btn-primary");
         }
-
     }
     $(function () {
         $("#testPass").text(resultData["testPass"]);

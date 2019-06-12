@@ -28,6 +28,7 @@ class Global(object):
             "testResult": []
         }
         self.suite = []
+        self.teardowns = []
 
     def set_driver(self):
         if self.platform.lower() == 'desktop':

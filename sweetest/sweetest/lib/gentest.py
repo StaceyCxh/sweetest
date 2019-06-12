@@ -149,8 +149,18 @@ class _Factory(object):
                     step['remark'] += str(exception)
                     break
 
-            assert self.testcase['result'] == 'Pass'
+            if self.testcase['condition'] in ['', None]:
+                self.testcase['setup'] = g.setup_testcase
 
+            if self.testcase['condition'] in ['teardown', 'TEARDOWN']:
+                case = {}
+                case['id'] = self.testcase.get('id')
+                case['title'] = self.testcase.get('title')
+                case['result'] = self.testcase.get('result')
+                case['steps'] = self.testcase.get('steps')
+                g.teardowns.append(case)
+
+            assert self.testcase['result'] == 'Pass'
 
 def create(name, testcase):
     '''
@@ -182,7 +192,7 @@ class TestClass(unittest.TestCase):
             if g.platform.lower() in ('desktop',):
                 w.close()
         except:
-            logger.exception('Clear the env is fail')
+            logger.exception('清除测试环境失败！')
 
     def setUp(self):
         pass

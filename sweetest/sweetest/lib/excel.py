@@ -4,7 +4,6 @@ from openpyxl import load_workbook
 from openpyxl.styles import Font, colors
 from openpyxl.styles.fills import PatternFill
 from sweetest.globals import g
-import re
 
 
 DarkRedFill = PatternFill("solid", fgColor="CD3700")
@@ -115,17 +114,42 @@ class Excel(object):
         m = 0
         n = 2
         while m < len(g.testsuite):
-            self.length = 0
+            case = g.testsuite[m]
+            # setup 和 teardown 不写入相关内容
+            if case.get('condition', '') in ['setup', 'SETUP', 'teardown', 'TEARDOWN']:
+                m = m + 1
+                steps = case.get('steps')
+                n = n + len(steps)
+                continue
+
+            # 将setup插入到用例中，作为操作步骤第0步
+            l = 0
+            if case.get('condition', '') in ['', None] and case.get('flag', '') in ['', None, 'Y', 'y']:
+                l = self.insert_setup(sheet, case.get('setup', {}), n)
 
             cell_result = '%s%d' % (chr(111), n)
-            sheet[cell_result].value = g.testsuite[m].get('result', '')
+            cell_id = '%s%d' % (chr(97), n)
+            cell_title = '%s%d' % (chr(98), n)
+
+            sheet[cell_result].value = case.get('result', '')
             # 用例结果列设置底色
             if sheet[cell_result].value:
                 sheet[cell_result].fill = Fills[sheet[cell_result].value]
                 sheet[cell_result].font = Font(color=colors.WHITE)
 
-            for step in g.testsuite[m].get('steps'):
-                cell_keyword = '%s%d' % (chr(101), (n+self.length))
+            sheet[cell_id].value = case.get('id', '')
+            sheet[cell_title].value = case.get('title', '')
+
+            n = n + l
+            if l:
+                cell_id = '%s%d' % (chr(97), n)
+                cell_title = '%s%d' % (chr(98), n)
+                sheet[cell_id].value = None
+                sheet[cell_title].value = None
+
+            # 将测试用例各步骤的执行结果写入
+            self.length = 0
+            for step in case.get('steps'):
                 cell_score = '%s%d' % (chr(110), (n+self.length))
                 cell_remark = '%s%d' % (chr(112), (n+self.length))
                 sheet[cell_score].value = step.get('score', '')
@@ -138,27 +162,73 @@ class Excel(object):
 
                 z = 1
                 if step.get('snippets', '') not in ('', []):
-                    z = self.insert_rows(sheet, step.get('element').split('*')[0], step.get('snippets'), (n+self.length+1)) + 1
+                    z = self.insert_snippet(sheet, step.get('element').split('*')[0], step.get('snippets'), (n+self.length+1)) + 1
                 self.length = self.length + z
 
-            m = m + 1
             n = n + self.length
+            # 将teardown插入到用例中，作为操作步骤最后一步
+            l = 0
+            if case.get('condition', '') in ['', None] and case.get('flag', '') in ['', None, 'Y', 'y']:
+                l = self.insert_teardown(sheet, case.get('id'), n)
+
+            m = m + 1
+            n = n + l
 
         self.workbook.save(g.report_file)
 
-    def insert_rows(self, sheet, caseID, rows, no):
+    def insert_snippet(self, sheet, caseID, rows, no):
         m = 0
         for row in rows:
             n = len(row)
             # 插入空白行
             sheet.insert_rows(no, n)
             # 空白行写入测试片段各步骤的内容
-            z = self.insert_snippet(sheet, caseID, no, row)
+            z = self.insert_rows(sheet, caseID, no, row)
             m = m + z
             no = no + z
         return m
 
-    def insert_snippet(self, sheet, caseID, no, row):
+    def insert_setup(self, sheet, case, no):
+        return self.insert_fixture(sheet, 0, case, no)
+
+    def insert_teardown(self, sheet, caseID, no):
+        for i, case in enumerate(g.normal_testcases):
+            if case.get('id') == caseID and g.teardowns:
+                case = g.teardowns[i]
+                pre_no = case.get('steps')[-1].get('no')
+                break
+        if pre_no[0] in ['^', '<', '>']:
+            pre_no = pre_no[1:]
+
+        return self.insert_fixture(sheet, 1, case, no, (int(pre_no)+1))
+
+    def insert_fixture(self, sheet, flag, case, no, pre_no=0):
+        sheet.insert_rows(no, (len(case.get('steps')) + 1))
+
+        cell_no = '%s%d' % (chr(100), no)
+        cell_keyword = '%s%d' % (chr(101), no)
+        cell_page = '%s%d' % (chr(102), no)
+        cell_element = '%s%d' % (chr(103), no)
+        cell_score = '%s%d' % (chr(110), no)
+        if flag == 0:
+            sheet[cell_page].value = 'SETUP'
+        else:
+            sheet[cell_page].value = 'TEARDOWN'
+        sheet[cell_no].value = pre_no
+        sheet[cell_keyword].value = '执行'
+        sheet[cell_element].value = str(case.get('id', ''))
+        if case.get('result', '') == 'Pass':
+            sheet[cell_score].value = 'OK'
+        else:
+            sheet[cell_score].value = 'NO'
+        no = no + 1
+
+        row = case.get('steps', [])
+        caseID = str(case.get('id', ''))
+        m = self.insert_rows(sheet, caseID, no, row)
+        return m + 1
+
+    def insert_rows(self, sheet, caseID, no, row):
         m = 0
         for step in row:
             cell_no = '%s%d' % (chr(100), no)
@@ -187,7 +257,7 @@ class Excel(object):
             sheet[cell_title].value = caseID
             z = 1
             if step.get('snippets', '') not in ('', []):
-                z = self.insert_rows(sheet, step.get('element').split('*')[0], step.get('snippets'), (no + 1)) + 1
+                z = self.insert_snippet(sheet, step.get('element').split('*')[0], step.get('snippets'), (no + 1)) + 1
             m = m + z
             no = no + z
         return m

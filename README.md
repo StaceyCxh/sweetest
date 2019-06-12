@@ -825,53 +825,93 @@ result = AutoTest.get_result()
 print(result)
 
 Output:
+
 {
-     "testAll": 9,                                         #测试用例总数 
-     "testPass": 6,                                        #测试通过的用例数
-     "testFail": 1,                                        #测试失败的用例数
-     "testSkip": 2,                                        #测试跳过的用例数
-     "beginTime": "2019-05-14 17:20:48",                   #测试开始时间
-     "totalTime": "20.01s",                                #测试时长
-     "testResult": [                                       #测试结果
-        {
-            "testsuite": "Order",                          #测试用例集
-            "testcases": [                                 #测试用例
-                {
-                    "id": "ORDER_001",                      #用例ID
-                    "title": "代理商编辑广告订单",             #用例标题
-                    "result": "成功",                        #用例结果
-                    "steps":[                               #用例各步骤
+    "testAll": 6,                           #测试用例总数
+    "testPass": 3,                          #测试通过的用例数
+    "testFail": 0,                          #测试失败的用例数
+    "testSkip": 3,                          #测试跳过的用例数
+    "beginTime": "2019-06-12 16:43:31",     #测试开始时间
+    "totalTime": "80.51s",                  #测试时长
+    "testResult": [                         #测试结果
+    {
+            "testsuite": "baidu",           #测试用例集
+            "testcases": [                  #测试用例
+            {
+                    "id": "BAIDU_001",                   #用例ID
+                    "title": "搜索：自动化测试",            #用例标题
+                    "result": "成功",                     #用例结果
+                    "setup": {                           #用例准备工作（即setup用例内容）
+                        "id": "HOME_001",
+                        "title": "打开百度",
+                        "result": "Pass",
+                        "steps": [
+                            {
+                                "control": "",
+                                "no": "1",
+                                "keyword": "EXECUTE",
+                                "page": "用例片段",
+                                "element": "SNIPPET_003",
+                                "data": {},
+                                "expected": {},
+                                "output": {},
+                                "score": "OK",
+                                "remark": "",
+                                "custom": "",
+                                "snippets": [
+                                ]
+                            }
+                        ]
+                    },
+                    "steps": [
                         {
-                            'no': 1,                        #测试步骤
-                            'keyword': 'INPUT',             #关键字
-                            'page': '产品管系统登录页',        #页面
-                            'custom': ,                     #frame
-                            'element': [元素1,元素2],         #元素
-                            'data': {变量1：值1,变量2:值2},    #测试数据
-                            'expected':{变量1：值1,变量2:值2}, #预期结果
-                            'output': {变量1：值1,变量2:值2},  #输出数据
-                            'score': '',                     #测试结果
-                            'remark': ''                     #备注
-                            'snippets':[[{},{},...],[{},{},...],...]       #调用的用例片段各步骤内容
+                            "control": "",                      #测试步骤逻辑控制符（if、else、then）
+                            "no": "1",                          #测试步骤
+                            "keyword": "INPUT",                 #关键字
+                            "page": "百度搜索页面",               #测试页面
+                            "element": "百度搜索页面^搜索框",      #测试元素    
+                            "data": {                           #测试数据
+                                "text": "自动化测试",
+                                "text1": ""
+                            },
+                            "expected": {},                     #预期结果
+                            "output": {},                       #输出数据
+                            "score": "OK",                      #执行结果
+                            "remark": "",                       #备注说明
+                            "custom": ""                        #frame信息
                         },
-                        {……}
-                    ]
-                }
-                {
-                    "id": "ORDER_002",
-                    "title": "客户编辑广告订单",
-                    "result": "失败",
-                    "steps":[] 
-                }
-            ]
-        }
-        {
-            "testsuite": "Creative",
-            "testcases": [
-            ]
-        }
-        
-     ]
+                        {...},
+                        ... 
+                    ],
+                    "teardown": {                           #用例清理工作（即teardown用例内容）
+                        "id": "HOME_002",
+                        "title": "打开百度",
+                        "result": "Pass",
+                        "steps": [
+                            {
+                                "control": "",
+                                "no": "1",
+                                "keyword": "EXECUTE",
+                                "page": "用例片段",
+                                "element": "SNIPPET_003",
+                                "data": {},
+                                "expected": {},
+                                "output": {},
+                                "score": "OK",
+                                "remark": "",
+                                "custom": "",
+                                "snippets": [
+                                ]
+                            }
+                        ]
+                    },
+            },
+            {...},
+            ...
+    }
+    {       "testsuite": "baidu",           #测试用例集
+            "testcases": [  ]                #测试用例
+    }]
 }
 ```
 
