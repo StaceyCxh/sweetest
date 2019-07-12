@@ -5,10 +5,22 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="922f7b62-9ba8-4787-ac2e-331c578dff2a" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/AutoTest.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/AutoTest.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sweetest/data/InterUT-Advertising.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sweetest/element/InterUT-Elements.xlsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sweetest/sweetest/lib/sendkeys.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sweetest/testcase/InterUT-TestCase.xlsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sweetest/htmlreport/image1.png" beforeDir="false" afterPath="$PROJECT_DIR$/sweetest/htmlreport/image1.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sweetest/htmlreport/image2.png" beforeDir="false" afterPath="$PROJECT_DIR$/sweetest/htmlreport/image2.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sweetest/htmlreport/pdf.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/sweetest/htmlreport/pdf.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sweetest/start.py" beforeDir="false" afterPath="$PROJECT_DIR$/sweetest/start.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sweetest/sweetest/autotest.py" beforeDir="false" afterPath="$PROJECT_DIR$/sweetest/sweetest/autotest.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sweetest/sweetest/config.py" beforeDir="false" afterPath="$PROJECT_DIR$/sweetest/sweetest/config.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sweetest/sweetest/globals.py" beforeDir="false" afterPath="$PROJECT_DIR$/sweetest/sweetest/globals.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sweetest/sweetest/keywords/common.py" beforeDir="false" afterPath="$PROJECT_DIR$/sweetest/sweetest/keywords/common.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sweetest/sweetest/lib/excel.py" beforeDir="false" afterPath="$PROJECT_DIR$/sweetest/sweetest/lib/excel.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sweetest/testcase/Baidu-TestCase.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/sweetest/testcase/Baidu-TestCase.xlsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sweetest/testcase/UT-TestCase.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/sweetest/testcase/UT-TestCase.xlsx" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -25,26 +37,82 @@
         <entry file="file://$PROJECT_DIR$/sweetest/start.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="154">
-              <caret line="7" column="20" selection-start-line="7" selection-start-column="20" selection-end-line="7" selection-end-column="20" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/sweetest/sweetest/autotest.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="4796">
-              <caret line="230" column="11" selection-start-line="230" selection-start-column="11" selection-end-line="230" selection-end-column="11" />
+              <caret line="7" column="21" selection-start-line="7" selection-start-column="21" selection-end-line="7" selection-end-column="21" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/sweetest/htmlreport/InterUT-Report@20190712_171841.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="66">
+              <caret line="3" column="74" lean-forward="true" selection-start-line="3" selection-start-column="74" selection-end-line="3" selection-end-column="74" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/sweetest/sweetest/globals.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1166">
+              <caret line="54" column="22" selection-start-line="54" selection-start-column="22" selection-end-line="54" selection-end-column="22" />
+              <folding>
+                <element signature="e#0#30#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/sweetest/sweetest/lib/sendkeys.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="198">
+              <caret line="9" column="12" selection-start-line="9" selection-start-column="12" selection-end-line="9" selection-end-column="12" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/sweetest/sweetest/lib/time.py">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/sweetest/sweetest/keywords/web.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="66">
+              <caret line="3" column="21" selection-start-line="3" selection-end-line="4" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/sweetest/sweetest/config.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="3520">
+              <caret line="160" column="22" selection-start-line="160" selection-start-column="22" selection-end-line="160" selection-end-column="22" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/sweetest/sweetest/keywords/common.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="2816">
+              <caret line="136" selection-start-line="136" selection-end-line="136" />
+              <folding>
+                <element signature="e#0#25#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/README.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="520">
-                <caret line="407" column="17" lean-forward="true" selection-start-line="407" selection-start-column="17" selection-end-line="407" selection-end-column="17" />
+              <first_editor relative-caret-position="3718">
+                <caret line="169" selection-start-line="169" selection-end-line="169" />
               </first_editor>
               <second_editor />
             </state>
@@ -59,6 +127,11 @@
         <option value="Python Script" />
       </list>
     </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>ActionChains</find>
+    </findStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -81,7 +154,6 @@
         <option value="$PROJECT_DIR$/sweetest-master/sweetest/sweetest/myrunner.py" />
         <option value="$PROJECT_DIR$/sweetest/sweetest/db.sql" />
         <option value="$PROJECT_DIR$/sweetest/sweetest/lib/path.py" />
-        <option value="$PROJECT_DIR$/sweetest/sweetest/config.py" />
         <option value="$PROJECT_DIR$/sweetest/db.sql" />
         <option value="$PROJECT_DIR$/sweetest/sweetest/lib/db.py" />
         <option value="$PROJECT_DIR$/sweetest/htmlreport/UT-Report@20190514_172047.html" />
@@ -90,29 +162,32 @@
         <option value="$PROJECT_DIR$/sweetest/htmlreport/Baidu-Report@20190603_164950.html" />
         <option value="$PROJECT_DIR$/sweetest/htmlreport/Baidu-Report@20190603_170546.html" />
         <option value="$PROJECT_DIR$/sweetest/sweetest/lib/parse.py" />
-        <option value="$PROJECT_DIR$/sweetest/start.py" />
-        <option value="$PROJECT_DIR$/sweetest/sweetest/keywords/common.py" />
         <option value="$PROJECT_DIR$/sweetest/htmlreport/Baidu-Report@20190604_162344.html" />
         <option value="$PROJECT_DIR$/sweetest/sweetest/keywords/web.py" />
         <option value="$PROJECT_DIR$/sweetest/htmlreport/Baidu-Report@20190606_161232.html" />
         <option value="$PROJECT_DIR$/sweetest/htmlreport/Baidu-Report@20190611_143558.html" />
         <option value="$PROJECT_DIR$/sweetest/htmlreport/Baidu-Report@20190611_144844.html" />
-        <option value="$PROJECT_DIR$/sweetest/sweetest/globals.py" />
         <option value="$PROJECT_DIR$/sweetest/sweetest/lib/gentest.py" />
         <option value="$PROJECT_DIR$/sweetest/htmlreport/Baidu-Report@20190612_151527.html" />
         <option value="$PROJECT_DIR$/sweetest/htmlreport/Baidu-Report@20190612_152023.html" />
         <option value="$PROJECT_DIR$/sweetest/template/template.html" />
-        <option value="$PROJECT_DIR$/sweetest/sweetest/lib/excel.py" />
-        <option value="$PROJECT_DIR$/sweetest/sweetest/autotest.py" />
         <option value="$PROJECT_DIR$/README.md" />
+        <option value="$PROJECT_DIR$/sweetest/data/InterUT-Advertising.csv" />
+        <option value="$PROJECT_DIR$/sweetest/start.py" />
+        <option value="$PROJECT_DIR$/sweetest/sweetest/globals.py" />
+        <option value="$PROJECT_DIR$/sweetest/sweetest/autotest.py" />
+        <option value="$PROJECT_DIR$/sweetest/sweetest/lib/excel.py" />
+        <option value="$PROJECT_DIR$/sweetest/sweetest/keywords/common.py" />
+        <option value="$PROJECT_DIR$/sweetest/sweetest/config.py" />
+        <option value="$PROJECT_DIR$/sweetest/sweetest/lib/sendkeys.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="1920" />
-    <option name="y" value="-2" />
-    <option name="width" value="1920" />
-    <option name="height" value="1082" />
+    <option name="x" value="1877" />
+    <option name="y" value="171" />
+    <option name="width" value="1657" />
+    <option name="height" value="941" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
@@ -126,6 +201,67 @@
               <item name="sweetest" type="b2602c69:ProjectViewProjectNode" />
               <item name="sweetest" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="sweetest" type="b2602c69:ProjectViewProjectNode" />
+              <item name="sweetest" type="462c0819:PsiDirectoryNode" />
+              <item name="sweetest" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="sweetest" type="b2602c69:ProjectViewProjectNode" />
+              <item name="sweetest" type="462c0819:PsiDirectoryNode" />
+              <item name="sweetest" type="462c0819:PsiDirectoryNode" />
+              <item name="data" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="sweetest" type="b2602c69:ProjectViewProjectNode" />
+              <item name="sweetest" type="462c0819:PsiDirectoryNode" />
+              <item name="sweetest" type="462c0819:PsiDirectoryNode" />
+              <item name="element" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="sweetest" type="b2602c69:ProjectViewProjectNode" />
+              <item name="sweetest" type="462c0819:PsiDirectoryNode" />
+              <item name="sweetest" type="462c0819:PsiDirectoryNode" />
+              <item name="htmlreport" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="sweetest" type="b2602c69:ProjectViewProjectNode" />
+              <item name="sweetest" type="462c0819:PsiDirectoryNode" />
+              <item name="sweetest" type="462c0819:PsiDirectoryNode" />
+              <item name="log" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="sweetest" type="b2602c69:ProjectViewProjectNode" />
+              <item name="sweetest" type="462c0819:PsiDirectoryNode" />
+              <item name="sweetest" type="462c0819:PsiDirectoryNode" />
+              <item name="report" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="sweetest" type="b2602c69:ProjectViewProjectNode" />
+              <item name="sweetest" type="462c0819:PsiDirectoryNode" />
+              <item name="sweetest" type="462c0819:PsiDirectoryNode" />
+              <item name="sweetest" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="sweetest" type="b2602c69:ProjectViewProjectNode" />
+              <item name="sweetest" type="462c0819:PsiDirectoryNode" />
+              <item name="sweetest" type="462c0819:PsiDirectoryNode" />
+              <item name="sweetest" type="462c0819:PsiDirectoryNode" />
+              <item name="keywords" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="sweetest" type="b2602c69:ProjectViewProjectNode" />
+              <item name="sweetest" type="462c0819:PsiDirectoryNode" />
+              <item name="sweetest" type="462c0819:PsiDirectoryNode" />
+              <item name="sweetest" type="462c0819:PsiDirectoryNode" />
+              <item name="lib" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="sweetest" type="b2602c69:ProjectViewProjectNode" />
+              <item name="sweetest" type="462c0819:PsiDirectoryNode" />
+              <item name="sweetest" type="462c0819:PsiDirectoryNode" />
+              <item name="testcase" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -136,10 +272,10 @@
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/sweetest/sweetest/lib" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/sweetest/data" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
-    <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="PyConsoleOptionsProvider">
     <option name="myPythonConsoleState">
@@ -150,11 +286,15 @@
     </option>
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/sweetest/testcase" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/sweetest/data" />
+      <recent name="$PROJECT_DIR$/sweetest/testcase" />
+      <recent name="$PROJECT_DIR$/sweetest/element" />
       <recent name="$PROJECT_DIR$/sweetest/sweetest/lib" />
       <recent name="$PROJECT_DIR$/sweetest/template" />
-      <recent name="$PROJECT_DIR$/sweetest/img" />
-      <recent name="$PROJECT_DIR$/sweetest-master/sweetest/sweetest/lib" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -445,7 +585,14 @@
       <option name="project" value="LOCAL" />
       <updated>1559809248884</updated>
     </task>
-    <option name="localTasksCounter" value="27" />
+    <task id="LOCAL-00027" summary="支持或模糊匹配">
+      <created>1561344050861</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1561344050861</updated>
+    </task>
+    <option name="localTasksCounter" value="28" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
@@ -457,11 +604,11 @@
     <layout>
       <window_info id="Structure" order="0" sideWeight="0.50120485" side_tool="true" weight="0.1652587" />
       <window_info id="Favorites" order="1" side_tool="true" />
-      <window_info active="true" content_ui="combo" id="Project" order="2" sideWeight="0.49879518" visible="true" weight="0.13976793" />
+      <window_info active="true" content_ui="combo" id="Project" order="2" sideWeight="0.49879518" visible="true" weight="0.18987341" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3532495" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49947202" visible="true" weight="0.2249467" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4498934" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49947202" visible="true" weight="0.564346" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.21835443" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -469,7 +616,7 @@
       <window_info anchor="bottom" id="Version Control" order="8" weight="0.090618335" />
       <window_info anchor="bottom" id="Database Changes" order="9" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.500528" side_tool="true" weight="0.32409382" />
-      <window_info anchor="bottom" id="Terminal" order="11" weight="0.32914045" />
+      <window_info anchor="bottom" id="Terminal" order="11" weight="0.32911393" />
       <window_info anchor="bottom" id="Python Console" order="12" weight="0.32914045" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -503,47 +650,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/sweetest/sweetest/db.sql" />
-    <entry file="file://$PROJECT_DIR$/sweetest/sweetest/lib/dingtalk.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="288">
-          <caret line="17" column="6" selection-start-line="17" selection-start-column="6" selection-end-line="17" selection-end-column="6" />
-          <folding>
-            <element signature="e#0#11#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sweetest/sweetest/lib/utility.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2784">
-          <caret line="121" column="21" selection-start-line="121" selection-start-column="21" selection-end-line="121" selection-end-column="21" />
-          <folding>
-            <element signature="e#0#9#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sweetest/db.sql" />
-    <entry file="file://$PROJECT_DIR$/sweetest/sweetest/lib/db.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="66">
-          <caret line="20" column="31" lean-forward="true" selection-start-line="20" selection-start-column="31" selection-end-line="20" selection-end-column="31" />
-          <folding>
-            <element signature="e#0#14#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sweetest/htmlreport/UT-Report@20190514_172047.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="916">
-          <caret line="7513" column="31" lean-forward="true" selection-start-line="7513" selection-start-column="31" selection-end-line="7513" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sweetest/htmlreport/Baidu-Report@20190603_161924.html" />
-    <entry file="file://$PROJECT_DIR$/sweetest/htmlreport/Baidu-Report@20190603_162243.html" />
     <entry file="file://$PROJECT_DIR$/sweetest/htmlreport/Baidu-Report@20190603_162825.html" />
     <entry file="file://$PROJECT_DIR$/sweetest/htmlreport/Baidu-Report@20190514_100908.html" />
     <entry file="file://$PROJECT_DIR$/sweetest/htmlreport/Baidu-Report@20190603_164950.html" />
@@ -607,28 +713,11 @@
     <entry file="file://$PROJECT_DIR$/sweetest/htmlreport/Baidu-Report@20190611_143558.html" />
     <entry file="file://$PROJECT_DIR$/sweetest/htmlreport/Baidu-Report@20190611_144844.html" />
     <entry file="file://$PROJECT_DIR$/sweetest/htmlreport/Baidu-Report@20190611_153638.html" />
-    <entry file="file://$PROJECT_DIR$/sweetest/sweetest/config.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="789">
-          <caret line="160" column="4" selection-start-line="160" selection-start-column="4" selection-end-line="160" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file:///usr/local/lib/python3.6/dist-packages/openpyxl/utils/cell.py" />
     <entry file="file:///usr/local/lib/python3.6/dist-packages/openpyxl/worksheet/worksheet.py" />
     <entry file="file://$PROJECT_DIR$/sweetest/htmlreport/Baidu-Report@20190612_113546.html" />
     <entry file="file://$PROJECT_DIR$/sweetest/sweetest/lib/excel1.py" />
     <entry file="file://$PROJECT_DIR$/sweetest/htmlreport/Baidu-Report@20190612_122113.html" />
-    <entry file="file://$PROJECT_DIR$/sweetest/sweetest/globals.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="552">
-          <caret line="23" column="26" lean-forward="true" selection-start-line="23" selection-start-column="26" selection-end-line="23" selection-end-column="26" />
-          <folding>
-            <element signature="e#0#30#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/sweetest/htmlreport/Baidu-Report@20190612_151527.html" />
     <entry file="file://$PROJECT_DIR$/sweetest/htmlreport/Baidu-Report@20190612_152023.html" />
     <entry file="file://$PROJECT_DIR$/sweetest/template/template.html">
@@ -641,33 +730,6 @@
     <entry file="file://$PROJECT_DIR$/sweetest/htmlreport/Baidu-Report@20190612_152336.html" />
     <entry file="file://$PROJECT_DIR$/sweetest/htmlreport/Baidu-Report@20190612_152601.html" />
     <entry file="file://$PROJECT_DIR$/sweetest/htmlreport/Baidu-Report@20190612_161001.html" />
-    <entry file="file://$PROJECT_DIR$/sweetest/sweetest/keywords/web.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="744">
-          <caret line="58" column="26" selection-start-line="58" selection-start-column="26" selection-end-line="58" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sweetest/sweetest/keywords/common.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-768">
-          <caret line="11" column="16" selection-start-line="11" selection-start-column="16" selection-end-line="11" selection-end-column="16" />
-          <folding>
-            <element signature="e#0#25#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sweetest/sweetest/lib/excel.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="355">
-          <caret line="223" column="19" lean-forward="true" selection-start-line="223" selection-start-column="19" selection-end-line="223" selection-end-column="19" />
-          <folding>
-            <element signature="e#0#15#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/sweetest/htmlreport/Baidu-Report@20190612_164331.html" />
     <entry file="file://$PROJECT_DIR$/sweetest/htmlreport/Baidu-Report@20190612_170921.html" />
     <entry file="file://$PROJECT_DIR$/sweetest/sweetest/lib/gentest.py">
@@ -680,27 +742,105 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/sweetest/start.py">
+    <entry file="file://$PROJECT_DIR$/sweetest/data/InterUT-Advertising.csv">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="154">
-          <caret line="7" column="20" selection-start-line="7" selection-start-column="20" selection-end-line="7" selection-end-column="20" />
+        <state relative-caret-position="44">
+          <caret line="2" selection-start-line="2" selection-end-line="2" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/sweetest/sweetest/autotest.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4796">
-          <caret line="230" column="11" selection-start-line="230" selection-start-column="11" selection-end-line="230" selection-end-column="11" />
+        <state relative-caret-position="228">
+          <caret line="238" column="45" selection-start-line="238" selection-start-column="45" selection-end-line="238" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sweetest/requirements.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sweetest/sweetest/lib/excel.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="133">
+          <caret line="200" column="37" selection-start-line="200" selection-start-column="37" selection-end-line="200" selection-end-column="37" />
+          <folding>
+            <element signature="e#0#15#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sweetest/sweetest/lib/uploadfile.py" />
+    <entry file="file://$PROJECT_DIR$/sweetest/htmlreport/image2.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sweetest/htmlreport/image1.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sweetest/sweetest/globals.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1166">
+          <caret line="54" column="22" selection-start-line="54" selection-start-column="22" selection-end-line="54" selection-end-column="22" />
+          <folding>
+            <element signature="e#0#30#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sweetest/sweetest/lib/time.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sweetest/sweetest/keywords/web.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="66">
+          <caret line="3" column="21" selection-start-line="3" selection-end-line="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sweetest/sweetest/config.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3520">
+          <caret line="160" column="22" selection-start-line="160" selection-start-column="22" selection-end-line="160" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sweetest/sweetest/keywords/common.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2816">
+          <caret line="136" selection-start-line="136" selection-end-line="136" />
+          <folding>
+            <element signature="e#0#25#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="520">
-            <caret line="407" column="17" lean-forward="true" selection-start-line="407" selection-start-column="17" selection-end-line="407" selection-end-column="17" />
+          <first_editor relative-caret-position="3718">
+            <caret line="169" selection-start-line="169" selection-end-line="169" />
           </first_editor>
           <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sweetest/sweetest/lib/sendkeys.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="9" column="12" selection-start-line="9" selection-start-column="12" selection-end-line="9" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sweetest/start.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="154">
+          <caret line="7" column="21" selection-start-line="7" selection-start-column="21" selection-end-line="7" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sweetest/htmlreport/InterUT-Report@20190712_171841.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="66">
+          <caret line="3" column="74" lean-forward="true" selection-start-line="3" selection-start-column="74" selection-end-line="3" selection-end-column="74" />
         </state>
       </provider>
     </entry>

@@ -237,8 +237,8 @@ class AutoTest(object):
             testcase = {}
             testcase['id'] = case['id']
             testcase['title'] = case['title']
+            setup = {}
             if case['setup']:
-                setup = {}
                 setup['id'] = case['setup'].get('id')
                 setup['title'] = case['setup'].get('title')
                 setup['result'] = case['setup'].get('result')

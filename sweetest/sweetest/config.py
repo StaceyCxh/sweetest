@@ -154,7 +154,7 @@ header = {
     '自定义': 'custom'
 }
 
-element_wait_timeout = 5  # 等待元素出现超时时间，单位：秒
+element_wait_timeout = 20  # 等待元素出现超时时间，单位：秒
 page_flash_timeout = 90  # 页面刷新超时时间，单位：秒
 
 # 数据库名称

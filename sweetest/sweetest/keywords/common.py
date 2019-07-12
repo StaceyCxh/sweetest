@@ -133,4 +133,4 @@ def call(step):
                 g.var[key] = getattr(eval(value[0].strip()), value[1].split('(')[0].strip())(param.split(','))
             else:
                 g.var[key] = getattr(eval(value[0].strip()), value[1].split('(')[0].strip())()
-            logger.info('g.var[' + key +']=' + g.var[key])
+            logger.info('g.var[' + key +']=' + str(g.var[key]))

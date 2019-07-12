@@ -125,7 +125,10 @@ class Excel(object):
             # 将setup插入到用例中，作为操作步骤第0步
             l = 0
             if case.get('condition', '') in ['', None] and case.get('flag', '') in ['', None, 'Y', 'y']:
-                l = self.insert_setup(sheet, case.get('setup', {}), n)
+                try:
+                    l = self.insert_setup(sheet, case.get('setup', {}), n)
+                except:
+                    pass
 
             cell_result = '%s%d' % (chr(111), n)
             cell_id = '%s%d' % (chr(97), n)
@@ -194,8 +197,8 @@ class Excel(object):
     def insert_teardown(self, sheet, caseID, no):
         for i, case in enumerate(g.normal_testcases):
             if case.get('id') == caseID and g.teardowns:
-                case = g.teardowns[i]
                 pre_no = case.get('steps')[-1].get('no')
+                case = g.teardowns[i]
                 break
         if pre_no[0] in ['^', '<', '>']:
             pre_no = pre_no[1:]
