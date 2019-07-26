@@ -9,7 +9,7 @@ from sweetest.lib.gentest import gentest
 from sweetest.lib.myrunner import myTextTestRunner
 from sweetest.lib.report import htmlreport
 from sweetest.lib.db import DB
-from sweetest.lib.mail import Mail
+from sweetest.lib.mail import Mail, Pop3
 from sweetest.lib.dingtalk import DingTalk
 
 

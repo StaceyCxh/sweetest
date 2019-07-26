@@ -1,12 +1,16 @@
 import sys
 from pathlib import Path
 import smtplib
+import poplib
 from email.mime.text import MIMEText
 from email.mime.image import MIMEImage
 from email.mime.multipart import MIMEMultipart
 from sweetest.globals import g
-from sweetest.config import mail_server, mail_port, mail_username, mail_password, mail_receiver, mail_subject
+from sweetest.config import mail_server, mail_port, mail_username, mail_password, mail_receiver, mail_subject, pop3_server, pop3_port
 from sweetest.lib.log import logger
+from email.parser import Parser
+from email.header import decode_header
+from email.utils import parseaddr
 
 
 class Mail(object):
@@ -129,6 +133,52 @@ class Mail(object):
             sys.exit(1)
         else:
             logger.info("***邮件发送成功！***")
+
+
+class Pop3(object):
+    def __init__(self):
+        super(Pop3, self).__init__()
+        self.server = poplib.POP3(pop3_server)
+
+    def conn(self):
+        self.server.user(mail_username)
+        self.server.pass_(mail_password)
+
+    def exit(self):
+        self.server.quit()
+
+    def retrmail(self):
+        '''
+        获取最新一份邮件
+        '''
+        self.conn()
+        resp, mails, octets = self.server.list()
+        resp, lines, octets = self.server.retr(len(mails))
+        self.exit()
+        return lines
+
+    def decodemail(self, lines):
+        '''
+        邮件解码
+        '''
+        msg_content = b'\r\n'.join(lines).decode('utf-8')
+        msg = Parser().parsestr(msg_content)
+        return msg
+
+    def retrline(self, lines, n):
+        '''
+        获取邮件第n行的内容
+        :param lines: 邮件内容
+        :param n: 行数
+        :return: 返回第n行的内容内容
+        '''
+        line = lines[n].decode('utf-8')
+        logger.info(line)
+        return line
+
+
+
+
 
 
 

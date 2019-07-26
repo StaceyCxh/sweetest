@@ -187,3 +187,6 @@ mail_password = "yD5zsKWACZixSJJo"
 
 mail_receiver = "chenxiaohua@youmi.net"
 mail_subject = "自动化测试报告"
+
+pop3_server = "imap.exmail.qq.com"
+pop3_port = 993
