@@ -19,3 +19,13 @@ def getDate():
     now = time.strftime('%m%d', time.localtime(time.time()))
 
     return now
+
+
+def getFDate():
+    '''
+    获取当前日期
+    :return: 当前日期，格式%m%d
+    '''
+    now = time.strftime('%Y%m%d', time.localtime(time.time()))
+
+    return now

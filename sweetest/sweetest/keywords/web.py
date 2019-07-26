@@ -77,7 +77,7 @@ def detail_match(expected, real):
 
 
 def detail_check(expected, real):
-    logger.info('DATA:%s' % repr(expected))
+    logger.info('EXPECTED:%s' % repr(expected))
     logger.info('REAL:%s' % repr(real))
     if isinstance(expected, str):
         try:
@@ -131,6 +131,8 @@ def check(step):
                 real = element_location.text
             else:
                 real = element_location.get_attribute(key)
+                if real is None:
+                    real = 'None'
 
             detail_check(expected, real)
 
@@ -168,6 +170,7 @@ def get_Ouput(step, element_location):
             g.var[key] = replace(output[key])
         else:
             g.var[key] = element_location.get_attribute(output[key])
+        logger.info('g.var[' + key + ']=' + g.var[key])
 
 
 def judge(step):
