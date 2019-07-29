@@ -135,6 +135,7 @@ class Windows(object):
             # 切换到每一个窗口,并关闭它
             g.driver.switch_to_window(handle)
             g.driver.close()
+        g.exist = 0
 
     def switch_context(self, context):
         if context.strip() == '':

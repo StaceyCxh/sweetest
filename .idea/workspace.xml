@@ -1,13 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="922f7b62-9ba8-4787-ac2e-331c578dff2a" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/sweetest/sweetest/lib/retrcode.py" afterDir="false" />
+    <list default="true" id="922f7b62-9ba8-4787-ac2e-331c578dff2a" name="Default Changelist" comment="中国版UT线上测试用例">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sweetest/start.py" beforeDir="false" afterPath="$PROJECT_DIR$/sweetest/start.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sweetest/sweetest/autotest.py" beforeDir="false" afterPath="$PROJECT_DIR$/sweetest/sweetest/autotest.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sweetest/htmlreport/image1.png" beforeDir="false" afterPath="$PROJECT_DIR$/sweetest/htmlreport/image1.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sweetest/htmlreport/pdf.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/sweetest/htmlreport/pdf.pdf" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/sweetest/sweetest/config.py" beforeDir="false" afterPath="$PROJECT_DIR$/sweetest/sweetest/config.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sweetest/sweetest/lib/mail.py" beforeDir="false" afterPath="$PROJECT_DIR$/sweetest/sweetest/lib/mail.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sweetest/sweetest/globals.py" beforeDir="false" afterPath="$PROJECT_DIR$/sweetest/sweetest/globals.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sweetest/sweetest/keywords/web.py" beforeDir="false" afterPath="$PROJECT_DIR$/sweetest/sweetest/keywords/web.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sweetest/sweetest/lib/gentest.py" beforeDir="false" afterPath="$PROJECT_DIR$/sweetest/sweetest/lib/gentest.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sweetest/sweetest/lib/windows.py" beforeDir="false" afterPath="$PROJECT_DIR$/sweetest/sweetest/lib/windows.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sweetest/testcase/UT-TestCase.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/sweetest/testcase/UT-TestCase.xlsx" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -40,7 +44,7 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$/sweetest/data" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
-    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+    <property name="settings.editor.selected.configurable" value="settings.github" />
   </component>
   <component name="PyConsoleOptionsProvider">
     <option name="myPythonConsoleState">
@@ -371,7 +375,14 @@
       <option name="project" value="LOCAL" />
       <updated>1564125410923</updated>
     </task>
-    <option name="localTasksCounter" value="30" />
+    <task id="LOCAL-00030" summary="中国版UT线上测试用例">
+      <created>1564130429214</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1564130429214</updated>
+    </task>
+    <option name="localTasksCounter" value="31" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
@@ -379,6 +390,9 @@
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="UnknownFeatures">
+    <option featureType="com.intellij.fileTypeFactory" implementationName="*.md" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">

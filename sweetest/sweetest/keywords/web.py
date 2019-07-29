@@ -34,6 +34,11 @@ class Common():
 
 def open(step):
     element = step['element']
+    if g.exist == 0:
+        g.set_driver()
+        w.init()
+    if element == '浏览器' or element.lower() == 'browser':
+        return 0
     el, value = get_elem(element)
     if step['data'].get('清理缓存', '') or step['data'].get('cookie', ''):
         g.driver.delete_all_cookies()
@@ -53,6 +58,15 @@ def open(step):
         g.driver.get(value)
         w.open(step)
     sleep(0.5)
+    return 1
+
+
+def close(step):
+    element = step['element']
+    if element == '浏览器' or element.lower() == 'browser':
+        w.close()
+    elif element == '标签页' or element.lower() == 'tab':
+        g.close()
 
 
 def detail_match(expected, real):
@@ -202,6 +216,7 @@ def input(step):
         pass
     else:
         #element_location.send_keys(Keys.BACK_SPACE)
+        #element_location.clear()
         element_location.send_keys(Keys.CONTROL, "a")
         element_location.send_keys(Keys.DELETE)
 

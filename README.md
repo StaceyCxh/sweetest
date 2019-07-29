@@ -350,7 +350,8 @@ excel文件中每个表单表示1个测试用例集，表单名sheet_name是测�
 </table>
 
 注意：
-- open /打开 关键字对应的元素必须定义在“通用”page下；
+- open /打开 关键字对应的元素可以为 浏览器 或 browser,表示打开浏览器；
+- open /打开 关键字对应的其它元素 必须定义在“通用”page下；
 - 可以设置打开的页面名称：标签页名=xxx、新窗口=xxx、tabname=xxx，该新页面的元素则定义在该page下；
 - 可以设置清缓存：清理缓存=是、cookie=yes；
 - 可以设置在浏览器中新开tab打开链接：打开方式=新标签页、mode=tab；
@@ -784,6 +785,36 @@ excel文件中每个表单表示1个测试用例集，表单名sheet_name是测�
 - web测试过程中经常会遇到弹窗，包括alert、confirm、prompt弹窗；
 - message / 对话框 关键字，对应的page=通用，element取值：确认、取消、关闭、输入; 
 - prompt弹窗的输入操作，会自动点击确认按钮，故无需再写确认步骤；
+
+#### 17、close / 关闭
+
+<table cellspacing="0" border="0">
+	<colgroup width="143"></colgroup>
+	<colgroup width="482"></colgroup>
+	<tr>
+		<td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" height="18" align="center" valign=middle bgcolor="#ADC5E7"><font color="#000000">keyword</font></td>
+		<td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="center" valign=middle bgcolor="#ADC5E7"><font color="#000000">page</font></td>
+		<td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" height="18" align="center" valign=middle bgcolor="#ADC5E7"><font color="#000000">element</font></td>
+		<td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" height="18" align="center" valign=middle bgcolor="#ADC5E7"><font color="#000000">data</font></td>
+	</tr>
+	<tr>
+		<td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" height="46" align="center" valign=middle><font color="#000000">关闭</font></td>
+		<td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="left" valign=middle><font color="#000000"></font></td>
+		<td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" height="46" align="center" valign=middle><font color="#000000">标签页</font></td>
+		<td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" height="46" align="center" valign=middle><font color="#000000"></font></td>
+	</tr>
+	<tr>
+		<td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" height="46" align="center" valign=middle><font color="#000000">关闭</font></td>
+		<td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" align="left" valign=middle><font color="#000000"></font></td>
+		<td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" height="46" align="center" valign=middle><font color="#000000">浏览器</font></td>
+		<td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" height="46" align="center" valign=middle><font color="#000000"></font></td>
+	</tr>
+</table>
+
+注意：
+- open /打开 关键字对应的元素可以为 浏览器 或 browser,表示关闭浏览器；
+- open /打开 关键字对应的元素可以为 标签页 或 tab,表示关闭浏览器；
+
 
 ## 七、外部数据文件
 

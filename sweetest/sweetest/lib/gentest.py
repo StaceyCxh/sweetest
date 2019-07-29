@@ -188,11 +188,12 @@ class TestClass(unittest.TestCase):
 
     @classmethod
     def tearDownClass(cls):
-        try:
-            if g.platform.lower() in ('desktop',):
-                w.close()
-        except:
-            logger.exception('清除测试环境失败！')
+        if g.exist == 1:
+            try:
+                if g.platform.lower() in ('desktop',):
+                    w.close()
+            except:
+                logger.exception('清除测试环境失败！')
 
     def setUp(self):
         pass

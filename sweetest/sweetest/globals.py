@@ -29,6 +29,7 @@ class Global(object):
         }
         self.suite = []
         self.teardowns = []
+        self.exist = 0
 
     def set_driver(self):
         if self.platform.lower() == 'desktop':
@@ -60,6 +61,8 @@ class Global(object):
         elif self.platform.lower() in ['ios', 'android']:
             from appium import webdriver as appdriver
             self.driver = appdriver.Remote(self.server_url, self.desired_caps)
+
+        self.exist = 1
 
     def close(self):
         self.driver.close()

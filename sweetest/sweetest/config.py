@@ -2,6 +2,8 @@
 web_keywords = {
     '打开': 'OPEN',
     'OPEN': 'OPEN',
+    '关闭': 'CLOSE',
+    'CLOSE': 'CLOSE',
     '检查': 'CHECK',
     'CHECK': 'CHECK',
     '#检查': 'NOTCHECK',
