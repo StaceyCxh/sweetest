@@ -165,29 +165,29 @@ db_name = "AutoTestDB"
 db_initsql = 'db.sql'
 
 # 钉钉相关设置
-webhook = 'https://oapi.dingtalk.com/robot/send?access_token=fec1cc32dfeaf0c2c012b042f979402379ec101e3d4cc7a2d8f0855758cd92e1'
+webhook = 'https://oapi.dingtalk.com/robot/send?access_token=xxx'
 title = '自动化测试报告'
 
 # 邮件相关设置
 '''
 mail_server = "smtp.gmail.com"
 mail_port = 587
-mail_username = "staceycxh@gmail.com"
-mail_password = "dhikvjfkvvjksryh"
+mail_username = "xxx@gmail.com"
+mail_password = "xxx"
 '''
 '''
 mail_server = "smtp.qq.com"
 mail_port = 465
-mail_username = "446909219@qq.com"
-mail_password = "dhikvjfkvvjksryh"
+mail_username = "xxx@qq.com"
+mail_password = "xxx"
 '''
 
 mail_server = "smtp.exmail.qq.com"
 mail_port = 465
-mail_username = "chenxiaohua@youmi.net"
-mail_password = "yD5zsKWACZixSJJo"
+mail_username = "xxx"
+mail_password = "xxx"
 
-mail_receiver = "chenxiaohua@youmi.net"
+mail_receiver = "xxx"
 mail_subject = "自动化测试报告"
 
 pop3_server = "imap.exmail.qq.com"
