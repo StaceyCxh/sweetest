@@ -3,6 +3,7 @@ from pathlib import Path
 import json
 import pdfkit
 from pdf2image import convert_from_path
+from sweetest.lib.log import logger
 
 
 def htmlreport():
@@ -36,8 +37,11 @@ def html2img():
         'encoding': "UTF-8",
         'no-outline': None
     }
-    pdfkit.from_file(str(g.htmlreport_file), str(Path('htmlreport') / f'pdf.pdf'), options=options)
-    pages = convert_from_path(Path('htmlreport') / f'pdf.pdf')
-    for i in range(0, len(pages)):
-        pages[i].save(Path('htmlreport') / f'image{i+1}.png', 'PNG')
+    try:
+        pdfkit.from_file(str(g.htmlreport_file), str(Path('htmlreport') / f'pdf.pdf'), options=options)
+        pages = convert_from_path(Path('htmlreport') / f'pdf.pdf')
+        for i in range(0, len(pages)):
+            pages[i].save(Path('htmlreport') / f'image{i+1}.png', 'PNG')
+    except:
+        logger.error("测试未执行！请检查测试配置是否正确！" + "\r\n")
 

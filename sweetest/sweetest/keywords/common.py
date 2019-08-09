@@ -3,7 +3,7 @@ from sweetest.globals import g
 from sweetest.lib.elements import get_elem
 from sweetest.lib.log import logger
 from sweetest.lib.parse import data_format
-from sweetest.lib.utility import replace
+from sweetest.lib.utility import replace, replace_list
 import sweetest.lib.gentest
 import re
 import json
@@ -128,9 +128,13 @@ def call(step):
             s = 'from sweetest.lib' + ' import ' + value[0].strip()
             exec(s)
             p = re.compile(r'[(](.*?)[)]', re.S)
-            param = re.findall(p, value[1])[0]
-            if len(param):
-                g.var[key] = getattr(eval(value[0].strip()), value[1].split('(')[0].strip())(param.split(','))
+            params = re.findall(p, value[1])[0]
+            if len(params):
+                params = params.split(',')
+                replace_list(params)
+                if len(params) == 1:
+                    params = params[0]
+                g.var[key] = getattr(eval(value[0].strip()), value[1].split('(')[0].strip())(params)
             else:
                 g.var[key] = getattr(eval(value[0].strip()), value[1].split('(')[0].strip())()
             logger.info('g.var[' + key +']=' + str(g.var[key]))

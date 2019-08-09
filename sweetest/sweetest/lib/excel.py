@@ -195,6 +195,7 @@ class Excel(object):
         return self.insert_fixture(sheet, 0, case, no)
 
     def insert_teardown(self, sheet, caseID, no):
+        pre_no = '0'
         for i, case in enumerate(g.normal_testcases):
             if case.get('id') == caseID and g.teardowns:
                 pre_no = case.get('steps')[-1].get('no')

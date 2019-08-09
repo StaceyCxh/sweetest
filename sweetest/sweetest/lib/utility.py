@@ -4,6 +4,7 @@ from sweetest.config import header
 from sweetest.globals import g
 from sweetest.config import addition, subtraction, multiplication, division, residual, lparenthesis, rparenthesis, lbrackets, rbrackets
 from selenium.webdriver.common.keys import Keys
+from sweetest.lib.log import logger
 
 
 def data2dict(data):
@@ -74,7 +75,7 @@ def replace_list(data):
     '''
 
     for i in range(len(data)):
-        data[i] = variable2value(data[i])
+        data[i] = replace(data[i])
 
 
 def replace(data):
@@ -93,11 +94,11 @@ def replace(data):
     new_data = variable2value(new_data)
 
     # 带有运算符，则进行表达式运算
-    if '+' in new_data or '-' in new_data or '*' in new_data or '%' in new_data:
+    if '+' in new_data or '-' in new_data or '*' in new_data or '/' in new_data or '%' in new_data:
         expression = middle2after(new_data)
         value = (''.join([str(x) for x in expression]))
         if new_data != value:
-            new_data = str(expression2value(middle2after(new_data)))
+            new_data = str(expression2value(expression))
 
     # 恢复原先的转义字符
     new_data = new_data.replace(addition, '+').replace(subtraction, '-').replace(multiplication, '*').\
@@ -152,6 +153,7 @@ def middle2after(data):
         '(': 3,
         ')': 3,
         '*': 2,
+        '/': 2,
         '%': 2,
         '+': 1,
         '-': 1
@@ -162,7 +164,7 @@ def middle2after(data):
     # 遍历每个字符
     for i, s in enumerate(data):
         # 若字符是运算符, 且运算符左边的字符是数字、右边的字符是数字或左括号
-        if s in ['+', '-', '*', '/'] and (is_number(data[i-1]) and (is_number(data[i+1]) or data[i+1]=='(')):
+        if s in ['+', '-', '*', '/', '%'] and (i > 0) and (is_number(data[i-1]) and (is_number(data[i+1]) or data[i+1]=='(')):
             while len(ops) >= 0:
                 # 运算符栈为空，则运算符直接放入
                 if len(ops) == 0:
@@ -179,10 +181,10 @@ def middle2after(data):
                 else:
                     expression.append(op)
         # 左括号，直接入运算符栈
-        elif s == '(' and (is_number(data[i-1]) and is_number(data[i+1])):
+        elif s == '(' and (i > 0) and (is_number(data[i-1]) and is_number(data[i+1])):
             ops.append(s)
         # 右括号，循环出运算符栈、入表达式栈，直到遇左括号为止
-        elif s == ')' and (is_number(data[i-1]) and is_number(data[i+1])):
+        elif s == ')' and (i > 0) and (is_number(data[i-1]) and is_number(data[i+1])):
             while len(ops) > 0:
                 op = ops.pop()
                 if op == '(':
@@ -191,7 +193,19 @@ def middle2after(data):
                     expression.append(op)
         # 数值或无需做运算的计算符，直接入表达式栈
         else:
-            expression.append(s)
+            value = s
+            if i > 0 and (is_number(s) or s == '.'):
+                j = i-1
+                while j >= 0:
+                    if not is_number(data[j]) and (data[j]!='.'):
+                        break
+                    if not is_number(data[j:i+1]):
+                        break
+                    j = j-1
+                value = data[j+1:i+1]
+                if j+1 != i:
+                    expression.pop()
+            expression.append(value)
 
     # 若运算符栈还有值，直接入表达式栈
     while len(ops) > 0:
@@ -210,7 +224,7 @@ def expression2value(expression):
     value = []
     for s in expression:
         # 运算符
-        if s in ['+', '-', '*', '/']:
+        if s in ['+', '-', '*', '/', '%']:
             v1, v2 = '', ''
             # 运算符右边的字符
             if value:

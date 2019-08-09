@@ -94,18 +94,19 @@ def detail_check(expected, real):
     logger.info('EXPECTED:%s' % repr(expected))
     logger.info('REAL:%s' % repr(real))
     if isinstance(expected, str):
+        expect = expected
         try:
-            expected = ast.literal_eval(expected)
+            expect = ast.literal_eval(expected)
         except:
             pass
-        if isinstance(expected, list):
-            for item in expected:
+        if isinstance(expect, list):
+            for item in expect:
                 if detail_match(item, real):
                     flag = 1
                     break
             assert flag == 1
         else:
-            expected = str(expected)
+            # expected = str(expected)
             assert detail_match(expected, real) is True
     elif isinstance(expected, int):
         real = str2int(real)

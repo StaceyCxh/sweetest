@@ -2,8 +2,22 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="922f7b62-9ba8-4787-ac2e-331c578dff2a" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/sweetest/data/.idea/data.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sweetest/data/InterUT-Funding.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sweetest/sweetest/lib/thousands.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sweetest/element/InterUT-Elements.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/sweetest/element/InterUT-Elements.xlsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sweetest/htmlreport/image1.png" beforeDir="false" afterPath="$PROJECT_DIR$/sweetest/htmlreport/image1.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sweetest/htmlreport/image2.png" beforeDir="false" afterPath="$PROJECT_DIR$/sweetest/htmlreport/image2.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sweetest/htmlreport/pdf.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/sweetest/htmlreport/pdf.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sweetest/start.py" beforeDir="false" afterPath="$PROJECT_DIR$/sweetest/start.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sweetest/sweetest/globals.py" beforeDir="false" afterPath="$PROJECT_DIR$/sweetest/sweetest/globals.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sweetest/sweetest/keywords/common.py" beforeDir="false" afterPath="$PROJECT_DIR$/sweetest/sweetest/keywords/common.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sweetest/sweetest/keywords/web.py" beforeDir="false" afterPath="$PROJECT_DIR$/sweetest/sweetest/keywords/web.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sweetest/sweetest/lib/excel.py" beforeDir="false" afterPath="$PROJECT_DIR$/sweetest/sweetest/lib/excel.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sweetest/sweetest/lib/report.py" beforeDir="false" afterPath="$PROJECT_DIR$/sweetest/sweetest/lib/report.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sweetest/sweetest/lib/utility.py" beforeDir="false" afterPath="$PROJECT_DIR$/sweetest/sweetest/lib/utility.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sweetest/testcase/InterUT-TestCase.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/sweetest/testcase/InterUT-TestCase.xlsx" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -13,6 +27,9 @@
   </component>
   <component name="CoverageDataManager">
     <SUITE FILE_PATH="coverage/AutoTest$start.coverage" NAME="start Coverage Results" MODIFIED="1551090339239" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/sweetest-master/sweetest" />
+  </component>
+  <component name="FavoritesManager">
+    <favorites_list name="sweetest" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -36,7 +53,7 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$/sweetest/data" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
-    <property name="settings.editor.selected.configurable" value="settings.github" />
+    <property name="settings.editor.selected.configurable" value="configurable.group.project" />
   </component>
   <component name="PyConsoleOptionsProvider">
     <option name="myPythonConsoleState">
@@ -47,15 +64,15 @@
     </option>
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/sweetest/testcase" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/sweetest/data" />
       <recent name="$PROJECT_DIR$/sweetest/testcase" />
       <recent name="$PROJECT_DIR$/sweetest/element" />
       <recent name="$PROJECT_DIR$/sweetest/sweetest/lib" />
       <recent name="$PROJECT_DIR$/sweetest/template" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/sweetest/testcase" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -405,7 +422,9 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>
