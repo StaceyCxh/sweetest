@@ -1,23 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="922f7b62-9ba8-4787-ac2e-331c578dff2a" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/sweetest/data/.idea/data.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sweetest/data/InterUT-Funding.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sweetest/sweetest/lib/thousands.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sweetest/element/InterUT-Elements.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/sweetest/element/InterUT-Elements.xlsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sweetest/htmlreport/image1.png" beforeDir="false" afterPath="$PROJECT_DIR$/sweetest/htmlreport/image1.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sweetest/htmlreport/image2.png" beforeDir="false" afterPath="$PROJECT_DIR$/sweetest/htmlreport/image2.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sweetest/htmlreport/pdf.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/sweetest/htmlreport/pdf.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sweetest/start.py" beforeDir="false" afterPath="$PROJECT_DIR$/sweetest/start.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sweetest/sweetest/globals.py" beforeDir="false" afterPath="$PROJECT_DIR$/sweetest/sweetest/globals.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sweetest/sweetest/keywords/common.py" beforeDir="false" afterPath="$PROJECT_DIR$/sweetest/sweetest/keywords/common.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sweetest/sweetest/keywords/web.py" beforeDir="false" afterPath="$PROJECT_DIR$/sweetest/sweetest/keywords/web.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sweetest/sweetest/lib/excel.py" beforeDir="false" afterPath="$PROJECT_DIR$/sweetest/sweetest/lib/excel.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sweetest/sweetest/lib/report.py" beforeDir="false" afterPath="$PROJECT_DIR$/sweetest/sweetest/lib/report.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sweetest/sweetest/lib/utility.py" beforeDir="false" afterPath="$PROJECT_DIR$/sweetest/sweetest/lib/utility.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sweetest/testcase/InterUT-TestCase.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/sweetest/testcase/InterUT-TestCase.xlsx" afterDir="false" />
+    <list default="true" id="922f7b62-9ba8-4787-ac2e-331c578dff2a" name="Default Changelist" comment="修复data中表达式的数值超过多位出现的问题">
+      <change beforePath="$PROJECT_DIR$/sweetest/data/InterUT-Advertising.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sweetest/data/UT-Access.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sweetest/data/UT-Advertising.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sweetest/data/UT-Order.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sweetest/element/InterUT-Elements.xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sweetest/element/UT-Elements.xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sweetest/sweetest/config.py" beforeDir="false" afterPath="$PROJECT_DIR$/sweetest/sweetest/config.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sweetest/testcase/InterUT-TestCase.xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sweetest/testcase/UT-TestCase.xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sweetest/testcase/UT-TestCase1.xlsx" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
