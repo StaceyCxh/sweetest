@@ -12,7 +12,7 @@ def pressEnter():
 
 def pressDown():
     '''
-    按下Enter键
+    按下向下箭头按钮键
     :return:
     '''
     pyautogui.press('down')

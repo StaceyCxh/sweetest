@@ -74,19 +74,24 @@ g = Global()
 # g.project_name = 'UT'
 # g.project_name = 'Baidu'
 g.project_name = 'InterUT'
+# g.project_name = 'SSP'
+# g.project_name = 'InterSSP'
+
 
 # 单 sheet 页面模式
 # g.sheet_name = 'baidu'
-# g.sheet_name = 'Advertising'
+g.sheet_name = 'Advertising'
 # g.sheet_name = 'Access'
-g.sheet_name = 'Funding'
-
+# g.sheet_name = 'Funding'
+# g.sheet_name = 'Media'
+# g.sheet_name = 'Placement'
 
 # sheet 页面匹配模式，支持首部或结尾带*，表示模糊匹配
 # g.sheet_name = 'TestCase*'
 
 # sheet 页面列表模式
 # g.sheet_name = ['TestCase', 'test']
+# g.sheet_name = ['Media', 'Placement']
 
 # 环境配置信息
 # Chrome

@@ -7,7 +7,7 @@ from sweetest.lib.excel import Excel
 from sweetest.lib.csv import read_csv, write_csv
 from sweetest.lib.utility import data2dict
 from sweetest.lib.log import logger
-from sweetest.config import all_keywords, comma_lower
+from sweetest.config import all_keywords, comma_lower, equal
 
 
 def analyze_record(record, data, d, i):
@@ -251,8 +251,9 @@ def data_format(data):
     :return: 处理后的数据，结构是dict
     '''
 
-    # 将转义字符 \, ， 替换为： # $%^&
-    data = data.replace('\\,', comma_lower)
+    # 将转义字符 \, 替换为： # $%^&
+    # 将转义字符 \= 替换为：$#%&^
+    data = data.replace('\\,', comma_lower).replace('\\=', equal)
     data_list = []
     data_dict = {}
     # 若数据中带双英文逗号，以此做分隔符
@@ -266,7 +267,8 @@ def data_format(data):
         # 分割第一个'='号，将变量及值存在list中
         d = data.split('=', 1)
         # 将之前替换的  # $%^&， 替换为： ,
-        d[-1] =d[-1].replace(comma_lower, ',')
+        # 将之前替换的  # $%^&， 替换为： =
+        d[-1] =d[-1].replace(comma_lower, ',').replace(equal, '=')
         if len(d) == 1:
             # 如果没有=号分割，说明只有内容，默认赋值给 text
             data_dict['text'] = d[0]

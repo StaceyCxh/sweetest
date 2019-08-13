@@ -11,6 +11,16 @@ def getTime():
     return now
 
 
+def getNumberTime():
+    """
+        获取当前时间
+        :return: 当前时间，格式%H%M%S
+        """
+    now = time.strftime('%H%M%S', time.localtime(time.time()))
+
+    return now
+
+
 def getDate():
     '''
     获取当前日期

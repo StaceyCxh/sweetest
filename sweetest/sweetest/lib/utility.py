@@ -325,3 +325,9 @@ def json2dict(s):
             s = s.replace('true', 'True').replace('false', 'False').replace('null', 'None').replace('none', 'None')
             d = eval(s)
     return d
+
+
+def get_18_string():
+    """随机获取 18 位字符串"""
+    return uuid.uuid4().hex[:18]
+
