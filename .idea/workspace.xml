@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="922f7b62-9ba8-4787-ac2e-331c578dff2a" name="Default Changelist" comment="data支持本身带=号功能；">
       <change afterPath="$PROJECT_DIR$/sweetest/testcase/Multilink-TestCase.xlsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -399,7 +398,14 @@
       <option name="project" value="LOCAL" />
       <updated>1565684813367</updated>
     </task>
-    <option name="localTasksCounter" value="34" />
+    <task id="LOCAL-00034" summary="更新readme文档，增加对关键字“调用”带参数情况的说明">
+      <created>1565685385202</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1565685385202</updated>
+    </task>
+    <option name="localTasksCounter" value="35" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
@@ -434,7 +440,8 @@
     <MESSAGE value="中国版UT线上测试用例" />
     <MESSAGE value="增加关键字CLOSE/关闭" />
     <MESSAGE value="data支持本身带=号功能；&#10;autotest-output（测试结果接口）修复无setup下出现的问题；" />
-    <option name="LAST_COMMIT_MESSAGE" value="data支持本身带=号功能；&#10;autotest-output（测试结果接口）修复无setup下出现的问题；" />
+    <MESSAGE value="更新readme文档，增加对关键字“调用”带参数情况的说明" />
+    <option name="LAST_COMMIT_MESSAGE" value="更新readme文档，增加对关键字“调用”带参数情况的说明" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
