@@ -1,7 +1,9 @@
-injson==0.2.1
-requests==2.21.0
-pdf2image==1.5.1
+PyAutoGUI==0.9.45
+openpyxl==2.6.2
+injson==0.2.3
+requests==2.18.4
+pdf2image==1.6.0
+selenium==3.141.0
 pdfkit==0.6.1
-openpyxl==2.6.0
-selenium==3.14.1
-Appium_Python_Client==0.40
+Appium_Python_Client==0.46
+# 需安装wkhtmltopdf命令行 shell 程序
