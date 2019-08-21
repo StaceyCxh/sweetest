@@ -137,6 +137,12 @@ class Windows(object):
             g.driver.close()
         g.exist = 0
 
+    def close_tab(self):
+        self.pages.pop(list(self.pages.keys())[list(self.pages.values()).index(g.driver.current_window_handle)])
+        g.driver.close()
+        if self.pages:
+            g.driver.switch_to_window(list(self.pages.values())[-1])
+
     def switch_context(self, context):
         if context.strip() == '':
             context = 'NATIVE_APP'

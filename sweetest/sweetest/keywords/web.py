@@ -66,7 +66,7 @@ def close(step):
     if element == '浏览器' or element.lower() == 'browser':
         w.close()
     elif element == '标签页' or element.lower() == 'tab':
-        g.close()
+        w.close_tab()
 
 
 def detail_match(expected, real):
