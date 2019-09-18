@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="922f7b62-9ba8-4787-ac2e-331c578dff2a" name="Default Changelist" comment="data支持本身带=号功能；">
-      <change afterPath="$PROJECT_DIR$/sweetest/testcase/Multilink-TestCase.xlsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sweetest/sweetest/globals.py" beforeDir="false" afterPath="$PROJECT_DIR$/sweetest/sweetest/globals.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -36,7 +36,7 @@
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/sweetest/element" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/sweetest" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="settings.editor.selected.configurable" value="configurable.group.project" />
@@ -405,7 +405,21 @@
       <option name="project" value="LOCAL" />
       <updated>1565685385202</updated>
     </task>
-    <option name="localTasksCounter" value="35" />
+    <task id="LOCAL-00035" summary="更新requirements.txt">
+      <created>1565748847798</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1565748847798</updated>
+    </task>
+    <task id="LOCAL-00036" summary="修复关闭标签页时找不到窗体的bug">
+      <created>1566370470385</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1566370470385</updated>
+    </task>
+    <option name="localTasksCounter" value="37" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
@@ -441,7 +455,9 @@
     <MESSAGE value="增加关键字CLOSE/关闭" />
     <MESSAGE value="data支持本身带=号功能；&#10;autotest-output（测试结果接口）修复无setup下出现的问题；" />
     <MESSAGE value="更新readme文档，增加对关键字“调用”带参数情况的说明" />
-    <option name="LAST_COMMIT_MESSAGE" value="更新readme文档，增加对关键字“调用”带参数情况的说明" />
+    <MESSAGE value="更新requirements.txt" />
+    <MESSAGE value="修复关闭标签页时找不到窗体的bug" />
+    <option name="LAST_COMMIT_MESSAGE" value="修复关闭标签页时找不到窗体的bug" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
