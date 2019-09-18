@@ -101,7 +101,8 @@ def replace(data):
             new_data = str(expression2value(expression))
 
     # 恢复原先的转义字符
-    new_data = new_data.replace(addition, '+').replace(subtraction, '-').replace(multiplication, '*').\
+    if isinstance(new_data, str):
+        new_data = new_data.replace(addition, '+').replace(subtraction, '-').replace(multiplication, '*').\
             replace(division, '/').replace(residual, '%').replace(lparenthesis, '(').replace(rparenthesis, ')').\
             replace(lbrackets, '<').replace(rbrackets, '>')
 
