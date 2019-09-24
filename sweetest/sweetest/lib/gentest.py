@@ -6,7 +6,7 @@ from sweetest.lib.windows import w
 from sweetest.lib.log import logger
 from sweetest.keywords import web, common, mobile, http
 from sweetest.config import web_keywords, mobile_keywords, http_keywords
-from sweetest.lib.utility import replace_dict, replace_list, variable2value
+from sweetest.lib.utility import replace_dict, replace_list, replace
 
 
 class _Factory(object):
@@ -38,7 +38,7 @@ class _Factory(object):
                     replace_dict(step['expected'])
 
                     if isinstance(step['element'], str):
-                        step['element'] = variable2value(step['element'])
+                        step['element'] = replace(step['element'])
                     elif isinstance(step['element'], list):
                         step['element'] = replace_list(step['element'])
 
@@ -53,7 +53,7 @@ class _Factory(object):
                             # 判断页面是否已和窗口做了关联，如果没有，就关联当前窗口，如果已关联，则判断是否需要切换
                             w.switch_window(step['page'])
                             # 切换 frame 处理，支持变量替换
-                            frame = variable2value(step['custom'])
+                            frame = replace(step['custom'])
                             w.switch_frame(frame)
                             sleep(2)
 
@@ -62,7 +62,7 @@ class _Factory(object):
 
                     elif g.platform.lower() in ('ios', 'android') and step['keyword'] in mobile_keywords:
                         # 切換 context 處理
-                        context = variable2value(step['custom']).strip()
+                        context = replace(step['custom']).strip()
                         current_context = w.switch_context(context)
 
                         if w.current_context.startswith('WEBVIEW'):

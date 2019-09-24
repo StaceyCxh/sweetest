@@ -121,20 +121,30 @@ def sql(step):
 
 def call(step):
     output = step['output']
+    flag = 0
+    if output.get('数据结构', '') == '是' or output.get('datatype', '').lower() in ('y', 'yes'):
+        flag = 1
     if output:
         logger.info('Call function: %s' % repr(output))
         for key in output:
-            value = output[key].split('.')
-            s = 'from sweetest.lib' + ' import ' + value[0].strip()
-            exec(s)
-            p = re.compile(r'[(](.*?)[)]', re.S)
-            params = re.findall(p, value[1])[0]
-            if len(params):
-                params = params.split(',')
-                replace_list(params)
-                if len(params) == 1:
-                    params = params[0]
-                g.var[key] = getattr(eval(value[0].strip()), value[1].split('(')[0].strip())(params)
-            else:
-                g.var[key] = getattr(eval(value[0].strip()), value[1].split('(')[0].strip())()
-            logger.info('g.var[' + key +']=' + str(g.var[key]))
+            if key not in ('数据结构', 'datatype'):
+                value = output[key].split('.')
+                s = 'from sweetest.lib' + ' import ' + value[0].strip()
+                exec(s)
+                p = re.compile(r'[(](.*?)[)]', re.S)
+                params = re.findall(p, value[1])[0]
+
+                if len(params):
+                    params = params.split(',')
+                    for i in range(len(params)):
+                        params[i] = replace(params[i], flag)
+
+                    if len(params) == 1:
+                        params = params[0]
+                        g.var[key] = getattr(eval(value[0].strip()), value[1].split('(')[0].strip())(params)
+                    else:
+                        params = tuple(params)
+                        g.var[key] = getattr(eval(value[0].strip()), value[1].split('(')[0].strip())(*params)
+                else:
+                    g.var[key] = getattr(eval(value[0].strip()), value[1].split('(')[0].strip())()
+                logger.info('g.var[' + key +']=' + str(g.var[key]))

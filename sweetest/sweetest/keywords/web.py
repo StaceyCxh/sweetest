@@ -173,19 +173,23 @@ def notcheck(step):
 
 def get_Ouput(step, element_location):
     output = step['output']
+    flag = 0
+    if output.get('数据结构', '') == '是' or output.get('datatype', '').lower() in ('y', 'yes'):
+        flag = 1
     for key in output:
-        if output[key] == 'text':
-            g.var[key] = element_location.text
-        elif output[key] in ('text…', 'text...'):
-            if element_location.text.endswith('...'):
-                g.var[key] = element_location.text[:-3]
-            else:
+        if key not in ('数据结构', 'datatype'):
+            if output[key] == 'text':
                 g.var[key] = element_location.text
-        elif re.findall(r'<(.*?)>', output[key]):
-            g.var[key] = replace(output[key])
-        else:
-            g.var[key] = element_location.get_attribute(output[key])
-        logger.info('g.var[' + key + ']=' + g.var[key])
+            elif output[key] in ('text…', 'text...'):
+                if element_location.text.endswith('...'):
+                    g.var[key] = element_location.text[:-3]
+                else:
+                    g.var[key] = element_location.text
+            elif re.findall(r'<(.*?)>', output[key]):
+                g.var[key] = replace(output[key], flag)
+            else:
+                g.var[key] = element_location.get_attribute(output[key])
+            logger.info('g.var[' + key + ']=' + g.var[key])
 
 
 def judge(step):

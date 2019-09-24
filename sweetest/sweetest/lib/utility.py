@@ -63,9 +63,13 @@ def replace_dict(data):
     对dict的变量进行值替换
     :param data: dict结构的数据，带变量
     '''
+    flag = 0
+    if data.get('数据结构', '') == '是' or data.get('datatype', '').lower() in ('y', 'yes'):
+        flag = 1
 
     for key in data:
-        data[key] = replace(data[key])
+        if key not in ('数据结构', 'datatype'):
+            data[key] = replace(data[key], flag)
 
 
 def replace_list(data):
@@ -73,12 +77,11 @@ def replace_list(data):
     对list的变量进行值替换
     :param data: list结构的数据，带变量
     '''
-
     for i in range(len(data)):
         data[i] = replace(data[i])
 
 
-def replace(data):
+def replace(data, flag=0):
     '''
     对输入进行变量替换、表达式计算
     :param data: 测试数据/预期结果/输出数据
@@ -91,7 +94,7 @@ def replace(data):
         replace('\\<', lbrackets).replace('\\>', rbrackets)
 
     # 将数据中的变量替换为具体的值
-    new_data = variable2value(new_data)
+    new_data = variable2value(new_data, flag)
 
     # 带有运算符，则进行表达式运算
     if '+' in new_data or '-' in new_data or '*' in new_data or '/' in new_data or '%' in new_data:
@@ -105,11 +108,10 @@ def replace(data):
         new_data = new_data.replace(addition, '+').replace(subtraction, '-').replace(multiplication, '*').\
             replace(division, '/').replace(residual, '%').replace(lparenthesis, '(').replace(rparenthesis, ')').\
             replace(lbrackets, '<').replace(rbrackets, '>')
-
     return new_data
 
 
-def variable2value(data):
+def variable2value(data, flag=0):
     '''
     对数据中的变量进行值替换
     :param data: 带有变量的数据，变量用<>括起来
@@ -122,20 +124,22 @@ def variable2value(data):
 
     for i, k in enumerate(keys):
         if k in g.var:
-            # 如果在 g.var 中是 list，则 pop 第一个值
-            if isinstance(g.var[k], list):
-                value = g.var[k].pop(0)
-                # 再判断一下此 list 是否只有一个值了，如果是，则从 list 变为该值
-                if len(g.var[k]) == 1:
-                    g.var[k] = g.var[k][0]
-            # 如果在 g.var 中是值，则直接赋值
+            if data == '<'+k+'>' and flag:
+                data = g.var[k]
             else:
-                value = g.var[k]
-            data = data.replace('<' + k + '>', str(value))
+                # 如果在 g.var 中是 list，则 pop 第一个值
+                if isinstance(g.var[k], list):
+                    value = g.var[k].pop(0)
+                    # 再判断一下此 list 是否只有一个值了，如果是，则从 list 变为该值
+                    if len(g.var[k]) == 1:
+                        g.var[k] = g.var[k][0]
+                # 如果在 g.var 中是值，则直接赋值
+                else:
+                    value = g.var[k]
+                data = data.replace('<' + k + '>', str(value))
         # 键盘操作
         elif data == '<'+k+'>' and 'Keys.' in k:
             data = eval(k)
-
     return data
 
 
