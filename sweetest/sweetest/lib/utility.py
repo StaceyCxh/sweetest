@@ -1,5 +1,5 @@
 import re
-import json
+import json, uuid
 from sweetest.config import header
 from sweetest.globals import g
 from sweetest.config import addition, subtraction, multiplication, division, residual, lparenthesis, rparenthesis, lbrackets, rbrackets
@@ -55,6 +55,17 @@ def is_number(s):
     except (TypeError, ValueError):
         pass
 
+    return False
+
+
+def is_operator(s):
+    '''
+    检测值是否是运算符+、-、×、/、%
+    :param s: 数据
+    :return: 输入是运算符，则返回True；否则返回False
+    '''
+    if s in ['+', '-', '*', '%', '/']:
+        return True
     return False
 
 
@@ -166,10 +177,12 @@ def middle2after(data):
 
     expression = []
     ops = []
+    l = len(data)
     # 遍历每个字符
     for i, s in enumerate(data):
-        # 若字符是运算符, 且运算符左边的字符是数字、右边的字符是数字或左括号
-        if s in ['+', '-', '*', '/', '%'] and (i > 0) and (is_number(data[i-1]) and (is_number(data[i+1]) or data[i+1]=='(')):
+        # 若字符是运算符, 且运算符左边的字符是数字或右括号、右边的字符是数字或左括号
+        if is_operator(s) and (i > 0 and i != (l-1)) and (is_number(data[i-1]) or data[i-1] == ')')\
+                and (is_number(data[i+1]) or data[i+1] == '('):
             while len(ops) >= 0:
                 # 运算符栈为空，则运算符直接放入
                 if len(ops) == 0:
@@ -185,11 +198,12 @@ def middle2after(data):
                 # 否则入表达式栈
                 else:
                     expression.append(op)
-        # 左括号，直接入运算符栈
-        elif s == '(' and (i > 0) and (is_number(data[i-1]) and is_number(data[i+1])):
+        # 左括号, 且右边的字符是数字或左括号，直接入运算符栈
+        elif s == '(' and (i == 0 or (i > 0 and i != (l-1))) and (is_number(data[i+1]) or data[i+1] == '('):
             ops.append(s)
-        # 右括号，循环出运算符栈、入表达式栈，直到遇左括号为止
-        elif s == ')' and (i > 0) and (is_number(data[i-1]) and is_number(data[i+1])):
+        # 右括号, 且左边的字符是数字或右括号、右边的字符是运算符，循环出运算符栈、入表达式栈，直到遇左括号为止
+        elif s == ')' and ((i > 0 and i != (l-1) and (is_number(data[i-1]) or data[i-1] == ')') and (is_operator(data[i+1]) or data[i+1] == ')'))\
+                           or (i == (l-1) and (is_number(data[i-1]) or data[i-1] == ')'))):
             while len(ops) > 0:
                 op = ops.pop()
                 if op == '(':
