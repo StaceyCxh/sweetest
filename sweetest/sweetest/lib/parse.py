@@ -15,7 +15,7 @@ def analyze_record(record, data, d, i):
     将csv文件中的数据转换成dict结构
     :param record: dict结构变量
     :param data: csv文件中的数据
-    :param d: 第几行
+    :param d: 第几行的内容
     :param i: 第几列
     :return:
     '''
